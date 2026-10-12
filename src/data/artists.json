@@ -1,0 +1,370 @@
+[
+  {
+    "id": "claudinho-buchecha",
+    "slug": "claudinho-buchecha",
+    "name": "Claudinho & Buchecha",
+    "decade": "1990",
+    "kind": "dupla",
+    "summary": "Dupla de São Gonçalo que levou o funk melody às rádios de todo o país nos anos 1990.",
+    "paragraphs": [
+      "Claudinho & Buchecha foi uma dupla formada por Cláudio Rodrigues de Mattos e Claucirlei Jovêncio de Souza, amigos desde a infância em São Gonçalo, no Rio de Janeiro. Eles começaram a se apresentar em festivais de rap da cidade e ganharam projeção com o “Rap do Salgueiro”, antes de assinar contrato com uma gravadora.",
+      "O primeiro álbum da dupla, lançado em 1996, reuniu sucessos como “Conquista” e ajudou a popularizar nacionalmente uma vertente romântica e melódica do funk carioca. A parceria terminou com a morte de Claudinho, em 2002; Buchecha seguiu carreira solo e manteve o repertório da dupla em circulação."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["conquista"],
+    "sourceIds": ["claudinho-folha", "claudinho-globo", "claudinho-gshow-photo"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/claudinho-buchecha.jpg",
+      "alt": "Claudinho e Buchecha sorrindo juntos.",
+      "credit": "Arquivo pessoal / Gshow."
+    }
+  },
+  {
+    "id": "cidinho-doca",
+    "slug": "cidinho-doca",
+    "name": "Cidinho & Doca",
+    "decade": "1990",
+    "kind": "dupla",
+    "summary": "Dupla da Cidade de Deus conhecida por transformar o cotidiano da favela em crônica musical.",
+    "paragraphs": [
+      "Cidinho & Doca é uma dupla formada por Sidney da Silva e Marcos Paulo de Jesus Peixoto, artistas ligados à Cidade de Deus, na Zona Oeste do Rio de Janeiro. A parceria ganhou projeção em 1994 com músicas como “Rap da Felicidade” e “Rap das Armas”.",
+      "“Rap da Felicidade” se tornou um dos registros mais conhecidos do funk dos anos 1990 ao reivindicar paz, respeito e o direito de viver com dignidade na favela. Em 1995, a Folha de S.Paulo já registrava a faixa entre as mais tocadas nos bailes de São Paulo e do Rio de Janeiro."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["rap-da-felicidade"],
+    "sourceIds": ["cidinho-folha", "cidinho-gshow", "cidinho-extra-photo"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/cidinho-doca.jpg",
+      "alt": "Cidinho e Doca juntos na Cidade de Deus.",
+      "credit": "Imagem publicada pelo Extra / O Globo."
+    }
+  },
+  {
+    "id": "mc-marcinho",
+    "slug": "mc-marcinho",
+    "name": "MC Marcinho",
+    "decade": "1990",
+    "kind": "artista",
+    "summary": "Cantor e compositor associado ao funk melody e a sucessos românticos do gênero.",
+    "paragraphs": [
+      "Márcio André Nepomuceno Garcia, o MC Marcinho, iniciou a carreira nos anos 1990 e ficou conhecido por canções de funk melody. “Rap do Solitário” e “Princesa” projetaram seu nome ainda naquela década; em 2001, “Glamurosa” ampliou novamente sua presença nas rádios e nos bailes.",
+      "Chamado de “Príncipe do Funk”, Marcinho construiu um repertório marcado por letras românticas, entre elas “Garota Nota 100” e “Porque Te Amo”. O artista morreu em 2023, aos 45 anos, deixando uma obra frequentemente retomada por outros intérpretes da música brasileira."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["glamourosa"],
+    "sourceIds": ["marcinho-uol", "marcinho-oglobo"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/mc-marcinho.jpg",
+      "alt": "Retrato de MC Marcinho.",
+      "credit": "Foto de divulgação publicada por O Globo."
+    }
+  },
+  {
+    "id": "dj-marlboro",
+    "slug": "dj-marlboro",
+    "name": "DJ Marlboro",
+    "decade": "1990",
+    "kind": "dj",
+    "summary": "DJ e produtor ligado à consolidação fonográfica do funk carioca em língua portuguesa.",
+    "paragraphs": [
+      "Fernando Luís Mattos da Matta, conhecido como DJ Marlboro, é DJ e produtor do Rio de Janeiro. Sua trajetória está ligada aos bailes e às experiências que aproximaram referências do electro e do Miami bass de letras e produções feitas por artistas brasileiros.",
+      "Em 1989, lançou pela PolyGram a coletânea “Funk Brasil”, considerada um marco da entrada do funk carioca em português no mercado fonográfico. Depois, continuou atuando em rádio, produção musical, bailes e apresentações dentro e fora do Brasil."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["rap-da-felicidade"],
+    "sourceIds": ["marlboro-alataj", "marlboro-band", "marlboro-commons"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/dj-marlboro.jpg",
+      "alt": "Retrato de DJ Marlboro usando fones de ouvido.",
+      "credit": "Olimor / Wikimedia Commons, CC BY-SA 3.0."
+    }
+  },
+  {
+    "id": "furacao-2000",
+    "slug": "furacao-2000",
+    "name": "Furacão 2000",
+    "decade": "2000",
+    "kind": "produtora",
+    "summary": "Equipe de som, produtora e gravadora central para a circulação do funk carioca.",
+    "paragraphs": [
+      "A Furacão 2000 é uma equipe de som, produtora e gravadora do Rio de Janeiro associada a Rômulo Costa e Verônica Costa. Com raízes no circuito de equipes de baile, ampliou a circulação do funk por meio de eventos, coletâneas, programas de rádio e televisão.",
+      "Nos anos 1990 e 2000, sua estrutura ajudou a projetar diferentes gerações de MCs, DJs e grupos. Nesta curadoria, a entrada reúne referências a Bonde do Tigrão, Os Hawaianos e Bola de Fogo, mas representa uma organização musical, não um único artista."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["agora-to-solteira"],
+    "sourceIds": ["projeto", "furacao-site", "furacao-uff"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/furacao-2000.png",
+      "alt": "Marca oficial da Furacão 2000.",
+      "credit": "Identidade visual publicada no site oficial da Furacão 2000."
+    }
+  },
+  {
+    "id": "tati-quebra-barraco",
+    "slug": "tati-quebra-barraco",
+    "name": "Tati Quebra Barraco",
+    "decade": "2000",
+    "kind": "artista",
+    "summary": "Cantora da Cidade de Deus que abriu espaço para a voz feminina no funk carioca.",
+    "paragraphs": [
+      "Tatiana dos Santos Lourenço, a Tati Quebra Barraco, nasceu e cresceu na Cidade de Deus, no Rio de Janeiro. Sua carreira começou no fim dos anos 1990, e ela ganhou projeção com um repertório direto sobre desejo, autonomia e a experiência de mulheres negras e periféricas.",
+      "Faixas como “Boladona”, “Dako é Bom” e “Sou Feia, Mas Tô na Moda” marcaram sua trajetória. Em 2004, ela também foi uma das figuras centrais do documentário “Sou Feia, Mas Tô na Moda”, dirigido por Denise Garcia, sobre mulheres no funk carioca."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["boladona"],
+    "sourceIds": ["tati-gshow", "tati-elle", "tati-commons"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/tati-quebra-barraco.jpg",
+      "alt": "Retrato de Tati Quebra Barraco sorrindo.",
+      "credit": "Humor Multishow / Wikimedia Commons, CC BY 3.0."
+    }
+  },
+  {
+    "id": "perlla",
+    "slug": "perlla",
+    "name": "Perlla",
+    "decade": "2000",
+    "kind": "artista",
+    "summary": "Cantora que ganhou projeção nacional com o funk melody “Tremendo Vacilão”.",
+    "paragraphs": [
+      "Perlla iniciou sua projeção nacional em 2006, aos 17 anos, quando “Tremendo Vacilão” entrou na lista das músicas mais tocadas nas rádios. A faixa, marcada pelo funk melódico e romântico, abriu caminho para outros sucessos, como “Eu Vou” e “Depois do Amor”.",
+      "A cantora passou a frequentar programas de televisão e trilhas de novelas. Depois de anos no funk e no pop, viveu uma fase dedicada à música gospel e mais tarde retomou o repertório que a tornou conhecida, mantendo “Tremendo Vacilão” como uma referência de sua carreira."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["tremendo-vacilao"],
+    "sourceIds": ["perlla-folha", "perlla-gshow", "perlla-commons"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/perlla.png",
+      "alt": "Retrato da cantora Perlla.",
+      "credit": "Boas Novas / Wikimedia Commons, CC BY 3.0."
+    }
+  },
+  {
+    "id": "mc-catra",
+    "slug": "mc-catra",
+    "name": "Mr. Catra",
+    "decade": "2000",
+    "kind": "artista",
+    "summary": "Cantor e compositor que transitou entre funk, rock, rap e samba.",
+    "paragraphs": [
+      "Wagner Domingues Costa, o Mr. Catra, nasceu no Morro do Borel, na Zona Norte do Rio de Janeiro. Antes de se firmar no funk, cantou rock e participou da banda Contexto, na qual rimava sob o nome Negativo; nos anos 1990, aproximou-se do gênero por incentivo de Cidinho & Doca.",
+      "Sua carreira foi marcada pela mistura de linguagens, por parcerias com artistas de diferentes estilos e por uma presença reconhecível no palco. Catra também atuou como referência e colaborador para outros nomes do funk carioca. Ele morreu em 2018, aos 49 anos."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["adulterio-ao-vivo"],
+    "sourceIds": ["catra-tvbrasil", "catra-uol"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/mr-catra.jpg",
+      "alt": "Retrato de Mr. Catra sorrindo.",
+      "credit": "TV Brasil / Wikimedia Commons, CC BY 3.0 BR."
+    }
+  },
+  {
+    "id": "anitta",
+    "slug": "anitta",
+    "name": "Anitta",
+    "decade": "2010",
+    "kind": "artista",
+    "summary": "Cantora de Honório Gurgel que iniciou a carreira nos bailes e ampliou o alcance internacional do funk pop.",
+    "paragraphs": [
+      "Larissa de Macedo Machado, a Anitta, nasceu em Honório Gurgel, no Rio de Janeiro. Vídeos publicados na internet chamaram a atenção do produtor DJ Batutinha, e ela passou a integrar a Furacão 2000 em 2010, apresentando-se em bailes e lançando “Eu Vou Ficar”.",
+      "“Fica Só Olhando” apareceu em um DVD da Furacão 2000 em 2011. A partir de 2012, Anitta seguiu uma nova fase de carreira, aproximando funk e pop; em 2013, “Meiga e Abusada” e “Show das Poderosas” consolidaram sua projeção nacional, antes da expansão para o mercado internacional."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["fica-so-olhando"],
+    "sourceIds": ["anitta-folha", "anitta-uol"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/anitta.jpg",
+      "alt": "Retrato da cantora Anitta.",
+      "credit": "Imagem de divulgação publicada pelo UOL."
+    }
+  },
+  {
+    "id": "valesca-popozuda",
+    "slug": "valesca-popozuda",
+    "name": "Valesca Popozuda",
+    "decade": "2010",
+    "kind": "artista",
+    "summary": "Cantora que se projetou à frente da Gaiola das Popozudas antes de seguir carreira solo.",
+    "paragraphs": [
+      "Valesca Popozuda nasceu e cresceu em Irajá, no Rio de Janeiro, e ganhou projeção como vocalista da Gaiola das Popozudas, grupo criado no início dos anos 2000. “Agora Eu Sou Solteira”, apresentada no DVD “Tsunami II”, da Furacão 2000, tornou-se uma das músicas associadas a essa fase.",
+      "Depois de deixar o grupo, Valesca iniciou carreira solo e alcançou novo público com “Beijinho no Ombro”. Ao longo de sua trajetória, suas letras e entrevistas abordam sexualidade, autonomia e o espaço das mulheres em um ambiente musical marcado pelo machismo."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["agora-to-solteira"],
+    "sourceIds": ["valesca-universa", "valesca-tangerina"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/valesca-popozuda.png",
+      "alt": "Retrato de Valesca Popozuda sorrindo.",
+      "credit": "Imagem publicada por Tangerina / UOL."
+    }
+  },
+  {
+    "id": "mc-pedrinho",
+    "slug": "mc-pedrinho",
+    "name": "MC Pedrinho",
+    "decade": "2010",
+    "kind": "artista",
+    "summary": "Cantor paulista que começou ainda criança e ganhou audiência pela circulação digital do funk.",
+    "paragraphs": [
+      "Pedro Maia Tempester, o MC Pedrinho, começou a cantar ainda criança na Zona Norte de São Paulo. Em 2014, aos 12 anos, já era conhecido pelo sucesso de “Dom Dom Dom”, cujo videoclipe alcançou grande audiência na internet.",
+      "Sua entrada precoce no funk tornou a circulação digital uma parte central da carreira. Com o passar dos anos, Pedrinho ampliou o repertório para faixas de ostentação, romance e trap, além de colaborar com diferentes artistas do funk paulista."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["nosso-amor"],
+    "sourceIds": ["pedrinho-ego", "pedrinho-billboard"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/mc-pedrinho.webp",
+      "alt": "Retrato de MC Pedrinho segurando uma coroa.",
+      "credit": "Imagem de divulgação publicada pela Billboard Brasil."
+    }
+  },
+  {
+    "id": "mc-lan",
+    "slug": "mc-lan",
+    "name": "MC Lan",
+    "decade": "2010",
+    "kind": "artista",
+    "summary": "Cantor e compositor ligado ao funk paulista que alcançou projeção com “Rabetão”.",
+    "paragraphs": [
+      "Caio Alexandre Cruz, o MC Lan, iniciou sua trajetória profissional em São Bernardo do Campo. Depois dos primeiros lançamentos, ganhou projeção nacional em 2017 com “Rabetão”, faixa que circulou amplamente nas plataformas digitais e recebeu videoclipe no canal KondZilla.",
+      "Lan seguiu a carreira com músicas como “Grave Faz Bum” e parcerias que aproximaram o funk de outros mercados e estilos. Em “Rave de Favela”, por exemplo, colaborou com Anitta e o trio Major Lazer."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": false,
+    "workIds": ["rabetao"],
+    "sourceIds": ["lan-uol", "lan-kondzilla"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/mc-lan.jpg",
+      "alt": "Retrato de MC Lan.",
+      "credit": "Imagem publicada pela KondZilla."
+    }
+  },
+  {
+    "id": "bia-soull",
+    "slug": "bia-soull",
+    "name": "Bia Soull",
+    "decade": "2020",
+    "kind": "artista",
+    "summary": "Cantora e compositora paranaense que articula funk, rap, R&B e música eletrônica.",
+    "paragraphs": [
+      "Bia Soull é uma cantora e compositora paranaense radicada em São Paulo. Seu trabalho combina referências de funk, rap, R&B e música eletrônica, com letras que tratam o desejo feminino e a sexualidade de forma explícita e autoral.",
+      "Em 2026, lançou o álbum de estreia “Pornografia Auditiva”. “Sinergia”, parceria com DJ RD da DZ7, integra o disco e concentra uma das propostas que a artista apresenta em entrevistas: colocar o prazer narrado por uma mulher no centro da canção."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["sinergia"],
+    "sourceIds": ["bia-bravo", "bia-folha", "bia-tmdqa"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/bia-soull.png",
+      "alt": "Retrato artístico de Bia Soull.",
+      "credit": "Imagem de divulgação publicada pela Bravo!."
+    }
+  },
+  {
+    "id": "vita-isma",
+    "slug": "vita-isma",
+    "name": "Irmãs de Pau",
+    "decade": "2020",
+    "kind": "dupla",
+    "summary": "Dupla formada por Vita Pereira e Isma Almeida, com música ligada a vivências negras, travestis e periféricas.",
+    "paragraphs": [
+      "Irmãs de Pau é a dupla formada pelas multiartistas paulistanas Vita Pereira e Isma Almeida. Elas se aproximaram durante as ocupações de escolas públicas de São Paulo, em 2015, e começaram a desenvolver juntas um projeto musical durante a pandemia.",
+      "A estreia veio em 2021 com o single “Travequeiro” e o álbum “Dotadas”. O trabalho combina funk com referências de dancehall, vogue, trap e performance para abordar afeto, raça, território, sexualidade e experiências de travestis negras e periféricas."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["travequeiro"],
+    "sourceIds": ["irmas-mural", "irmas-abramus", "irmas-ig"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/irmas-de-pau.jpg",
+      "alt": "Vita Pereira e Isma Almeida, da dupla Irmãs de Pau.",
+      "credit": "Lucas Silvestre / Divulgação, via Agência Mural."
+    }
+  },
+  {
+    "id": "nanda-tsunami",
+    "slug": "nanda-tsunami",
+    "name": "NandaTsunami",
+    "decade": "2020",
+    "kind": "artista",
+    "summary": "Artista paulista que reúne rap, funk e moda na construção de sua identidade musical.",
+    "paragraphs": [
+      "NandaTsunami é o nome artístico da paulista Fernanda Xavier Ferreira Santana. Sua produção reúne a atitude do rap, a linguagem do funk mandelão e uma relação próxima com a moda; o nome artístico foi inspirado por um verso de MC Daleste.",
+      "“Novinho Chora” foi sua primeira composição e chegou às plataformas como single em 2024. A artista explicou que escreveu a faixa projetando uma postura mais segura do que aquela que conseguira ter em uma relação passada, transformando a criação de uma persona em parte de sua narrativa musical."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["novinho-chora"],
+    "sourceIds": ["nanda-elle", "nanda-terra"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/nanda-tsunami.jpg",
+      "alt": "Retrato da artista NandaTsunami.",
+      "credit": "Divulgação / Rolling Stone Brasil, via Terra."
+    }
+  },
+  {
+    "id": "katy-voz-abusadas",
+    "slug": "katy-voz-abusadas",
+    "name": "Katy da Voz e as Abusadas",
+    "decade": "2020",
+    "kind": "grupo",
+    "summary": "Trio do Grajaú que mistura funk, música eletrônica, punk, humor e performance.",
+    "paragraphs": [
+      "Katy da Voz e as Abusadas é um trio formado em 2019 no Grajaú, na Zona Sul de São Paulo, por Katy da Voz, Palladino Proibida e Degoncé Rabetão. O grupo articula funk, música eletrônica, punk, humor e performance a partir de uma identidade ligada ao território periférico.",
+      "A produção do trio inclui singles, remixes, apresentações e colaborações com artistas da cena independente. Em 2024, o grupo integrou a programação do Festival Grito Periférico, realizado pela Secretaria Municipal de Cultura de São Paulo. “mini set DAS VISITANTES” é a obra escolhida pelo grupo Omnia para este acervo."
+    ],
+    "editorialStatus": "pesquisado",
+    "womenHighlight": true,
+    "workIds": ["mini-set-das-visitantes"],
+    "sourceIds": ["projeto", "katy-falo", "katy-prefeitura", "katy-apple"],
+    "instagramUrl": null,
+    "youtubeUrl": null,
+    "image": {
+      "url": "/artists/katy-abusadas.jpg",
+      "alt": "Integrantes de Katy da Voz e as Abusadas na capa de Sacolão das Faveladas.",
+      "credit": "Capa de Sacolão das Faveladas, 2022 / Apple Music."
+    }
+  }
+]

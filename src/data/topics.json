@@ -1,0 +1,68 @@
+[
+  {
+    "id": "populacao",
+    "title": "Comunidade e pertencimento",
+    "subtitle": "Quem se reconhece no baile?",
+    "text": [
+      "O projeto propõe observar o funk como expressão cultural ligada a experiências de identificação e pertencimento. A pesquisa vai além da música e inclui dança, linguagem, moda e espaços de encontro.",
+      "Este núcleo reúne perguntas sobre quem participa da construção dessa cultura e quais experiências ganham visibilidade."
+    ],
+    "questions": [
+      "Quem costuma aparecer nas histórias contadas sobre o funk?",
+      "Como a comunidade participa da produção e da circulação cultural?"
+    ],
+    "sourceIds": [
+      "projeto"
+    ]
+  },
+  {
+    "id": "politica",
+    "title": "Política e espaço público",
+    "subtitle": "Quem pode ocupar a cidade?",
+    "text": [
+      "A proposta do grupo aborda as disputas em torno dos bailes, do preconceito e do reconhecimento cultural. O acervo desta sala será dedicado aos diferentes olhares sobre a presença do funk no espaço público.",
+      "As leituras devem contextualizar os acontecimentos e distinguir a análise do grupo das informações documentadas."
+    ],
+    "questions": [
+      "Como os debates sobre cultura e segurança enquadram os bailes?",
+      "Quais vozes participam dessas discussões?"
+    ],
+    "sourceIds": [
+      "projeto"
+    ]
+  },
+  {
+    "id": "genero",
+    "title": "Gênero, corpo e autonomia",
+    "subtitle": "Quem narra o próprio desejo?",
+    "text": [
+      "O prazer e a liberdade feminina são parte central do recorte apresentado pelo grupo. A pesquisa também propõe explorar representatividade feminina e LGBTQIA+ e tensões entre autonomia, visibilidade e mercado.",
+      "A seção especial de mulheres complementa esta sala ao conectar perguntas de pesquisa a trajetórias selecionadas."
+    ],
+    "questions": [
+      "Como diferentes artistas constroem narrativas sobre o próprio corpo?",
+      "Como a recepção dessas narrativas varia entre públicos?"
+    ],
+    "sourceIds": [
+      "projeto",
+      "azmina",
+      "empoderamento"
+    ]
+  },
+  {
+    "id": "estetica",
+    "title": "Estética e circulação",
+    "subtitle": "O funk também se veste.",
+    "text": [
+      "O documento aproxima música, gírias, roupas, dança e referências visuais. Essas expressões oferecem caminhos para observar como a cultura circula e é incorporada ao cotidiano.",
+      "A pesquisa pode reunir capas, imagens de arquivo e análises de redes sociais, com fonte e crédito para cada peça."
+    ],
+    "questions": [
+      "Como as referências visuais mudam entre os períodos?",
+      "O que o público acrescenta quando compartilha e ressignifica uma obra?"
+    ],
+    "sourceIds": [
+      "projeto"
+    ]
+  }
+]

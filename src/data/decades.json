@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1990",
+    "label": "1990s",
+    "title": "Encontros que guardam memória.",
+    "description": "Um percurso pelas referências selecionadas pelo grupo para aproximar música, baile e pertencimento.",
+    "artistIds": [
+      "claudinho-buchecha",
+      "cidinho-doca",
+      "mc-marcinho",
+      "dj-marlboro"
+    ]
+  },
+  {
+    "id": "2000",
+    "label": "2000s",
+    "title": "Corpo, linguagem e novas vozes.",
+    "description": "Uma sala para explorar diferentes expressões do funk e as questões de desejo e autonomia propostas pelo projeto.",
+    "artistIds": [
+      "furacao-2000",
+      "tati-quebra-barraco",
+      "perlla",
+      "mc-catra"
+    ]
+  },
+  {
+    "id": "2010",
+    "label": "2010s",
+    "title": "Identidade, visibilidade e circulação.",
+    "description": "Trajetórias selecionadas para pensar as transformações na produção e no consumo musical.",
+    "artistIds": [
+      "anitta",
+      "valesca-popozuda",
+      "mc-pedrinho",
+      "mc-lan"
+    ]
+  },
+  {
+    "id": "2020",
+    "label": "2020s",
+    "title": "Outros encontros, novas perspectivas.",
+    "description": "Um recorte contemporâneo que abre espaço para novas vozes e formas de expressão.",
+    "artistIds": [
+      "bia-soull",
+      "vita-isma",
+      "nanda-tsunami",
+      "katy-voz-abusadas"
+    ]
+  }
+]

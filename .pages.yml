@@ -1,0 +1,354 @@
+media:
+  - name: artist_images
+    label: Imagens dos artistas
+    input: public/artists
+    output: /artists
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
+
+components:
+  stable_id:
+    type: string
+    label: ID estável
+    required: true
+    pattern:
+      regex: "^[a-z0-9-]+$"
+      message: Use apenas letras minúsculas, números e hífens.
+    description: Não altere um ID já publicado, pois ele conecta os registros do acervo.
+  decade:
+    type: select
+    label: Década
+    required: true
+    options:
+      values:
+        - name: "1990"
+          label: 1990s
+        - name: "2000"
+          label: 2000s
+        - name: "2010"
+          label: 2010s
+        - name: "2020"
+          label: 2020s
+  source_ids:
+    type: string
+    label: IDs das fontes
+    required: true
+    list:
+      min: 1
+    pattern:
+      regex: "^[a-z0-9-]+$"
+      message: Informe um ID existente em Fontes.
+
+content:
+  - name: site
+    label: Configurações do museu
+    type: file
+    path: src/data/site.json
+    format: json
+    fields:
+      - name: title
+        label: Título do site
+        type: string
+        required: true
+      - name: instagramUrl
+        label: Instagram do projeto
+        type: string
+        required: true
+        pattern:
+          regex: "^https://.+$"
+          message: Use uma URL completa iniciada por https://.
+      - name: playlistUrl
+        label: URL da playlist Beat a Beat
+        type: string
+        required: false
+        pattern:
+          regex: "^(https://.+)?$"
+          message: Deixe vazio ou use uma URL iniciada por https://.
+      - name: playlistTitle
+        label: Nome da playlist
+        type: string
+        required: true
+      - name: womenTitle
+        label: Título da exposição de mulheres
+        type: string
+        required: true
+      - name: womenIntro
+        label: Introdução da exposição
+        type: text
+        required: true
+      - name: womenEditorialNote
+        label: Nota editorial da exposição
+        type: text
+        required: true
+
+  - name: artists
+    label: Artistas e grupos
+    type: file
+    path: src/data/artists.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        component: stable_id
+      - name: slug
+        label: Slug da página
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: Use apenas letras minúsculas, números e hífens.
+        description: Deve ser igual ao ID.
+      - name: name
+        label: Nome público
+        type: string
+        required: true
+      - name: decade
+        component: decade
+      - name: kind
+        label: Tipo de entrada
+        type: string
+        required: true
+        description: "Exemplo: artista, dupla, grupo, DJ ou coletivo/produtora."
+      - name: summary
+        label: Resumo do perfil
+        type: text
+        required: true
+        options:
+          minlength: 20
+      - name: paragraphs
+        label: Parágrafos da biografia
+        type: text
+        required: true
+        list:
+          min: 1
+      - name: editorialStatus
+        label: Estado editorial
+        type: select
+        required: true
+        options:
+          values:
+            - name: inicial
+              label: Inicial
+            - name: pesquisado
+              label: Pesquisado
+            - name: revisado
+              label: Revisado pelo grupo
+      - name: womenHighlight
+        label: Incluir em Mulheres no Funk
+        type: boolean
+        required: true
+      - name: workIds
+        label: IDs das obras
+        type: string
+        required: true
+        list:
+          min: 1
+        pattern: "^[a-z0-9-]+$"
+        description: Cada ID precisa existir no cadastro de Obras.
+      - name: sourceIds
+        component: source_ids
+      - name: instagramUrl
+        label: Instagram oficial
+        type: string
+        required: false
+        pattern:
+          regex: "^(https://.+)?$"
+          message: Deixe vazio ou use uma URL iniciada por https://.
+      - name: youtubeUrl
+        label: Canal oficial no YouTube
+        type: string
+        required: false
+        pattern:
+          regex: "^(https://.+)?$"
+          message: Deixe vazio ou use uma URL iniciada por https://.
+      - name: image
+        label: Imagem do perfil
+        type: object
+        required: true
+        fields:
+          - name: url
+            label: Arquivo
+            type: image
+            required: true
+            options:
+              media: artist_images
+          - name: alt
+            label: Texto alternativo
+            type: text
+            required: true
+          - name: credit
+            label: Crédito da imagem
+            type: text
+            required: true
+
+  - name: works
+    label: Obras e músicas
+    type: file
+    path: src/data/works.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        component: stable_id
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: decade
+        component: decade
+      - name: artistIds
+        label: IDs dos artistas relacionados
+        type: string
+        required: true
+        list:
+          min: 1
+        pattern: "^[a-z0-9-]+$"
+        description: Cada ID precisa existir em Artistas e grupos.
+      - name: type
+        label: Tipo da obra
+        type: string
+        required: true
+      - name: context
+        label: Contexto curatorial
+        type: text
+        required: true
+      - name: sourceIds
+        component: source_ids
+      - name: spotify
+        label: Player do Spotify
+        type: object
+        required: false
+        description: Preencha Spotify ou YouTube. Não cole código HTML.
+        fields:
+          - name: type
+            label: Tipo do recurso
+            type: select
+            required: true
+            options:
+              values:
+                - name: track
+                  label: Faixa
+                - name: album
+                  label: Álbum ou single
+                - name: playlist
+                  label: Playlist
+          - name: id
+            label: ID do Spotify
+            type: string
+            required: true
+            pattern:
+              regex: "^[A-Za-z0-9]{22}$"
+              message: O ID do Spotify deve ter 22 caracteres.
+          - name: label
+            label: Rótulo acessível
+            type: string
+            required: true
+      - name: youtube
+        label: Vídeo do YouTube
+        type: object
+        required: false
+        description: Use o ID de 11 caracteres da URL do vídeo.
+        fields:
+          - name: id
+            label: ID do vídeo
+            type: string
+            required: true
+            pattern:
+              regex: "^[A-Za-z0-9_-]{11}$"
+              message: O ID do YouTube deve ter 11 caracteres.
+          - name: label
+            label: Rótulo acessível
+            type: string
+            required: true
+      - name: explicit
+        label: Pode conter linguagem explícita
+        type: boolean
+        required: true
+
+  - name: decades
+    label: Salas por década
+    type: file
+    path: src/data/decades.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        component: decade
+        label: ID da década
+      - name: label
+        label: Rótulo
+        type: string
+        required: true
+      - name: title
+        label: Título da sala
+        type: string
+        required: true
+      - name: description
+        label: Descrição
+        type: text
+        required: true
+      - name: artistIds
+        label: IDs dos quatro artistas, na ordem dos cards
+        type: string
+        required: true
+        list:
+          min: 4
+          max: 4
+        pattern: "^[a-z0-9-]+$"
+
+  - name: topics
+    label: Olhares do funk
+    type: file
+    path: src/data/topics.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        component: stable_id
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: subtitle
+        label: Pergunta de abertura
+        type: string
+        required: true
+      - name: text
+        label: Parágrafos
+        type: text
+        required: true
+        list:
+          min: 1
+      - name: questions
+        label: Perguntas de pesquisa
+        type: text
+        required: true
+        list:
+          min: 1
+      - name: sourceIds
+        component: source_ids
+
+  - name: sources
+    label: Fontes e créditos
+    type: file
+    path: src/data/sources.json
+    format: json
+    list: true
+    fields:
+      - name: id
+        component: stable_id
+      - name: title
+        label: Título da referência
+        type: string
+        required: true
+      - name: credit
+        label: Crédito bibliográfico
+        type: text
+        required: true
+      - name: url
+        label: URL
+        type: string
+        required: false
+        pattern:
+          regex: "^(https://.+)?$"
+          message: Deixe vazio ou use uma URL iniciada por https://.

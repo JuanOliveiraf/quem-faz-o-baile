@@ -1,0 +1,289 @@
+[
+  {
+    "id": "conquista",
+    "title": "Conquista",
+    "decade": "1990",
+    "artistIds": [
+      "claudinho-buchecha"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-conquista-spotify"
+    ],
+    "spotify": {
+      "type": "album",
+      "id": "3cVROV59MytmrSVmx5Hl1l",
+      "label": "Álbum Claudinho & Buchecha — inclui Conquista"
+    },
+    "youtube": null,
+    "explicit": false
+  },
+  {
+    "id": "rap-da-felicidade",
+    "title": "Rap da Felicidade",
+    "decade": "1990",
+    "artistIds": [
+      "cidinho-doca",
+      "dj-marlboro"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-rap-felicidade-youtube"
+    ],
+    "spotify": null,
+    "youtube": {
+      "id": "7pD8k2zaLqk",
+      "label": "Cidinho & Doca — Rap da Felicidade (vídeo oficial)"
+    },
+    "explicit": false
+  },
+  {
+    "id": "agora-to-solteira",
+    "title": "Agora Tô Solteira",
+    "decade": "2000",
+    "artistIds": [
+      "furacao-2000",
+      "valesca-popozuda"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-agora-solteira-youtube"
+    ],
+    "spotify": null,
+    "youtube": {
+      "id": "m_Uo24O-BbE",
+      "label": "Furacão 2000 — Agora Tô Solteira"
+    },
+    "explicit": false
+  },
+  {
+    "id": "tremendo-vacilao",
+    "title": "Tremendo Vacilão",
+    "decade": "2000",
+    "artistIds": [
+      "perlla"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-tremendo-vacilao-spotify"
+    ],
+    "spotify": {
+      "type": "track",
+      "id": "3u9Jvy8kUXW5Ms9FzjPC6d",
+      "label": "Tremendo Vacilão"
+    },
+    "youtube": null,
+    "explicit": false
+  },
+  {
+    "id": "fica-so-olhando",
+    "title": "Fica só Olhando",
+    "decade": "2010",
+    "artistIds": [
+      "anitta"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-fica-olhando-youtube"
+    ],
+    "spotify": null,
+    "youtube": {
+      "id": "zRgN7AO0snQ",
+      "label": "Anitta — Fica só olhando"
+    },
+    "explicit": false
+  },
+  {
+    "id": "nosso-amor",
+    "title": "Nosso Amor",
+    "decade": "2010",
+    "artistIds": [
+      "mc-pedrinho"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-nosso-amor-spotify"
+    ],
+    "spotify": {
+      "type": "album",
+      "id": "0lgefaaaDLVoBfmSKFWojS",
+      "label": "Single Nosso Amor"
+    },
+    "youtube": null,
+    "explicit": false
+  },
+  {
+    "id": "rabetao",
+    "title": "Rabetão",
+    "decade": "2010",
+    "artistIds": [
+      "mc-lan"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-rabetao-youtube"
+    ],
+    "spotify": null,
+    "youtube": {
+      "id": "RymhzC238YI",
+      "label": "MC Lan — Rabetão (KondZilla)"
+    },
+    "explicit": true
+  },
+  {
+    "id": "sinergia",
+    "title": "Sinergia",
+    "decade": "2020",
+    "artistIds": [
+      "bia-soull"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-sinergia-spotify"
+    ],
+    "spotify": {
+      "type": "album",
+      "id": "0nRwEFPONzItt3VjqLzq2Q",
+      "label": "Álbum PORNOGRAFIA AUDITIVA — inclui Sinergia"
+    },
+    "youtube": null,
+    "explicit": true
+  },
+  {
+    "id": "novinho-chora",
+    "title": "Novinho Chora",
+    "decade": "2020",
+    "artistIds": [
+      "nanda-tsunami"
+    ],
+    "type": "faixa",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-novinho-chora-spotify"
+    ],
+    "spotify": {
+      "type": "album",
+      "id": "2j4DZP2MoqtY3pscIEnYxS",
+      "label": "Single Novinho Chora"
+    },
+    "youtube": null,
+    "explicit": true
+  },
+  {
+    "id": "mini-set-das-visitantes",
+    "title": "mini set DAS VISITANTES",
+    "decade": "2020",
+    "artistIds": [
+      "katy-voz-abusadas"
+    ],
+    "type": "set",
+    "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
+    "sourceIds": [
+      "projeto",
+      "media-mini-set-spotify"
+    ],
+    "spotify": {
+      "type": "album",
+      "id": "6DMo9730gJb8lCFiMT91Wp",
+      "label": "Álbum A VISITA — inclui mini set DAS VISITANTES"
+    },
+    "youtube": null,
+    "explicit": true
+  },
+  {
+    "id": "glamourosa",
+    "title": "Glamourosa (Rap Glamurosa)",
+    "decade": "2000",
+    "artistIds": [
+      "mc-marcinho"
+    ],
+    "type": "faixa",
+    "context": "Registro disponível no Spotify creditado a MC Marcinho e DJ Marlboro.",
+    "sourceIds": [
+      "media-glamourosa-spotify"
+    ],
+    "spotify": {
+      "type": "track",
+      "id": "50ySvgpqmS9W810GuKhrvD",
+      "label": "Glamourosa (Rap Glamurosa)"
+    },
+    "youtube": null,
+    "explicit": false
+  },
+  {
+    "id": "boladona",
+    "title": "Boladona",
+    "decade": "2000",
+    "artistIds": [
+      "tati-quebra-barraco"
+    ],
+    "type": "faixa",
+    "context": "Registro disponível no Spotify creditado a Tati Quebra Barraco e DJ Marlboro.",
+    "sourceIds": [
+      "media-boladona-spotify"
+    ],
+    "spotify": {
+      "type": "track",
+      "id": "19ETbp46uzm9GEoyE12toT",
+      "label": "Boladona"
+    },
+    "youtube": null,
+    "explicit": true
+  },
+  {
+    "id": "adulterio-ao-vivo",
+    "title": "Adultério — ao vivo",
+    "decade": "2010",
+    "artistIds": [
+      "mc-catra"
+    ],
+    "type": "registro ao vivo",
+    "context": "Registro de Mr. Catra no Estúdio Showlivre, publicado no Spotify em 2017.",
+    "sourceIds": [
+      "media-adulterio-spotify"
+    ],
+    "spotify": {
+      "type": "track",
+      "id": "14nUBavT6yI0ddM3EbJ7Vi",
+      "label": "Adultério — ao vivo"
+    },
+    "youtube": null,
+    "explicit": true
+  },
+  {
+    "id": "travequeiro",
+    "title": "Travequeiro",
+    "decade": "2020",
+    "artistIds": [
+      "vita-isma"
+    ],
+    "type": "faixa",
+    "context": "Faixa de Irmãs de Pau com produção de Mu540, publicada em 2021 no canal oficial do duo.",
+    "sourceIds": [
+      "media-travequeiro-youtube"
+    ],
+    "spotify": null,
+    "youtube": {
+      "id": "LDZi4627zqg",
+      "label": "Irmãs de Pau — Travequeiro"
+    },
+    "explicit": true
+  }
+]
