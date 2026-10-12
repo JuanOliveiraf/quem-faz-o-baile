@@ -1,4 +1,4 @@
-import { Save, X } from 'lucide-react';
+import { Plus, Save, Trash2, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { Artist, Channel, ContentBundle, Decade, SiteContent, Source, Topic, Work } from '../types/content';
 import { useCms, type EditorTarget, type MediaDraft } from './CmsContext';
@@ -16,6 +16,21 @@ const decadeOptions = [
   { value: '1990', label: '1990s' }, { value: '2000', label: '2000s' },
   { value: '2010', label: '2010s' }, { value: '2020', label: '2020s' }
 ];
+
+const experienceCountWords = ['ZERO', 'UMA', 'DUAS', 'TRÊS', 'QUATRO', 'CINCO', 'SEIS'];
+
+function renumberChannels(channels: Channel[]): Channel[] {
+  return channels.map((channel, index) => {
+    const name = channel.label.replace(/^\s*\d+\s*\/\s*/, '').trim();
+    return { ...channel, label: `${String(index + 1).padStart(2, '0')} / ${name}`.trimEnd() };
+  });
+}
+
+function updateExperienceCount(eyebrow: string, count: number): string {
+  const amount = experienceCountWords[count] || String(count);
+  const noun = count === 1 ? 'EXPERIÊNCIA' : 'EXPERIÊNCIAS';
+  return eyebrow.replace(/,\s*[^,]+\s+EXPERIÊNCIAS?\s*$/i, `, ${amount} ${noun}`);
+}
 
 function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreviewUrl }: { draft: SiteContent; setDraft: (value: SiteContent) => void; section?: string; setMedia: (media: MediaDraft | undefined) => void; previewUrl?: string; setPreviewUrl: (url: string) => void }) {
   const update = <K extends keyof SiteContent>(key: K, value: SiteContent[K]) => setDraft({ ...draft, [key]: value });
@@ -69,12 +84,27 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
   </>;
   if (current === 'about') {
     const updateChannel = (index: number, channel: Channel) => update('aboutSection', { ...draft.aboutSection, channels: draft.aboutSection.channels.map((item, currentIndex) => currentIndex === index ? channel : item) });
+    const setChannels = (channels: Channel[]) => update('aboutSection', {
+      ...draft.aboutSection,
+      eyebrow: updateExperienceCount(draft.aboutSection.eyebrow, channels.length),
+      channels: renumberChannels(channels)
+    });
+    const removeChannel = (index: number) => setChannels(draft.aboutSection.channels.filter((_, currentIndex) => currentIndex !== index));
+    const addChannel = () => setChannels([...draft.aboutSection.channels, {
+      id: `canal-${Date.now().toString(36)}`,
+      label: 'NOVA EXPERIÊNCIA',
+      title: 'Nova experiência',
+      text: '',
+      linkLabel: null,
+      linkUrl: null
+    }]);
     const labels = Object.fromEntries(draft.aboutSection.channels.map(channel => [channel.id, channel.title]));
     return <>
       <TextField label="Identificação" value={draft.aboutSection.eyebrow} onChange={value => update('aboutSection', { ...draft.aboutSection, eyebrow: value })}/>
       <StringListField label="Linhas do título" values={draft.aboutSection.titleLines} onChange={value => update('aboutSection', { ...draft.aboutSection, titleLines: value })} itemLabel="Linha"/>
-      <ReorderField label="Ordem dos canais" ids={draft.aboutSection.channels.map(channel => channel.id)} labels={labels} onChange={ids => update('aboutSection', { ...draft.aboutSection, channels: ids.map(id => draft.aboutSection.channels.find(channel => channel.id === id)!) })}/>
-      {draft.aboutSection.channels.map((channel, index) => <fieldset className="cms-fieldset cms-subgroup" key={channel.id}><legend>{channel.title}</legend><TextField label="Identificação" value={channel.label} onChange={value => updateChannel(index, { ...channel, label: value })}/><TextField label="Título" value={channel.title} onChange={value => updateChannel(index, { ...channel, title: value })}/><TextArea label="Texto" value={channel.text} onChange={value => updateChannel(index, { ...channel, text: value })}/><TextField label="Texto do link" value={channel.linkLabel || ''} onChange={value => updateChannel(index, { ...channel, linkLabel: value || null })}/><TextField label="URL do link" type="url" value={channel.linkUrl || ''} onChange={value => updateChannel(index, { ...channel, linkUrl: value || null })}/></fieldset>)}
+      {draft.aboutSection.channels.length > 1 && <ReorderField label="Ordem das experiências" ids={draft.aboutSection.channels.map(channel => channel.id)} labels={labels} onChange={ids => setChannels(ids.map(id => draft.aboutSection.channels.find(channel => channel.id === id)!))}/>}
+      {draft.aboutSection.channels.map((channel, index) => <fieldset className="cms-fieldset cms-subgroup" key={channel.id}><legend>Experiência {index + 1}</legend><div className="cms-subgroup-heading"><strong>{channel.title || 'Sem título'}</strong><button type="button" className="cms-delete-button" onClick={() => removeChannel(index)}><Trash2 size={16}/> Excluir experiência</button></div><TextField label="Identificação" value={channel.label} onChange={value => updateChannel(index, { ...channel, label: value })}/><TextField label="Título" value={channel.title} onChange={value => updateChannel(index, { ...channel, title: value })}/><TextArea label="Texto" value={channel.text} onChange={value => updateChannel(index, { ...channel, text: value })}/><TextField label="Texto do link" value={channel.linkLabel || ''} onChange={value => updateChannel(index, { ...channel, linkLabel: value || null })}/><TextField label="URL do link" type="url" value={channel.linkUrl || ''} onChange={value => updateChannel(index, { ...channel, linkUrl: value || null })}/></fieldset>)}
+      <button type="button" className="cms-secondary-button" onClick={addChannel}><Plus size={16}/> Adicionar experiência</button>
     </>;
   }
   if (current === 'footer') return <>

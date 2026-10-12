@@ -129,6 +129,14 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
       required(stat.detail, `Complemento da estatística ${index + 1}`, errors);
     });
   }
+  if (!Array.isArray(site.aboutSection?.channels)) {
+    errors.push('As experiências do projeto precisam estar em uma lista.');
+  } else {
+    uniqueIds(site.aboutSection.channels, 'experiências do projeto', errors);
+    site.aboutSection.channels.forEach((channel, index) => {
+      secureUrl(channel.linkUrl, `URL da experiência ${index + 1}`, errors);
+    });
+  }
   secureUrl(site.instagramUrl, 'Instagram do projeto', errors);
   secureUrl(site.playlistUrl, 'Playlist do projeto', errors);
 

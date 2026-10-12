@@ -112,6 +112,12 @@
 .cms-fieldset{display:grid;gap:12px;margin:0;padding:16px;border:1px solid #aaa;background:#fff}
 .cms-fieldset legend{padding:0 7px;font-size:12px;font-weight:900;text-transform:uppercase}
 .cms-subgroup{background:#efede8}
+.cms-subgroup-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;border-bottom:1px solid #c8c3bd}
+.cms-subgroup-heading strong{font-size:14px;overflow-wrap:anywhere}
+.cms-delete-button{display:inline-flex;flex:none;align-items:center;justify-content:center;gap:7px;min-height:38px;padding:8px 10px;border:1px solid #a12424;background:#fff;color:#a12424;font-size:12px;font-weight:800}
+.cms-delete-button:hover{background:#a12424;color:#fff}
+.channel-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr))}
+@media(max-width:850px){.channel-grid{grid-template-columns:1fr}}
 .cms-toggle,.cms-checkbox-grid label{display:flex;align-items:flex-start;gap:9px;font-size:13px;font-weight:700}
 .cms-toggle{padding:14px;border:1px solid #aaa;background:#fff}
 .cms-toggle input,.cms-checkbox-grid input{width:17px;height:17px;margin:1px 0 0;accent-color:var(--red)}
