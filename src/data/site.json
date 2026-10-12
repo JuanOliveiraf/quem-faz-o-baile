@@ -92,7 +92,7 @@
     "ctaLabel": "Explorar o catálogo"
   },
   "aboutSection": {
-    "eyebrow": "UM PROJETO, TRÊS EXPERIÊNCIAS",
+    "eyebrow": "UM PROJETO, DUAS EXPERIÊNCIAS",
     "titleLines": [
       "A história continua",
       "fora destas paredes."
@@ -111,14 +111,6 @@
         "label": "02 / SPOTIFY",
         "title": "Beat a Beat",
         "text": "A playlist comentada do projeto acompanha músicas e contextos de diferentes períodos.",
-        "linkLabel": null,
-        "linkUrl": null
-      },
-      {
-        "id": "museu",
-        "label": ".",
-        "title": ".",
-        "text": ".",
         "linkLabel": null,
         "linkUrl": null
       }
