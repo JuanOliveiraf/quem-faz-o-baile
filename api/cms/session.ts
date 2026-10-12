@@ -1,5 +1,5 @@
-import { readSession } from '../../server/cms/auth';
-import { json, methodNotAllowed } from '../../server/cms/http';
+import { readSession } from '../../server/cms/auth.js';
+import { json, methodNotAllowed } from '../../server/cms/http.js';
 
 export default {
   fetch(request: Request) {

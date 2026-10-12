@@ -1,4 +1,4 @@
-import type { ContentBundle } from '../types/content';
+import type { ContentBundle } from '../types/content.js';
 
 const idPattern = /^[a-z0-9-]+$/;
 const spotifyPattern = /^[a-zA-Z0-9]{22}$/;

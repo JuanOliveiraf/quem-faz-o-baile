@@ -1,5 +1,5 @@
-import { createSession, sessionCookie, verifyPassword } from '../../server/cms/auth';
-import { json, methodNotAllowed, sameOrigin } from '../../server/cms/http';
+import { createSession, sessionCookie, verifyPassword } from '../../server/cms/auth.js';
+import { json, methodNotAllowed, sameOrigin } from '../../server/cms/http.js';
 
 export default {
   async fetch(request: Request) {

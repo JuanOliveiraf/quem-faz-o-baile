@@ -1,4 +1,4 @@
-import type { ContentBundle, ContentCollection } from '../../src/types/content';
+import type { ContentBundle, ContentCollection } from '../../src/types/content.js';
 
 const paths: Record<ContentCollection, string> = {
   artists: 'src/data/artists.json',

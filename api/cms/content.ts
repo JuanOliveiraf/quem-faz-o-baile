@@ -1,8 +1,8 @@
-import type { ContentBundle, ContentCollection } from '../../src/types/content';
-import { validateContentBundle } from '../../src/services/contentValidation';
-import { readSession } from '../../server/cms/auth';
-import { commitContent, loadContentBundle, type MediaUpload } from '../../server/cms/github';
-import { json, methodNotAllowed, sameOrigin } from '../../server/cms/http';
+import type { ContentBundle, ContentCollection } from '../../src/types/content.js';
+import { validateContentBundle } from '../../src/services/contentValidation.js';
+import { readSession } from '../../server/cms/auth.js';
+import { commitContent, loadContentBundle, type MediaUpload } from '../../server/cms/github.js';
+import { json, methodNotAllowed, sameOrigin } from '../../server/cms/http.js';
 
 const collections = new Set<ContentCollection>(['artists', 'works', 'decades', 'topics', 'sources', 'site']);
 

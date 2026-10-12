@@ -1,5 +1,5 @@
-import { clearSessionCookie } from '../../server/cms/auth';
-import { json, methodNotAllowed, sameOrigin } from '../../server/cms/http';
+import { clearSessionCookie } from '../../server/cms/auth.js';
+import { json, methodNotAllowed, sameOrigin } from '../../server/cms/http.js';
 
 export default {
   fetch(request: Request) {
