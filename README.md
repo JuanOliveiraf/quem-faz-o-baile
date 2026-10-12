@@ -1,6 +1,6 @@
 # Quem Faz o Baile: Conheça o Grave
 
-Museu digital do funk desenvolvido para o projeto transmídia do grupo Omnia, FAPCOM. A interface usa React, TypeScript e Vite. O acervo possui um CMS gratuito baseado em Git, sem Supabase ou banco de dados.
+Museu digital do funk desenvolvido para o projeto transmídia do grupo Omnia, FAPCOM. A aplicação usa React, TypeScript e Vite e inclui um editor visual no próprio site.
 
 ## Executar localmente
 
@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Abra o endereço informado pelo Vite. Não abra `index.html` diretamente.
+Abra o endereço informado pelo Vite e use o botão `Entrar`. Em desenvolvimento, `Abrir prévia local` permite testar todos os lápis sem credenciais e sem publicar alterações.
 
 ## Validar e gerar a produção
 
@@ -21,20 +21,21 @@ npm run build
 npm run preview
 ```
 
-`check:content` valida o acervo e o arquivo `.pages.yml`. A build é gerada em `dist`.
+`check:content` valida relações, fontes, players, imagens e a configuração alternativa do Pages CMS. A build estática é gerada em `dist`.
 
-## CMS
+## Editor visual
 
-O painel usa [Pages CMS](https://pagescms.org/), que edita os JSON e as imagens diretamente no GitHub.
+O modo administrativo funciona no mesmo site:
 
-1. O administrador entra em `https://app.pagescms.org` com GitHub e instala o Pages CMS somente neste repositório.
-2. No painel do repositório, o administrador convida os editores por e-mail.
-3. Os editores aceitam o convite e acessam o painel sem criar conta GitHub.
-4. Cada salvamento gera um commit na branch `main` e inicia a publicação na Vercel.
+1. o editor seleciona `Entrar` no cabeçalho;
+2. após o login, lápis aparecem nos blocos editáveis;
+3. textos, artistas, obras, fontes, imagens e ordem dos cards podem ser alterados;
+4. `Salvar e publicar` cria um commit atômico na branch `main`;
+5. GitHub Actions valida o conteúdo e a Vercel inicia um novo deploy.
 
-Depois da publicação, `/admin` é o endereço de entrada do grupo e encaminha ao painel. A configuração completa está em `.pages.yml`. Consulte `Quem_Faz_o_Baile_Como_Funciona_o_CMS.md` para ativação, convites, segurança, validação e recuperação.
+Não há Supabase nem banco de dados. Os JSON e as imagens do GitHub continuam sendo a fonte principal do acervo. As credenciais e o token de escrita existem somente como variáveis protegidas na Vercel; nada secreto é enviado ao navegador.
 
-O CMS hospedado não exige banco, API própria, variáveis de ambiente ou credenciais no frontend deste projeto. O GitHub guarda o conteúdo e seu histórico; a Vercel recompila o site a cada alteração conectada à branch de produção.
+Para configurar a conta administrativa e a integração com o GitHub, siga [Quem_Faz_o_Baile_Como_Funciona_o_CMS.md](Quem_Faz_o_Baile_Como_Funciona_o_CMS.md).
 
 ## Conteúdo
 
@@ -45,29 +46,14 @@ O CMS hospedado não exige banco, API própria, variáveis de ambiente ou creden
 | Décadas e ordem dos cards | `src/data/decades.json` |
 | Pesquisas e perguntas | `src/data/topics.json` |
 | Fontes bibliográficas | `src/data/sources.json` |
-| Textos gerais e conexões | `src/data/site.json` |
-| Imagens dos perfis | `public/artists` |
-
-O acervo atual contém 16 perfis, 14 obras com player, quatro salas cronológicas, quatro núcleos de pesquisa e referências exibidas nos perfis.
+| Textos gerais e seções | `src/data/site.json` |
+| Fotos dos perfis | `public/artists` |
+| Imagens gerais | `public/site` |
 
 ## Publicação na Vercel
 
-Importe o repositório na Vercel usando:
+Importe `JuanOliveiraf/quem-faz-o-baile` na Vercel. O `vercel.json` já define `npm run build:production`, saída `dist` e o fallback das rotas do React. Configure as variáveis descritas no guia do CMS e use Node.js 22.
 
-- preset: Vite;
-- build: `npm run build:production` (já definido em `vercel.json`);
-- saída: `dist`;
-- Node.js: 22.
-
-O `vercel.json` preserva rotas internas e o acesso `/admin`. O plano Hobby é destinado a projetos pessoais e não comerciais. Um domínio `*.vercel.app` não exige compra; domínio próprio é opcional.
-
-## Automação
-
-`.github/workflows/validate-content.yml` executa instalação, validação e build em commits e pull requests da branch `main`. A Vercel também executa a validação por meio de `npm run build:production`; uma alteração inválida não substitui a versão de produção.
-
-## Documentação
-
-- `Quem_Faz_o_Baile_Como_Funciona_o_CMS.md`: operação do CMS.
-- `PROJETO_ARQUITETURA_REGRAS.md`: arquitetura, regras e estado do acervo.
+`.github/workflows/validate-content.yml` também executa instalação, validação e build em commits e pull requests da branch `main`. Uma alteração inválida não substitui a versão de produção.
 
 Arte, fotografias e músicas não recebem licença de redistribuição por integrarem o projeto. O grupo deve manter créditos, fontes e autorizações aplicáveis.

@@ -1,178 +1,133 @@
-# CMS do Quem Faz o Baile
+# CMS visual do Quem Faz o Baile
 
-Guia do painel editorial implementado no museu digital. Atualizado em 12/10/2026.
+Guia de configuração e operação do editor administrativo integrado ao museu digital. Atualizado em 12/10/2026.
 
-**Estado:** implementado. O projeto usa Pages CMS sobre os arquivos do repositório. Não utiliza Supabase, banco SQL, API própria ou servidor de escrita.
+**Estado:** implementado no código. Para funcionar em produção, ainda é necessário cadastrar as variáveis secretas na Vercel e conectar o projeto ao repositório.
 
-## 1. Decisão técnica
-
-O CMS adotado é o [Pages CMS](https://pagescms.org/), um editor gratuito e open source para projetos armazenados no GitHub. Ele lê a configuração `.pages.yml`, apresenta formulários e salva as alterações nos mesmos arquivos JSON usados pelo site.
-
-O conteúdo continua sob controle do grupo:
+## 1. Como funciona
 
 ```text
-Pages CMS -> arquivos JSON e imagens -> GitHub -> validação -> Vercel
+login no próprio site
+  -> lápis de edição sobre os blocos
+  -> função protegida da Vercel
+  -> commit na branch main do GitHub
+  -> validação automática
+  -> deploy automático da Vercel
 ```
 
-Essa solução foi escolhida porque o acervo já é estruturado em arquivos, recebe atualizações editoriais ocasionais e não precisa de consultas de visitantes, cadastro público ou dados privados.
+Não há Supabase, banco SQL ou servidor permanente. Os arquivos JSON e as imagens do repositório são o banco editorial. Isso atende ao projeto sem contratar um CMS ou banco externo.
 
-## 2. O que está implementado
+O Pages CMS continua configurado em `.pages.yml` apenas como painel alternativo de recuperação. O fluxo principal é o editor visual dentro do site.
 
-O arquivo `.pages.yml` oferece formulários para:
+## 2. O que pode ser editado
 
-| Área | Arquivo editado |
-|---|---|
-| Configurações e textos gerais | `src/data/site.json` |
-| Artistas, biografias, imagens e créditos | `src/data/artists.json` |
-| Obras e players | `src/data/works.json` |
-| Salas e ordem dos cards | `src/data/decades.json` |
-| Pesquisas de Olhares do Funk | `src/data/topics.json` |
-| Fontes bibliográficas e créditos | `src/data/sources.json` |
-| Biblioteca de imagens | `public/artists` |
+- abertura, faixa animada, chamadas, rodapé e imagens gerais;
+- texto da cronologia e conteúdo de cada década;
+- nome, resumo, biografia, foto, crédito, fontes e links de cada artista;
+- destaque de artistas na exposição Mulheres no Funk;
+- título, introdução, nota editorial, cabeçalho da lista e legendas das estatísticas de Mulheres no Funk;
+- título, contexto, relações e player Spotify ou YouTube das obras;
+- pesquisas, perguntas e fontes da área Olhares;
+- ordem dos quatro artistas dentro de cada década;
+- canais e links do projeto.
 
-Os formulários possuem campos obrigatórios, opções para década e estado editorial, validação de URLs, IDs de Spotify e YouTube, texto alternativo e crédito de imagem.
+Os valores `8 trajetórias`, `3 décadas` e `8 obras` na página Mulheres são calculados a partir do acervo. O CMS edita os rótulos, mas não permite falsificar esses totais.
 
-O endereço `/admin` encaminha o editor para `https://app.pagescms.org`. O painel não aparece na navegação pública do museu.
+## 3. Preparar a conta administrativa
 
-## 3. Contas e acesso simplificado
-
-O grupo não precisa criar contas GitHub para todas as pessoas. Há dois papéis:
-
-- **Administrador:** entra uma vez com a conta GitHub proprietária do repositório, instala o Pages CMS e gerencia convites;
-- **Colaborador:** recebe um convite por e-mail e pode editar conteúdo e mídia sem ter conta GitHub.
-
-O endereço divulgado para a equipe é `/admin`. Ele encaminha ao painel hospedado do Pages CMS, onde cada pessoa entra com seu próprio e-mail. Não use uma senha compartilhada entre o grupo.
-
-Colaboradores não podem alterar `.pages.yml`, convidar outras pessoas ou administrar a integração. Essas ações permanecem com o administrador. Os salvamentos dos colaboradores usam a instalação segura do aplicativo Pages CMS para gravar no repositório.
-
-Uma tela de login totalmente hospedada no mesmo domínio do museu exigiria manter uma instalação própria do Pages CMS, autenticação, envio de e-mail e PostgreSQL. Para este projeto acadêmico, isso acrescentaria custo operacional sem melhorar o acervo; por isso foi adotado o painel oficial hospedado, com entrada pelo `/admin` do site.
-
-## 4. Ativação inicial
-
-O código do CMS está pronto, mas a autorização do repositório exige a conta pessoal de quem será responsável pelo projeto.
-
-1. Entre em `https://app.pagescms.org` usando a conta GitHub administradora.
-2. Instale o aplicativo Pages CMS apenas no repositório `JuanOliveiraf/quem-faz-o-baile`.
-3. Abra o repositório no painel. O Pages CMS encontrará `.pages.yml` automaticamente.
-4. Abra a área de colaboradores do repositório e envie um convite para o e-mail de cada editor.
-5. Conecte o repositório à Vercel com saída `dist`; o comando `npm run build:production` já está em `vercel.json`.
-6. Faça uma pequena edição de teste e confirme o commit, a validação e o deploy.
-
-Não coloque senhas, tokens ou chaves dentro do repositório. O Pages CMS usa a autorização do GitHub; o site público não recebe essa credencial.
-
-## 5. Fluxo editorial
-
-1. O editor abre `/admin` e entra com o e-mail convidado.
-2. Escolhe uma área do acervo.
-3. Edita o formulário e salva.
-4. O Pages CMS registra a alteração no GitHub.
-5. O GitHub Actions executa `npm ci`, `npm run check:content` e `npm run build`.
-6. A Vercel executa `npm run build:production`, que valida o acervo antes da build.
-7. Se tudo estiver correto, a Vercel publica a nova versão; se a validação falhar, a versão pública anterior continua ativa.
-
-Salvar no CMS altera o repositório. Portanto, a revisão do conteúdo deve acontecer antes de salvar ou por pull request no GitHub quando o grupo precisar de aprovação formal.
-
-O campo `editorialStatus` dos artistas indica a qualidade editorial do texto:
-
-- `inicial`: conteúdo ainda não pesquisado;
-- `pesquisado`: texto apoiado nas fontes, aguardando revisão final;
-- `revisado`: texto aprovado pelo grupo.
-
-Esse campo não é controle de acesso e não torna um texto privado.
-
-## 6. Colaboração
-
-Usuários com acesso ao repositório podem editar pelo Pages CMS. Colaboradores convidados por e-mail editam conteúdo e mídia sem conta GitHub e sem receber administração da configuração.
-
-Convide apenas pessoas responsáveis pelo acervo. A versão atual do Pages CMS não oferece permissões granulares por coleção, comentários editoriais ou agendamento de publicação. Para revisão obrigatória, use branches e pull requests do GitHub.
-
-O histórico do Git registra quem alterou os arquivos e permite restaurar uma versão anterior. O repositório é também a cópia principal do conteúdo, mas arquivos importantes devem ter backup fora de uma única conta.
-
-## 7. Regras protegidas
-
-O comando `npm run check:content` verifica o conteúdo e a configuração do CMS. Entre as regras bloqueadas estão:
-
-- IDs únicos e formados por letras minúsculas, números e hífens;
-- quatro salas e quatro entradas por sala;
-- cada artista em uma única sala;
-- relações de artista e obra nos dois sentidos;
-- ao menos uma obra e uma imagem por artista;
-- texto alternativo, crédito e arquivo de imagem existentes;
-- fontes cadastradas para perfis, obras e pesquisas;
-- URLs com HTTPS;
-- exatamente um player por obra, Spotify ou YouTube;
-- IDs de mídia no formato esperado;
-- cobertura de todos os campos JSON pela configuração `.pages.yml`.
-
-O GitHub Actions executa essa checagem em commits e pull requests para `main`.
-
-## 8. Como cadastrar conteúdo
-
-### Artista
-
-Cadastre ID e slug iguais, nome, recorte temporal, tipo, resumo, parágrafos, estado editorial, obras, fontes e imagem. Não altere o ID de um perfil publicado sem atualizar todas as relações.
-
-Para aparecer na cronologia, o ID também precisa estar na sala correta em `Salas por década`. A seleção atual mantém quatro entradas por sala.
-
-### Obra
-
-Cadastre os IDs dos artistas nos dois lados: a obra aponta para os artistas e cada artista lista a obra. Preencha contexto e fontes.
-
-Use somente um player:
-
-- Spotify: tipo, ID de 22 caracteres e rótulo;
-- YouTube: ID de 11 caracteres e rótulo.
-
-Não cole `iframe` ou HTML no conteúdo. O componente do site cria o player a partir do ID validado.
-
-### Imagem
-
-Envie JPG, JPEG, PNG ou WebP pela biblioteca `Imagens dos artistas`. O arquivo entra em `public/artists` e o conteúdo recebe um caminho `/artists/...`.
-
-Toda imagem exige texto alternativo e crédito. O upload não concede licença de uso; o grupo continua responsável por autoria, autorização e atribuição.
-
-### Fonte
-
-Cadastre primeiro a referência em `Fontes e créditos`; depois use seu ID nos perfis, obras ou pesquisas. URLs são opcionais, mas, quando existentes, precisam usar HTTPS.
-
-## 9. Custos e dependências
-
-O CMS não exige pagamento nem cartão:
-
-- Pages CMS: gratuito e open source;
-- conteúdo e imagens: armazenados no GitHub;
-- site: estático;
-- Vercel Hobby: adequado ao projeto acadêmico e não comercial dentro dos limites do plano;
-- Supabase: não utilizado;
-- domínio próprio: opcional e potencialmente pago.
-
-Serviços externos podem alterar termos e limites. A independência do conteúdo é preservada porque os dados continuam em JSON no repositório.
-
-## 10. Operação manual e recuperação
-
-O CMS não impede edição pelo VS Code. Em uma emergência, edite os mesmos arquivos, execute:
+No computador do projeto, execute:
 
 ```bash
-npm ci
+npm run cms:credentials -- admin@exemplo.com
+```
+
+O comando cria uma senha forte e imprime as variáveis necessárias. Guarde a senha em um gerenciador de senhas; o projeto armazena somente o hash.
+
+Cadastre na Vercel, em `Project Settings > Environment Variables`:
+
+| Variável | Uso |
+|---|---|
+| `CMS_ADMIN_EMAIL` | e-mail aceito no login |
+| `CMS_ADMIN_PASSWORD_HASH` | hash `scrypt`, nunca a senha aberta |
+| `CMS_SESSION_SECRET` | assinatura da sessão administrativa |
+| `CMS_GITHUB_OWNER` | `JuanOliveiraf` |
+| `CMS_GITHUB_REPO` | `quem-faz-o-baile` |
+| `CMS_GITHUB_BRANCH` | `main` |
+| `CMS_GITHUB_TOKEN` | token restrito usado para salvar commits |
+
+Use as variáveis em `Production` e `Preview`. Depois, faça um novo deploy para disponibilizá-las às funções.
+
+## 4. Criar o token do GitHub
+
+Crie um **fine-grained personal access token** na conta proprietária do repositório:
+
+1. limite o proprietário a `JuanOliveiraf`;
+2. selecione somente `quem-faz-o-baile`;
+3. conceda `Contents: Read and write`;
+4. defina uma data de expiração e registre um lembrete para renovar;
+5. cole o valor somente em `CMS_GITHUB_TOKEN` na Vercel.
+
+Não salve o token em `.env`, JSON, documento compartilhado ou mensagem. `.env.example` contém apenas os nomes das variáveis.
+
+## 5. Entrada e publicação
+
+O endereço de entrada é o próprio site publicado. Se alguém abrir `/admin`, também será levado ao login interno.
+
+1. selecione `Entrar` no cabeçalho;
+2. use o e-mail e a senha gerados;
+3. selecione o lápis do bloco desejado;
+4. revise e use `Salvar e publicar`;
+5. aguarde a Vercel concluir o novo deploy.
+
+Cada salvamento envia somente os arquivos relacionados e cria um único commit. Se outra pessoa salvar primeiro, o CMS bloqueia a edição antiga e pede recarregamento para não apagar trabalho recente.
+
+## 6. Segurança e limites
+
+- a sessão dura oito horas e usa cookie `HttpOnly`, `Secure` e `SameSite=Strict`;
+- requisições de escrita aceitam somente a mesma origem do site;
+- o token do GitHub fica no ambiente da função, nunca no JavaScript público;
+- imagens aceitas: JPG, PNG ou WebP, até 3 MB;
+- toda alteração passa pela validação completa antes do commit;
+- a implementação atual possui uma única conta administrativa compartilhada pelo grupo;
+- não há recuperação automática de senha por e-mail.
+
+Para trocar a senha, execute novamente `npm run cms:credentials -- email@do-admin`, atualize `CMS_ADMIN_PASSWORD_HASH` e `CMS_SESSION_SECRET` na Vercel e faça um redeploy. Para encerrar todo acesso ao repositório, revogue também o token no GitHub.
+
+## 7. Validações protegidas
+
+`npm run check:content` e a API de publicação verificam:
+
+- IDs únicos e relações entre artistas, obras, décadas e fontes;
+- quatro salas e quatro artistas em cada sala;
+- uma obra e uma imagem para cada perfil;
+- texto alternativo e crédito de imagem;
+- URLs HTTPS;
+- exatamente um player Spotify ou YouTube por obra;
+- IDs de mídia no formato esperado;
+- três estatísticas automáticas e ordenadas na página Mulheres;
+- cobertura dos arquivos pelo CMS alternativo.
+
+## 8. Testar sem publicar
+
+Em desenvolvimento, execute `npm run dev`, use `Entrar` e depois `Abrir prévia local`. O site exibe os mesmos lápis e formulários, mas o botão de salvar altera apenas a memória daquela aba. Nenhum commit ou deploy é criado.
+
+Antes de enviar código:
+
+```bash
 npm run check:content
 npm run build
 ```
 
-Depois envie o commit ao GitHub. Não edite simultaneamente o mesmo registro no CMS e localmente sem sincronizar o repositório.
+## 9. Custos
 
-Se uma alteração quebrar a validação:
+O editor não exige Supabase nem serviço pago. GitHub, GitHub Actions e o domínio `*.vercel.app` podem ser usados sem compra dentro dos limites de seus planos gratuitos. O domínio próprio é opcional. A equipe deve acompanhar os limites e os termos dos serviços, especialmente se o projeto deixar de ser acadêmico ou passar a ter uso comercial.
 
-1. abra o resultado da ação `Validar acervo` no GitHub;
-2. identifique o ID ou campo informado;
-3. corrija pelo CMS ou reverta o commit;
-4. confirme que a ação e o deploy ficaram verdes.
+## 10. Recuperação
 
-## 11. Referências técnicas
+O histórico do GitHub registra todas as publicações do CMS. Se um conteúdo precisar ser desfeito, reverta o commit correspondente e envie a reversão para `main`; a Vercel publicará novamente. A edição manual dos JSON continua possível pelo VS Code, desde que `npm run check:content` seja executado antes do push.
 
-- Pages CMS: https://pagescms.org/
-- Introdução e funcionamento: https://pagescms.org/docs/
-- Configuração de conteúdo: https://pagescms.org/docs/configuration/content/
-- Biblioteca de mídia: https://pagescms.org/docs/configuration/media/
-- Colaboradores: https://pagescms.org/docs/configuration/collaborators/
-- Vercel para Vite: https://vercel.com/docs/frameworks/frontend/vite
-- GitHub Actions: https://docs.github.com/actions
+Links úteis:
+
+- GitHub, criação de token: https://github.com/settings/personal-access-tokens/new
+- Vercel, novo projeto: https://vercel.com/new
+- Pages CMS alternativo: https://app.pagescms.org

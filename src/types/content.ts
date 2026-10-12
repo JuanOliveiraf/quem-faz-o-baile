@@ -6,3 +6,27 @@ export interface Work { id: string; title: string; decade: DecadeId; artistIds: 
 export interface Decade { id: DecadeId; label: string; title: string; description: string; artistIds: string[] }
 export interface Topic { id: string; title: string; subtitle: string; text: string[]; questions: string[]; sourceIds: string[] }
 export interface Source { id: string; title: string; credit: string; url: string | null }
+export interface HeroContent { eyebrow: string; titleLines: string[]; accent: string; intro: string; ctaLabel: string; meta: string; imageUrl: string; imageAlt: string; imageCredit: string; stickerLines: string[] }
+export interface SectionIntro { eyebrow: string; titleLines: string[]; descriptionLines: string[] }
+export interface Channel { id: string; label: string; title: string; text: string; linkLabel: string | null; linkUrl: string | null }
+export interface SiteContent {
+ title: string;
+ instagramUrl: string;
+ playlistUrl: string | null;
+ playlistTitle: string;
+ hero: HeroContent;
+ ribbonText: string;
+ timelineSection: SectionIntro & { note: string };
+ womenTitle: string;
+ womenIntro: string;
+ womenEditorialNote: string;
+ womenSection: { eyebrow: string; titleLines: string[]; lead: string; ctaLabel: string; statLabelLines: string[] };
+ womenPage: { eyebrow: string; directoryEyebrow: string; directoryTitle: string; stats: Array<{ id: string; label: string; detail: string }> };
+ topicsSection: SectionIntro;
+ catalogSection: { eyebrow: string; titleLines: string[]; description: string; ctaLabel: string };
+ aboutSection: { eyebrow: string; titleLines: string[]; channels: Channel[] };
+ catalogPage: { eyebrow: string; title: string; description: string };
+ footer: { project: string; tagline: string; notes: string[] };
+}
+export interface ContentBundle { artists: Artist[]; works: Work[]; decades: Decade[]; topics: Topic[]; sources: Source[]; site: SiteContent }
+export type ContentCollection = keyof ContentBundle;

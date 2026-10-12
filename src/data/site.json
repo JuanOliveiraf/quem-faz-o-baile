@@ -3,7 +3,98 @@
   "instagramUrl": "https://www.instagram.com/quemfaz0baile/",
   "playlistUrl": null,
   "playlistTitle": "Quem Faz o Baile: Beat a Beat",
+  "hero": {
+    "eyebrow": "CONHEÇA O GRAVE / MUSEU DIGITAL DO FUNK",
+    "titleLines": ["O BAILE", "É FEITO DE"],
+    "accent": "HISTÓRIAS.",
+    "intro": "Da pista à memória. Explore as vozes, os encontros e as transformações de uma cultura que atravessa gerações.",
+    "ctaLabel": "Começar a visita",
+    "meta": "1990 — 2020s · Música, identidade e expressão",
+    "imageUrl": "/referencias.png",
+    "imageAlt": "Painel de referências do projeto Omnia: colagem de capas, artistas e cartazes",
+    "imageCredit": "ACERVO VISUAL / REFERÊNCIAS DO GRUPO OMNIA",
+    "stickerLines": ["MEMÓRIA", "EM MOVIMENTO"]
+  },
+  "ribbonText": "QUEM CANTA · QUEM DANÇA · QUEM PRODUZ · QUEM FAZ O BAILE ·",
+  "timelineSection": {
+    "eyebrow": "01 / PERCURSO HISTÓRICO",
+    "titleLines": ["Um gênero.", "Muitas gerações."],
+    "descriptionLines": ["Escolha uma década.", "Conheça os nomes selecionados pelo grupo."],
+    "note": "Seleção curatorial do projeto; as trajetórias podem atravessar várias décadas."
+  },
   "womenTitle": "Mulheres no funk.",
   "womenIntro": "De diferentes territórios e gerações, cantoras, compositoras e grupos transformam desejo, cotidiano, trabalho e autonomia em linguagem musical.",
-  "womenEditorialNote": "Este recorte reúne perfis pesquisados e fontes consultadas, sem pretender esgotar a presença das mulheres na história do funk."
+  "womenEditorialNote": "Este recorte reúne perfis pesquisados e fontes consultadas, sem pretender esgotar a presença das mulheres na história do funk.",
+  "womenSection": {
+    "eyebrow": "02 / MULHERES NO FUNK",
+    "titleLines": ["MULHERES", "NO FUNK."],
+    "lead": "Trajetórias em primeiro plano.",
+    "ctaLabel": "Conhecer as artistas",
+    "statLabelLines": ["perfis pesquisados", "neste acervo"]
+  },
+  "womenPage": {
+    "eyebrow": "EXPOSIÇÃO / MULHERES NO FUNK",
+    "directoryEyebrow": "AS ARTISTAS / O ACERVO",
+    "directoryTitle": "Conheça cada trajetória.",
+    "stats": [
+      { "id": "artists", "label": "trajetórias pesquisadas", "detail": "artistas e grupos" },
+      { "id": "decades", "label": "décadas representadas", "detail": "2000, 2010 e 2020" },
+      { "id": "works", "label": "obras no acervo", "detail": "com player disponível" }
+    ]
+  },
+  "topicsSection": {
+    "eyebrow": "03 / ACERVO DE PESQUISAS",
+    "titleLines": ["Olhares do funk."],
+    "descriptionLines": ["Comunidade, política, corpo e cultura.", "Explore as perguntas de cada pesquisa."]
+  },
+  "catalogSection": {
+    "eyebrow": "04 / CATÁLOGO DE ARTISTAS",
+    "titleLines": ["Encontre uma voz.", "Descubra uma música."],
+    "description": "Explore todo o acervo, abra os perfis e ouça as seleções disponíveis.",
+    "ctaLabel": "Explorar o catálogo"
+  },
+  "aboutSection": {
+    "eyebrow": "UM PROJETO, TRÊS EXPERIÊNCIAS",
+    "titleLines": ["A história continua", "fora destas paredes."],
+    "channels": [
+      {
+        "id": "instagram",
+        "label": "01 / INSTAGRAM",
+        "title": "Ver e conversar",
+        "text": "Reels, carrosséis e debates sobre a cultura do funk.",
+        "linkLabel": "Acessar @quemfaz0baile",
+        "linkUrl": "https://www.instagram.com/quemfaz0baile/"
+      },
+      {
+        "id": "spotify",
+        "label": "02 / SPOTIFY",
+        "title": "Beat a Beat",
+        "text": "A playlist comentada do projeto acompanha músicas e contextos de diferentes períodos.",
+        "linkLabel": null,
+        "linkUrl": null
+      },
+      {
+        "id": "museu",
+        "label": "03 / MUSEU DIGITAL",
+        "title": "Conheça o Grave",
+        "text": "Histórias, obras e pesquisas se encontram em um acervo de memória cultural.",
+        "linkLabel": null,
+        "linkUrl": null
+      }
+    ]
+  },
+  "catalogPage": {
+    "eyebrow": "CATÁLOGO / TODO O ACERVO",
+    "title": "Artistas, vozes e encontros.",
+    "description": "Encontre um perfil para conhecer o recorte do projeto e acessar as músicas e links disponíveis."
+  },
+  "footer": {
+    "project": "Projeto Omnia · FAPCOM · 2026",
+    "tagline": "Memória, cultura e expressão.",
+    "notes": [
+      "Seleção e textos iniciais baseados na proposta do grupo.",
+      "Painel visual: referências reunidas pelo grupo Omnia.",
+      "Biografias, curadoria e créditos individuais em preparação."
+    ]
+  }
 }

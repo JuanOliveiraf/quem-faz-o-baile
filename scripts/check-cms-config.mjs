@@ -48,4 +48,10 @@ assert.equal(artistMedia.input, 'public/artists');
 assert.equal(artistMedia.output, '/artists');
 assert(existsSync(new URL(`../${artistMedia.input}`, import.meta.url)), 'Pasta da biblioteca de imagens ausente');
 
-console.log('OK: Pages CMS cobre seis arquivos de conteúdo e a biblioteca de imagens.');
+const siteMedia = config.media.find(item => item.name === 'site_images');
+assert(siteMedia, 'Biblioteca de imagens gerais ausente');
+assert.equal(siteMedia.input, 'public/site');
+assert.equal(siteMedia.output, '/site');
+assert(existsSync(new URL(`../${siteMedia.input}`, import.meta.url)), 'Pasta de imagens gerais ausente');
+
+console.log('OK: o CMS cobre seis arquivos de conteúdo e as duas bibliotecas de imagens.');

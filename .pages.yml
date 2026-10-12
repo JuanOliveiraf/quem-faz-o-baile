@@ -5,6 +5,12 @@ media:
     output: /artists
     rename: safe
     extensions: [jpg, jpeg, png, webp]
+  - name: site_images
+    label: Imagens gerais do site
+    input: public/site
+    output: /site
+    rename: safe
+    extensions: [jpg, jpeg, png, webp]
 
 settings:
   commit:
@@ -77,6 +83,39 @@ content:
         label: Nome da playlist
         type: string
         required: true
+      - name: hero
+        label: Abertura do site
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
+          - { name: accent, label: Palavra em destaque, type: string, required: true }
+          - { name: intro, label: Texto de abertura, type: text, required: true }
+          - { name: ctaLabel, label: Texto do botão, type: string, required: true }
+          - { name: meta, label: Linha informativa, type: string, required: true }
+          - name: imageUrl
+            label: Imagem principal
+            type: image
+            required: true
+            options:
+              media: site_images
+          - { name: imageAlt, label: Texto alternativo, type: text, required: true }
+          - { name: imageCredit, label: Crédito da imagem, type: text, required: true }
+          - { name: stickerLines, label: Linhas do selo, type: string, required: true, list: true }
+      - name: ribbonText
+        label: Texto da faixa animada
+        type: string
+        required: true
+      - name: timelineSection
+        label: Introdução da cronologia
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
+          - { name: descriptionLines, label: Linhas da descrição, type: string, required: true, list: true }
+          - { name: note, label: Nota curatorial, type: text, required: true }
       - name: womenTitle
         label: Título da exposição de mulheres
         type: string
@@ -89,6 +128,85 @@ content:
         label: Nota editorial da exposição
         type: text
         required: true
+      - name: womenSection
+        label: Chamada Mulheres no Funk
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
+          - { name: lead, label: Chamada, type: string, required: true }
+          - { name: ctaLabel, label: Texto do botão, type: string, required: true }
+          - { name: statLabelLines, label: Linhas da legenda numérica, type: string, required: true, list: true }
+      - name: womenPage
+        label: Página Mulheres no Funk
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação da página, type: string, required: true }
+          - { name: directoryEyebrow, label: Identificação da lista, type: string, required: true }
+          - { name: directoryTitle, label: Título da lista, type: string, required: true }
+          - name: stats
+            label: Legendas das estatísticas
+            type: object
+            required: true
+            list: true
+            fields:
+              - { name: id, label: ID, type: string, required: true }
+              - { name: label, label: Rótulo, type: string, required: true }
+              - { name: detail, label: Complemento, type: string, required: true }
+      - name: topicsSection
+        label: Chamada Olhares do Funk
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
+          - { name: descriptionLines, label: Linhas da descrição, type: string, required: true, list: true }
+      - name: catalogSection
+        label: Chamada do catálogo
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
+          - { name: description, label: Descrição, type: text, required: true }
+          - { name: ctaLabel, label: Texto do botão, type: string, required: true }
+      - name: aboutSection
+        label: Canais do projeto
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
+          - name: channels
+            label: Canais
+            type: object
+            required: true
+            list: true
+            fields:
+              - { name: id, label: ID, type: string, required: true }
+              - { name: label, label: Identificação, type: string, required: true }
+              - { name: title, label: Título, type: string, required: true }
+              - { name: text, label: Texto, type: text, required: true }
+              - { name: linkLabel, label: Texto do link, type: string, required: false }
+              - { name: linkUrl, label: URL do link, type: string, required: false }
+      - name: catalogPage
+        label: Página do catálogo
+        type: object
+        required: true
+        fields:
+          - { name: eyebrow, label: Identificação, type: string, required: true }
+          - { name: title, label: Título, type: string, required: true }
+          - { name: description, label: Descrição, type: text, required: true }
+      - name: footer
+        label: Rodapé
+        type: object
+        required: true
+        fields:
+          - { name: project, label: Projeto, type: string, required: true }
+          - { name: tagline, label: Assinatura, type: string, required: true }
+          - { name: notes, label: Notas, type: text, required: true, list: true }
 
   - name: artists
     label: Artistas e grupos
