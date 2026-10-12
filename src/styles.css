@@ -101,6 +101,10 @@
 .cms-panel>form>footer{display:flex;flex:none;justify-content:flex-end;gap:10px;padding:15px 22px;background:#fff;color:var(--ink);border-top:1px solid #b9b5b0}
 .cms-field{display:grid;gap:7px;font-size:13px;font-weight:800}
 .cms-field input,.cms-field textarea,.cms-field select,.cms-list-row textarea{width:100%;min-height:44px;padding:11px 12px;border:1px solid #888;background:#fff;color:var(--ink);font:inherit;font-size:15px;line-height:1.45;border-radius:0}
+.cms-password-field{position:relative;display:block}
+.cms-password-field input{padding-right:48px}
+.cms-password-toggle{position:absolute;top:1px;right:1px;display:grid;place-items:center;width:42px;height:42px;padding:0;border:0;border-left:1px solid #aaa;background:#fff;color:var(--ink)}
+.cms-password-toggle:hover{background:var(--ink);color:#fff}
 .cms-field input[readonly]{background:#e6e3dd;color:#666;cursor:not-allowed}
 .cms-field textarea,.cms-list-row textarea{resize:vertical}
 .cms-field small,.cms-image-upload small{color:#69635f;font-size:11px;font-weight:400}

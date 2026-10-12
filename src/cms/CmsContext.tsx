@@ -33,7 +33,11 @@ async function api<T>(path: string, init?: RequestInit): Promise<T> {
     ...init,
     headers: { 'Content-Type': 'application/json', ...init?.headers }
   });
-  const body = await response.json().catch(() => ({})) as { error?: string; details?: string[] } & T;
+  const contentType = response.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    throw new Error('O login administrativo precisa ser usado no site publicado pela Vercel.');
+  }
+  const body = await response.json() as { error?: string; details?: string[] } & T;
   if (!response.ok) {
     const detail = body.details?.length ? ` ${body.details.join(' ')}` : '';
     throw new Error(`${body.error || 'Não foi possível concluir a operação.'}${detail}`);
@@ -61,8 +65,8 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
     api<{ authenticated: boolean }>('/api/cms/session')
       .then(async result => {
         if (result.authenticated) {
-          setAuthenticated(true);
           await loadLatest();
+          setAuthenticated(true);
         }
       })
       .catch(() => undefined)
@@ -70,11 +74,16 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
   }, [loadLatest]);
 
   const login = useCallback(async (email: string, password: string) => {
-    await api('/api/cms/login', { method: 'POST', body: JSON.stringify({ email, password }) });
-    await loadLatest();
-    setAuthenticated(true);
-    setLoginOpen(false);
-    setNotice('Modo de edição ativado.');
+    try {
+      await api('/api/cms/login', { method: 'POST', body: JSON.stringify({ email, password }) });
+      await loadLatest();
+      setAuthenticated(true);
+      setLoginOpen(false);
+      setNotice('Modo de edição ativado.');
+    } catch (error) {
+      await api('/api/cms/logout', { method: 'POST', body: '{}' }).catch(() => undefined);
+      throw error;
+    }
   }, [loadLatest]);
 
   const logout = useCallback(async () => {
