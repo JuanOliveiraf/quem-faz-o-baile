@@ -27,14 +27,14 @@ npm run preview
 
 O painel usa [Pages CMS](https://pagescms.org/), que edita os JSON e as imagens diretamente no GitHub.
 
-1. Envie o projeto para um repositório GitHub na branch `main`.
-2. Entre em `https://app.pagescms.org` e autorize esse repositório.
-3. Abra o repositório no painel.
-4. Edite e salve o conteúdo.
+1. O administrador entra em `https://app.pagescms.org` com GitHub e instala o Pages CMS somente neste repositório.
+2. No painel do repositório, o administrador convida os editores por e-mail.
+3. Os editores aceitam o convite e acessam o painel sem criar conta GitHub.
+4. Cada salvamento gera um commit na branch `main` e inicia a publicação na Vercel.
 
-Depois da publicação, `/admin` também encaminha ao painel. A configuração completa está em `.pages.yml`. Consulte `Quem_Faz_o_Baile_Como_Funciona_o_CMS.md` para colaboração, segurança, validação e recuperação.
+Depois da publicação, `/admin` é o endereço de entrada do grupo e encaminha ao painel. A configuração completa está em `.pages.yml`. Consulte `Quem_Faz_o_Baile_Como_Funciona_o_CMS.md` para ativação, convites, segurança, validação e recuperação.
 
-O CMS não precisa de banco, API própria, variáveis de ambiente ou credenciais no frontend. O GitHub guarda o conteúdo e seu histórico; a Vercel recompila o site a cada alteração conectada à branch de produção.
+O CMS hospedado não exige banco, API própria, variáveis de ambiente ou credenciais no frontend deste projeto. O GitHub guarda o conteúdo e seu histórico; a Vercel recompila o site a cada alteração conectada à branch de produção.
 
 ## Conteúdo
 
@@ -55,7 +55,7 @@ O acervo atual contém 16 perfis, 14 obras com player, quatro salas cronológica
 Importe o repositório na Vercel usando:
 
 - preset: Vite;
-- build: `npm run build`;
+- build: `npm run build:production` (já definido em `vercel.json`);
 - saída: `dist`;
 - Node.js: 22.
 
@@ -63,7 +63,7 @@ O `vercel.json` preserva rotas internas e o acesso `/admin`. O plano Hobby é de
 
 ## Automação
 
-`.github/workflows/validate-content.yml` executa instalação, validação e build em commits e pull requests da branch `main`. Uma alteração inválida não deve ser publicada como nova versão de produção.
+`.github/workflows/validate-content.yml` executa instalação, validação e build em commits e pull requests da branch `main`. A Vercel também executa a validação por meio de `npm run build:production`; uma alteração inválida não substitui a versão de produção.
 
 ## Documentação
 

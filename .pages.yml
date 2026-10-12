@@ -6,6 +6,15 @@ media:
     rename: safe
     extensions: [jpg, jpeg, png, webp]
 
+settings:
+  commit:
+    identity: app
+    templates:
+      create: "cms: cria {name}"
+      update: "cms: atualiza {name}"
+      delete: "cms: remove {name}"
+      rename: "cms: renomeia {oldFilename} para {newFilename}"
+
 components:
   stable_id:
     type: string

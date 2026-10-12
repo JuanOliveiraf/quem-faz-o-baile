@@ -1,6 +1,6 @@
 # CMS do Quem Faz o Baile
 
-Guia do painel editorial implementado no museu digital. Atualizado em 11/10/2026.
+Guia do painel editorial implementado no museu digital. Atualizado em 12/10/2026.
 
 **Estado:** implementado. O projeto usa Pages CMS sobre os arquivos do repositório. Não utiliza Supabase, banco SQL, API própria ou servidor de escrita.
 
@@ -34,28 +34,41 @@ Os formulários possuem campos obrigatórios, opções para década e estado edi
 
 O endereço `/admin` encaminha o editor para `https://app.pagescms.org`. O painel não aparece na navegação pública do museu.
 
-## 3. Ativação inicial
+## 3. Contas e acesso simplificado
+
+O grupo não precisa criar contas GitHub para todas as pessoas. Há dois papéis:
+
+- **Administrador:** entra uma vez com a conta GitHub proprietária do repositório, instala o Pages CMS e gerencia convites;
+- **Colaborador:** recebe um convite por e-mail e pode editar conteúdo e mídia sem ter conta GitHub.
+
+O endereço divulgado para a equipe é `/admin`. Ele encaminha ao painel hospedado do Pages CMS, onde cada pessoa entra com seu próprio e-mail. Não use uma senha compartilhada entre o grupo.
+
+Colaboradores não podem alterar `.pages.yml`, convidar outras pessoas ou administrar a integração. Essas ações permanecem com o administrador. Os salvamentos dos colaboradores usam a instalação segura do aplicativo Pages CMS para gravar no repositório.
+
+Uma tela de login totalmente hospedada no mesmo domínio do museu exigiria manter uma instalação própria do Pages CMS, autenticação, envio de e-mail e PostgreSQL. Para este projeto acadêmico, isso acrescentaria custo operacional sem melhorar o acervo; por isso foi adotado o painel oficial hospedado, com entrada pelo `/admin` do site.
+
+## 4. Ativação inicial
 
 O código do CMS está pronto, mas a autorização do repositório exige a conta pessoal de quem será responsável pelo projeto.
 
-1. Crie um repositório no GitHub e envie esta pasta para a branch `main`.
-2. Entre em `https://app.pagescms.org` usando GitHub.
-3. Autorize o Pages CMS apenas para o repositório do museu.
-4. Abra o repositório no painel. O Pages CMS encontrará `.pages.yml` automaticamente.
-5. Conecte o mesmo repositório à Vercel com build `npm run build` e saída `dist`.
+1. Entre em `https://app.pagescms.org` usando a conta GitHub administradora.
+2. Instale o aplicativo Pages CMS apenas no repositório `JuanOliveiraf/quem-faz-o-baile`.
+3. Abra o repositório no painel. O Pages CMS encontrará `.pages.yml` automaticamente.
+4. Abra a área de colaboradores do repositório e envie um convite para o e-mail de cada editor.
+5. Conecte o repositório à Vercel com saída `dist`; o comando `npm run build:production` já está em `vercel.json`.
 6. Faça uma pequena edição de teste e confirme o commit, a validação e o deploy.
 
 Não coloque senhas, tokens ou chaves dentro do repositório. O Pages CMS usa a autorização do GitHub; o site público não recebe essa credencial.
 
-## 4. Fluxo editorial
+## 5. Fluxo editorial
 
-1. O editor abre `/admin` ou `https://app.pagescms.org`.
-2. Escolhe o repositório e uma área do acervo.
+1. O editor abre `/admin` e entra com o e-mail convidado.
+2. Escolhe uma área do acervo.
 3. Edita o formulário e salva.
 4. O Pages CMS registra a alteração no GitHub.
 5. O GitHub Actions executa `npm ci`, `npm run check:content` e `npm run build`.
-6. A Vercel gera uma nova versão a partir do commit.
-7. Se a validação falhar, o deploy não deve substituir a versão pública anterior.
+6. A Vercel executa `npm run build:production`, que valida o acervo antes da build.
+7. Se tudo estiver correto, a Vercel publica a nova versão; se a validação falhar, a versão pública anterior continua ativa.
 
 Salvar no CMS altera o repositório. Portanto, a revisão do conteúdo deve acontecer antes de salvar ou por pull request no GitHub quando o grupo precisar de aprovação formal.
 
@@ -67,15 +80,15 @@ O campo `editorialStatus` dos artistas indica a qualidade editorial do texto:
 
 Esse campo não é controle de acesso e não torna um texto privado.
 
-## 5. Colaboração
+## 6. Colaboração
 
-Usuários com acesso ao repositório podem editar pelo Pages CMS. O serviço também permite convidar colaboradores por e-mail para editar conteúdo e mídia sem conceder administração da configuração.
+Usuários com acesso ao repositório podem editar pelo Pages CMS. Colaboradores convidados por e-mail editam conteúdo e mídia sem conta GitHub e sem receber administração da configuração.
 
 Convide apenas pessoas responsáveis pelo acervo. A versão atual do Pages CMS não oferece permissões granulares por coleção, comentários editoriais ou agendamento de publicação. Para revisão obrigatória, use branches e pull requests do GitHub.
 
 O histórico do Git registra quem alterou os arquivos e permite restaurar uma versão anterior. O repositório é também a cópia principal do conteúdo, mas arquivos importantes devem ter backup fora de uma única conta.
 
-## 6. Regras protegidas
+## 7. Regras protegidas
 
 O comando `npm run check:content` verifica o conteúdo e a configuração do CMS. Entre as regras bloqueadas estão:
 
@@ -93,7 +106,7 @@ O comando `npm run check:content` verifica o conteúdo e a configuração do CMS
 
 O GitHub Actions executa essa checagem em commits e pull requests para `main`.
 
-## 7. Como cadastrar conteúdo
+## 8. Como cadastrar conteúdo
 
 ### Artista
 
@@ -122,7 +135,7 @@ Toda imagem exige texto alternativo e crédito. O upload não concede licença d
 
 Cadastre primeiro a referência em `Fontes e créditos`; depois use seu ID nos perfis, obras ou pesquisas. URLs são opcionais, mas, quando existentes, precisam usar HTTPS.
 
-## 8. Custos e dependências
+## 9. Custos e dependências
 
 O CMS não exige pagamento nem cartão:
 
@@ -135,7 +148,7 @@ O CMS não exige pagamento nem cartão:
 
 Serviços externos podem alterar termos e limites. A independência do conteúdo é preservada porque os dados continuam em JSON no repositório.
 
-## 9. Operação manual e recuperação
+## 10. Operação manual e recuperação
 
 O CMS não impede edição pelo VS Code. Em uma emergência, edite os mesmos arquivos, execute:
 
@@ -154,7 +167,7 @@ Se uma alteração quebrar a validação:
 3. corrija pelo CMS ou reverta o commit;
 4. confirme que a ação e o deploy ficaram verdes.
 
-## 10. Referências técnicas
+## 11. Referências técnicas
 
 - Pages CMS: https://pagescms.org/
 - Introdução e funcionamento: https://pagescms.org/docs/
