@@ -107,11 +107,9 @@ Para trocar a senha, execute novamente `npm run cms:credentials -- email@do-admi
 - três estatísticas automáticas e ordenadas na página Mulheres;
 - cobertura dos arquivos pelo CMS alternativo.
 
-## 8. Testar sem publicar
+## 8. Validação local
 
-Em desenvolvimento, execute `npm run dev`, use `Entrar` e depois `Abrir prévia local`. O site exibe os mesmos lápis e formulários, mas o botão de salvar altera apenas a memória daquela aba. Nenhum commit ou deploy é criado.
-
-Antes de enviar código:
+Não existe login de demonstração ou prévia local sem senha. Para validar o código antes de enviar:
 
 ```bash
 npm run check:content

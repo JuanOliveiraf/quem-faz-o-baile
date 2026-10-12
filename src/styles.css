@@ -121,7 +121,6 @@
 .cms-save-button{background:var(--ink);color:#fff}
 .cms-save-button:hover:not(:disabled){background:var(--red)}
 .cms-save-button:disabled{opacity:.55;cursor:wait}
-.cms-preview-login{width:100%}
 .cms-order-list{display:grid;gap:7px;margin:0;padding:0;list-style:none;counter-reset:item}
 .cms-order-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 12px;border:1px solid #bbb;background:#f4f3ee;counter-increment:item}
 .cms-order-list li>span::before{content:counter(item) '. ';font-weight:900}

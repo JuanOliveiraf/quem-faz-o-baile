@@ -9,7 +9,6 @@ type CmsContextValue = {
   content: ContentBundle;
   authenticated: boolean;
   checkingSession: boolean;
-  localPreview: boolean;
   loginOpen: boolean;
   editor: EditorTarget | null;
   saving: boolean;
@@ -17,7 +16,6 @@ type CmsContextValue = {
   openLogin: () => void;
   closeLogin: () => void;
   login: (email: string, password: string) => Promise<void>;
-  enterLocalPreview: () => void;
   logout: () => Promise<void>;
   openEditor: (target: EditorTarget) => void;
   closeEditor: () => void;
@@ -47,7 +45,6 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
   const [content, setContent] = useState<ContentBundle>(() => structuredClone(initialContent));
   const [authenticated, setAuthenticated] = useState(false);
   const [checkingSession, setCheckingSession] = useState(true);
-  const [localPreview, setLocalPreview] = useState(false);
   const [loginOpen, setLoginOpen] = useState(false);
   const [editor, setEditor] = useState<EditorTarget | null>(null);
   const [saving, setSaving] = useState(false);
@@ -61,12 +58,6 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (import.meta.env.DEV && sessionStorage.getItem('qfb-cms-preview') === '1') {
-      setAuthenticated(true);
-      setLocalPreview(true);
-      setCheckingSession(false);
-      return;
-    }
     api<{ authenticated: boolean }>('/api/cms/session')
       .then(async result => {
         if (result.authenticated) {
@@ -86,45 +77,29 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
     setNotice('Modo de edição ativado.');
   }, [loadLatest]);
 
-  const enterLocalPreview = useCallback(() => {
-    if (!import.meta.env.DEV) return;
-    sessionStorage.setItem('qfb-cms-preview', '1');
-    setLocalPreview(true);
-    setAuthenticated(true);
-    setLoginOpen(false);
-    setNotice('Prévia local ativada. As alterações não serão publicadas.');
-  }, []);
-
   const logout = useCallback(async () => {
-    if (localPreview) sessionStorage.removeItem('qfb-cms-preview');
-    else await api('/api/cms/logout', { method: 'POST', body: '{}' }).catch(() => undefined);
+    await api('/api/cms/logout', { method: 'POST', body: '{}' }).catch(() => undefined);
     setAuthenticated(false);
-    setLocalPreview(false);
     setEditor(null);
     setContent(structuredClone(initialContent));
     setNotice('Você saiu do modo de edição.');
-  }, [localPreview]);
+  }, []);
 
   const saveChanges = useCallback(async (changes: Partial<ContentBundle>, media?: MediaDraft) => {
     setSaving(true);
     try {
-      if (localPreview) {
-        setContent(current => ({ ...current, ...structuredClone(changes) }));
-        setNotice('Alteração aplicada somente na prévia local.');
-      } else {
-        const result = await api<{ sha: string }>('/api/cms/content', {
-          method: 'PUT',
-          body: JSON.stringify({ changes, baseSha: headSha, media })
-        });
-        setContent(current => ({ ...current, ...structuredClone(changes) }));
-        setHeadSha(result.sha);
-        setNotice('Alteração salva. A publicação na Vercel foi iniciada.');
-      }
+      const result = await api<{ sha: string }>('/api/cms/content', {
+        method: 'PUT',
+        body: JSON.stringify({ changes, baseSha: headSha, media })
+      });
+      setContent(current => ({ ...current, ...structuredClone(changes) }));
+      setHeadSha(result.sha);
+      setNotice('Alteração salva. A publicação na Vercel foi iniciada.');
       setEditor(null);
     } finally {
       setSaving(false);
     }
-  }, [headSha, localPreview]);
+  }, [headSha]);
 
   const saveCollection = useCallback(async <K extends ContentCollection>(collection: K, data: ContentBundle[K], media?: MediaDraft) => {
     await saveChanges({ [collection]: data } as Partial<ContentBundle>, media);
@@ -142,15 +117,15 @@ export function CmsProvider({ children }: { children: React.ReactNode }) {
   }, [content.decades, saveCollection]);
 
   const value = useMemo<CmsContextValue>(() => ({
-    content, authenticated, checkingSession, localPreview, loginOpen, editor, saving, notice,
+    content, authenticated, checkingSession, loginOpen, editor, saving, notice,
     openLogin: () => setLoginOpen(true),
     closeLogin: () => setLoginOpen(false),
-    login, enterLocalPreview, logout,
+    login, logout,
     openEditor: setEditor,
     closeEditor: () => setEditor(null),
     saveChanges, saveCollection, moveArtist,
     clearNotice: () => setNotice(null)
-  }), [authenticated, checkingSession, content, editor, enterLocalPreview, localPreview, login, loginOpen, logout, moveArtist, notice, saveChanges, saveCollection, saving]);
+  }), [authenticated, checkingSession, content, editor, login, loginOpen, logout, moveArtist, notice, saveChanges, saveCollection, saving]);
 
   return <CmsContext.Provider value={value}>{children}</CmsContext.Provider>;
 }

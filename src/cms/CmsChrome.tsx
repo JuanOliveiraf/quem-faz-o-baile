@@ -11,7 +11,7 @@ export function CmsAccountButton() {
 }
 
 function LoginModal() {
-  const { loginOpen, closeLogin, login, enterLocalPreview } = useCms();
+  const { loginOpen, closeLogin, login } = useCms();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -23,7 +23,7 @@ function LoginModal() {
     catch (reason) { setError(reason instanceof Error ? reason.message : 'Não foi possível entrar.'); }
     finally { setLoading(false); }
   };
-  return <div className="cms-modal-backdrop" role="presentation" onMouseDown={event => { if (event.target === event.currentTarget && !loading) closeLogin(); }}><div className="cms-login-modal" role="dialog" aria-modal="true" aria-labelledby="cms-login-title"><button type="button" className="cms-icon-button cms-modal-close" onClick={closeLogin} title="Fechar" aria-label="Fechar"><X/></button><p className="eyebrow">ACESSO EDITORIAL</p><h2 id="cms-login-title">Entrar no modo de edição</h2><p>Use a conta administrativa configurada para este museu.</p><form onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cms-field"><span>E-mail</span><input type="email" autoComplete="username" required value={email} onChange={event => setEmail(event.target.value)}/></label><label className="cms-field"><span>Senha</span><input type="password" autoComplete="current-password" required value={password} onChange={event => setPassword(event.target.value)}/></label>{error && <p className="cms-error" role="alert">{error}</p>}<button className="cms-save-button" type="submit" disabled={loading}><LogIn size={17}/>{loading ? 'Entrando...' : 'Entrar'}</button>{import.meta.env.DEV && <button className="cms-secondary-button cms-preview-login" type="button" onClick={enterLocalPreview}>Abrir prévia local</button>}</form></div></div>;
+  return <div className="cms-modal-backdrop" role="presentation" onMouseDown={event => { if (event.target === event.currentTarget && !loading) closeLogin(); }}><div className="cms-login-modal" role="dialog" aria-modal="true" aria-labelledby="cms-login-title"><button type="button" className="cms-icon-button cms-modal-close" onClick={closeLogin} title="Fechar" aria-label="Fechar"><X/></button><p className="eyebrow">ACESSO EDITORIAL</p><h2 id="cms-login-title">Entrar no modo de edição</h2><p>Use a conta administrativa configurada para este museu.</p><form onSubmit={event => { event.preventDefault(); void submit(); }}><label className="cms-field"><span>E-mail</span><input type="email" autoComplete="username" required value={email} onChange={event => setEmail(event.target.value)}/></label><label className="cms-field"><span>Senha</span><input type="password" autoComplete="current-password" required value={password} onChange={event => setPassword(event.target.value)}/></label>{error && <p className="cms-error" role="alert">{error}</p>}<button className="cms-save-button" type="submit" disabled={loading}><LogIn size={17}/>{loading ? 'Entrando...' : 'Entrar'}</button></form></div></div>;
 }
 
 function Notice() {

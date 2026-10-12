@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Abra o endereço informado pelo Vite e use o botão `Entrar`. Em desenvolvimento, `Abrir prévia local` permite testar todos os lápis sem credenciais e sem publicar alterações.
+Abra o endereço informado pelo Vite. O modo de edição exige a conta administrativa configurada na Vercel e não oferece acesso local sem autenticação.
 
 ## Validar e gerar a produção
 
