@@ -5,7 +5,10 @@
   "playlistTitle": "Quem Faz o Baile: Beat a Beat",
   "hero": {
     "eyebrow": "CONHEÇA O GRAVE / MUSEU DIGITAL DO FUNK",
-    "titleLines": ["O BAILE", "É FEITO DE"],
+    "titleLines": [
+      "O BAILE",
+      "É FEITO DE"
+    ],
     "accent": "HISTÓRIAS.",
     "intro": "Da pista à memória. Explore as vozes, os encontros e as transformações de uma cultura que atravessa gerações.",
     "ctaLabel": "Começar a visita",
@@ -13,13 +16,22 @@
     "imageUrl": "/referencias.png",
     "imageAlt": "Painel de referências do projeto Omnia: colagem de capas, artistas e cartazes",
     "imageCredit": "ACERVO VISUAL / REFERÊNCIAS DO GRUPO OMNIA",
-    "stickerLines": ["MEMÓRIA", "EM MOVIMENTO"]
+    "stickerLines": [
+      "MEMÓRIA",
+      "EM MOVIMENTO"
+    ]
   },
   "ribbonText": "QUEM CANTA · QUEM DANÇA · QUEM PRODUZ · QUEM FAZ O BAILE ·",
   "timelineSection": {
     "eyebrow": "01 / PERCURSO HISTÓRICO",
-    "titleLines": ["Um gênero.", "Muitas gerações."],
-    "descriptionLines": ["Escolha uma década.", "Conheça os nomes selecionados pelo grupo."],
+    "titleLines": [
+      "Um gênero.",
+      "Muitas gerações."
+    ],
+    "descriptionLines": [
+      "Escolha uma década.",
+      "Conheça os nomes selecionados pelo grupo."
+    ],
     "note": "Seleção curatorial do projeto; as trajetórias podem atravessar várias décadas."
   },
   "womenTitle": "Mulheres no funk.",
@@ -27,35 +39,64 @@
   "womenEditorialNote": "Este recorte reúne perfis pesquisados e fontes consultadas, sem pretender esgotar a presença das mulheres na história do funk.",
   "womenSection": {
     "eyebrow": "02 / MULHERES NO FUNK",
-    "titleLines": ["MULHERES", "NO FUNK."],
+    "titleLines": [
+      "MULHERES",
+      "NO FUNK."
+    ],
     "lead": "Trajetórias em primeiro plano.",
     "ctaLabel": "Conhecer as artistas",
-    "statLabelLines": ["perfis pesquisados", "neste acervo"]
+    "statLabelLines": [
+      "perfis pesquisados",
+      "neste acervo"
+    ]
   },
   "womenPage": {
     "eyebrow": "EXPOSIÇÃO / MULHERES NO FUNK",
     "directoryEyebrow": "AS ARTISTAS / O ACERVO",
     "directoryTitle": "Conheça cada trajetória.",
     "stats": [
-      { "id": "artists", "label": "trajetórias pesquisadas", "detail": "artistas e grupos" },
-      { "id": "decades", "label": "décadas representadas", "detail": "2000, 2010 e 2020" },
-      { "id": "works", "label": "obras no acervo", "detail": "com player disponível" }
+      {
+        "id": "artists",
+        "label": "trajetórias pesquisadas",
+        "detail": "artistas e grupos"
+      },
+      {
+        "id": "decades",
+        "label": "décadas representadas",
+        "detail": "2000, 2010 e 2020"
+      },
+      {
+        "id": "works",
+        "label": "obras no acervo",
+        "detail": "com player disponível"
+      }
     ]
   },
   "topicsSection": {
     "eyebrow": "03 / ACERVO DE PESQUISAS",
-    "titleLines": ["Olhares do funk."],
-    "descriptionLines": ["Comunidade, política, corpo e cultura.", "Explore as perguntas de cada pesquisa."]
+    "titleLines": [
+      "Olhares do funk."
+    ],
+    "descriptionLines": [
+      "Comunidade, política, corpo e cultura.",
+      "Explore as perguntas de cada pesquisa."
+    ]
   },
   "catalogSection": {
     "eyebrow": "04 / CATÁLOGO DE ARTISTAS",
-    "titleLines": ["Encontre uma voz.", "Descubra uma música."],
+    "titleLines": [
+      "Encontre uma voz.",
+      "Descubra uma música."
+    ],
     "description": "Explore todo o acervo, abra os perfis e ouça as seleções disponíveis.",
     "ctaLabel": "Explorar o catálogo"
   },
   "aboutSection": {
     "eyebrow": "UM PROJETO, TRÊS EXPERIÊNCIAS",
-    "titleLines": ["A história continua", "fora destas paredes."],
+    "titleLines": [
+      "A história continua",
+      "fora destas paredes."
+    ],
     "channels": [
       {
         "id": "instagram",
@@ -75,9 +116,9 @@
       },
       {
         "id": "museu",
-        "label": "03 / MUSEU DIGITAL",
-        "title": "Conheça o Grave",
-        "text": "Histórias, obras e pesquisas se encontram em um acervo de memória cultural.",
+        "label": ".",
+        "title": ".",
+        "text": ".",
         "linkLabel": null,
         "linkUrl": null
       }
