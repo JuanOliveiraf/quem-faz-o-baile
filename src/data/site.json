@@ -129,5 +129,8 @@
       "Painel visual: referências reunidas pelo grupo Omnia.",
       "Biografias, curadoria e créditos individuais em preparação."
     ]
+  },
+  "textAlignments": {
+    "hero.intro": "justify"
   }
 }
