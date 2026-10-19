@@ -108,6 +108,12 @@
 .cms-field input[readonly]{background:#e6e3dd;color:#666;cursor:not-allowed}
 .cms-field textarea,.cms-list-row textarea{resize:vertical}
 .cms-field small,.cms-image-upload small{color:#69635f;font-size:11px;font-weight:400}
+.cms-alignment-toolbar{display:inline-grid;grid-template-columns:repeat(4,36px);width:max-content;border:1px solid #aaa;background:#fff}
+.cms-alignment-toolbar button{display:grid;place-items:center;width:36px;height:36px;padding:0;border:0;border-right:1px solid #ccc;background:#fff;color:var(--ink)}
+.cms-alignment-toolbar button:last-child{border-right:0}
+.cms-alignment-toolbar button:hover{background:#e6e3dd}
+.cms-alignment-toolbar button[aria-pressed=true]{background:var(--ink);color:#fff}
+.cms-source-host p>a,.cms-source-host p>strong,.cms-source-host p>span{display:block}
 .cms-form-note{margin:2px 0 4px;padding:12px;border-left:3px solid var(--red);background:#f0ece9;font-size:12px;font-weight:700;line-height:1.5}
 .cms-fieldset{display:grid;gap:12px;margin:0;padding:16px;border:1px solid #aaa;background:#fff}
 .cms-fieldset legend{padding:0 7px;font-size:12px;font-weight:900;text-transform:uppercase}

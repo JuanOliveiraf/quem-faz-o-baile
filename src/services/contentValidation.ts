@@ -23,6 +23,17 @@ function uniqueIds(rows: Array<{ id: string }>, label: string, errors: string[])
   ids.forEach(id => { if (!idPattern.test(id)) errors.push(`ID inválido em ${label}: ${id}`); });
 }
 
+function validTextAlignments(value: unknown, label: string, errors: string[]) {
+  if (value === undefined) return;
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    errors.push(`A formatação de ${label} é inválida.`);
+    return;
+  }
+  Object.values(value).forEach(alignment => {
+    if (!['left', 'center', 'right', 'justify'].includes(String(alignment))) errors.push(`Alinhamento inválido em ${label}.`);
+  });
+}
+
 export function validateContentBundle(bundle: ContentBundle): string[] {
   const errors: string[] = [];
   const { artists, works, decades, topics, sources, site } = bundle;
@@ -44,6 +55,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
 
   if (decades.length !== 4) errors.push('A cronologia precisa manter quatro décadas.');
   decades.forEach(decade => {
+    validTextAlignments(decade.textAlignments, decade.id, errors);
     required(decade.label, `Rótulo da década ${decade.id}`, errors);
     required(decade.title, `Título da década ${decade.id}`, errors);
     required(decade.description, `Descrição da década ${decade.id}`, errors);
@@ -57,6 +69,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   if (new Set(roomArtists).size !== artists.length || roomArtists.length !== artists.length) errors.push('Cada artista precisa aparecer uma única vez na cronologia.');
 
   artists.forEach(artist => {
+    validTextAlignments(artist.textAlignments, artist.id, errors);
     required(artist.name, `Nome de ${artist.id}`, errors);
     required(artist.kind, `Tipo de ${artist.id}`, errors);
     required(artist.summary, `Resumo de ${artist.id}`, errors);
@@ -82,6 +95,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   });
 
   works.forEach(work => {
+    validTextAlignments(work.textAlignments, work.id, errors);
     required(work.title, `Título da obra ${work.id}`, errors);
     required(work.type, `Tipo da obra ${work.id}`, errors);
     required(work.context, `Contexto da obra ${work.id}`, errors);
@@ -97,18 +111,21 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   });
 
   topics.forEach(topic => {
+    validTextAlignments(topic.textAlignments, topic.id, errors);
     required(topic.title, `Título da pesquisa ${topic.id}`, errors);
     required(topic.subtitle, `Abertura da pesquisa ${topic.id}`, errors);
     if (!topic.text.length || !topic.questions.length) errors.push(`A pesquisa ${topic.id} está incompleta.`);
     topic.sourceIds.forEach(id => { if (!sourceIds.has(id)) errors.push(`Fonte ${id} não existe.`); });
   });
   sources.forEach(source => {
+    validTextAlignments(source.textAlignments, source.id, errors);
     required(source.title, `Título da fonte ${source.id}`, errors);
     required(source.credit, `Crédito da fonte ${source.id}`, errors);
     secureUrl(source.url, `URL da fonte ${source.id}`, errors);
   });
 
   required(site.title, 'Título do site', errors);
+  validTextAlignments(site.textAlignments, 'site', errors);
   required(site.hero?.intro, 'Texto de abertura', errors);
   required(site.hero?.imageUrl, 'Imagem de abertura', errors);
   if (site.hero?.imageUrl && !site.hero.imageUrl.startsWith('/')) errors.push('A imagem de abertura precisa usar um caminho público do site.');
@@ -134,6 +151,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   } else {
     uniqueIds(site.aboutSection.channels, 'experiências do projeto', errors);
     site.aboutSection.channels.forEach((channel, index) => {
+      validTextAlignments(channel.textAlignments, `experiência ${index + 1}`, errors);
       secureUrl(channel.linkUrl, `URL da experiência ${index + 1}`, errors);
     });
   }

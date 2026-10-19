@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import TopicDetail from './pages/TopicDetail';
 import Women from './pages/Women';
 import Admin from './pages/Admin';
+import { textAlignmentStyle } from './services/textFormatting';
 
 function RouteEffects() {
   const { pathname, hash } = useLocation();
@@ -37,7 +38,7 @@ export default function App() {
       <CmsAccountButton/>
     </header>
     <main id="conteudo"><Routes><Route path="/" element={<Home/>}/><Route path="/catalogo" element={<Catalog/>}/><Route path="/artistas/:slug" element={<ArtistDetail/>}/><Route path="/mulheres" element={<Women/>}/><Route path="/olhares/:id" element={<TopicDetail/>}/><Route path="/admin" element={<Admin/>}/><Route path="*" element={<NotFound/>}/></Routes></main>
-    <footer className="cms-edit-host"><Link className="brand" to="/">QUEM FAZ<br/><span>O BAILE</span></Link><p>{site.footer.project}<br/>{site.footer.tagline}</p><p className="footer-note">{site.footer.notes.map(note => <span key={note}>{note}<br/></span>)}</p><EditButton target={{ collection: 'site', section: 'footer', label: 'rodapé' }}/></footer>
+    <footer className="cms-edit-host"><Link className="brand" to="/">QUEM FAZ<br/><span>O BAILE</span></Link><div><p style={textAlignmentStyle(site, 'footer.project')}>{site.footer.project}</p><p style={textAlignmentStyle(site, 'footer.tagline')}>{site.footer.tagline}</p></div><p className="footer-note" style={textAlignmentStyle(site, 'footer.notes')}>{site.footer.notes.map(note => <span key={note}>{note}<br/></span>)}</p><EditButton target={{ collection: 'site', section: 'footer', label: 'rodapé' }}/></footer>
     <CmsChrome/>
   </>;
 }

@@ -1,14 +1,31 @@
-import { ArrowDown, ArrowUp, Plus, Trash2, Upload } from 'lucide-react';
+import { AlignCenter, AlignJustify, AlignLeft, AlignRight, ArrowDown, ArrowUp, Plus, Trash2, Upload } from 'lucide-react';
+import { useId } from 'react';
 import type { MediaDraft } from './CmsContext';
+import type { TextAlignment } from '../types/content';
 
 type Option = { value: string; label: string };
+type FormattingProps = { alignment?: TextAlignment; onAlignmentChange?: (alignment: TextAlignment) => void };
 
-export function TextField({ label, value, onChange, type = 'text', readOnly = false, help }: { label: string; value: string; onChange: (value: string) => void; type?: 'text' | 'url'; readOnly?: boolean; help?: string }) {
-  return <label className="cms-field"><span>{label}</span><input type={type} value={value} readOnly={readOnly} onChange={event => onChange(event.target.value)}/>{help && <small>{help}</small>}</label>;
+const alignmentOptions = [
+  { value: 'left' as const, label: 'Alinhar à esquerda', Icon: AlignLeft },
+  { value: 'center' as const, label: 'Centralizar', Icon: AlignCenter },
+  { value: 'right' as const, label: 'Alinhar à direita', Icon: AlignRight },
+  { value: 'justify' as const, label: 'Justificar', Icon: AlignJustify }
+];
+
+function AlignmentToolbar({ value = 'left', onChange }: { value?: TextAlignment; onChange?: (alignment: TextAlignment) => void }) {
+  if (!onChange) return null;
+  return <div className="cms-alignment-toolbar" role="group" aria-label="Alinhamento do texto">{alignmentOptions.map(({ value: option, label, Icon }) => <button type="button" key={option} aria-pressed={value === option} title={label} aria-label={label} onClick={() => onChange(option)}><Icon size={19}/></button>)}</div>;
 }
 
-export function TextArea({ label, value, onChange, rows = 4 }: { label: string; value: string; onChange: (value: string) => void; rows?: number }) {
-  return <label className="cms-field"><span>{label}</span><textarea value={value} rows={rows} onChange={event => onChange(event.target.value)}/></label>;
+export function TextField({ label, value, onChange, type = 'text', readOnly = false, help, alignment, onAlignmentChange }: { label: string; value: string; onChange: (value: string) => void; type?: 'text' | 'url'; readOnly?: boolean; help?: string } & FormattingProps) {
+  const id = useId();
+  return <div className="cms-field"><label htmlFor={id}>{label}</label><AlignmentToolbar value={alignment} onChange={onAlignmentChange}/><input id={id} type={type} value={value} readOnly={readOnly} style={onAlignmentChange ? { textAlign: alignment } : undefined} onChange={event => onChange(event.target.value)}/>{help && <small>{help}</small>}</div>;
+}
+
+export function TextArea({ label, value, onChange, rows = 4, alignment, onAlignmentChange }: { label: string; value: string; onChange: (value: string) => void; rows?: number } & FormattingProps) {
+  const id = useId();
+  return <div className="cms-field"><label htmlFor={id}>{label}</label><AlignmentToolbar value={alignment} onChange={onAlignmentChange}/><textarea id={id} value={value} rows={rows} style={{ textAlign: alignment }} onChange={event => onChange(event.target.value)}/></div>;
 }
 
 export function SelectField({ label, value, options, onChange, disabled = false, help }: { label: string; value: string; options: Option[]; onChange: (value: string) => void; disabled?: boolean; help?: string }) {
@@ -19,9 +36,9 @@ export function ToggleField({ label, checked, onChange }: { label: string; check
   return <label className="cms-toggle"><input type="checkbox" checked={checked} onChange={event => onChange(event.target.checked)}/><span>{label}</span></label>;
 }
 
-export function StringListField({ label, values, onChange, itemLabel = 'Item' }: { label: string; values: string[]; onChange: (values: string[]) => void; itemLabel?: string }) {
+export function StringListField({ label, values, onChange, itemLabel = 'Item', alignment, onAlignmentChange }: { label: string; values: string[]; onChange: (values: string[]) => void; itemLabel?: string } & FormattingProps) {
   const update = (index: number, value: string) => onChange(values.map((item, current) => current === index ? value : item));
-  return <fieldset className="cms-fieldset"><legend>{label}</legend>{values.map((value, index) => <div className="cms-list-row" key={index}><textarea aria-label={`${itemLabel} ${index + 1}`} value={value} rows={3} onChange={event => update(index, event.target.value)}/><button type="button" className="cms-icon-button" onClick={() => onChange(values.filter((_, current) => current !== index))} disabled={values.length === 1} title="Remover" aria-label={`Remover ${itemLabel.toLowerCase()}`}><Trash2 size={16}/></button></div>)}<button type="button" className="cms-secondary-button" onClick={() => onChange([...values, ''])}><Plus size={16}/> Adicionar {itemLabel.toLowerCase()}</button></fieldset>;
+  return <fieldset className="cms-fieldset"><legend>{label}</legend><AlignmentToolbar value={alignment} onChange={onAlignmentChange}/>{values.map((value, index) => <div className="cms-list-row" key={index}><textarea aria-label={`${itemLabel} ${index + 1}`} value={value} rows={3} style={{ textAlign: alignment }} onChange={event => update(index, event.target.value)}/><button type="button" className="cms-icon-button" onClick={() => onChange(values.filter((_, current) => current !== index))} disabled={values.length === 1} title="Remover" aria-label={`Remover ${itemLabel.toLowerCase()}`}><Trash2 size={16}/></button></div>)}<button type="button" className="cms-secondary-button" onClick={() => onChange([...values, ''])}><Plus size={16}/> Adicionar {itemLabel.toLowerCase()}</button></fieldset>;
 }
 
 export function CheckboxGroup({ label, values, selected, onChange }: { label: string; values: Option[]; selected: string[]; onChange: (selected: string[]) => void }) {

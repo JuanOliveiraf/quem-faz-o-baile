@@ -1,8 +1,8 @@
 # CMS visual do Quem Faz o Baile
 
-Guia de configuração e operação do editor administrativo integrado ao museu digital. Atualizado em 12/10/2026.
+Guia de configuração e operação do editor administrativo integrado ao museu digital. Atualizado em 19/10/2026.
 
-**Estado:** implementado no código. Para funcionar em produção, ainda é necessário cadastrar as variáveis secretas na Vercel e conectar o projeto ao repositório.
+**Estado:** configurado e publicado em produção pela Vercel.
 
 ## 1. Como funciona
 
@@ -30,6 +30,7 @@ O Pages CMS continua configurado em `.pages.yml` apenas como painel alternativo 
 - pesquisas, perguntas e fontes da área Olhares;
 - ordem dos quatro artistas dentro de cada década;
 - canais e links do projeto.
+- alinhamento à esquerda, centralizado, à direita ou justificado para títulos e blocos de texto.
 
 Os valores `8 trajetórias`, `3 décadas` e `8 obras` na página Mulheres são calculados a partir do acervo. O CMS edita os rótulos, mas não permite falsificar esses totais.
 
@@ -76,8 +77,11 @@ O endereço de entrada é o próprio site publicado. Se alguém abrir `/admin`, 
 1. selecione `Entrar` no cabeçalho;
 2. use o e-mail e a senha gerados;
 3. selecione o lápis do bloco desejado;
-4. revise e use `Salvar e publicar`;
-5. aguarde a Vercel concluir o novo deploy.
+4. use os quatro botões de alinhamento acima do campo quando quiser formatar o texto;
+5. revise e use `Salvar e publicar`;
+6. aguarde a Vercel concluir o novo deploy.
+
+O alinhamento selecionado aparece no próprio campo como prévia. Escolher novamente o alinhamento à esquerda restaura o padrão do site. Listas como biografias, perguntas e notas usam um alinhamento comum para todos os seus itens.
 
 Cada salvamento envia somente os arquivos relacionados e cria um único commit. Se outra pessoa salvar primeiro, o CMS bloqueia a edição antiga e pede recarregamento para não apagar trabalho recente.
 
@@ -104,6 +108,7 @@ Para trocar a senha, execute novamente `npm run cms:credentials -- email@do-admi
 - URLs HTTPS;
 - exatamente um player Spotify ou YouTube por obra;
 - IDs de mídia no formato esperado;
+- alinhamentos de texto limitados às quatro opções oferecidas pelo editor;
 - três estatísticas automáticas e ordenadas na página Mulheres;
 - cobertura dos arquivos pelo CMS alternativo.
 
