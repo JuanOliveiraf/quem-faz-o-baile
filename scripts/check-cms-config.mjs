@@ -19,6 +19,8 @@ const expected = {
   sources: { path: 'src/data/sources.json', list: true }
 };
 
+const editorMetadataKeys = new Set(['textAlignments']);
+
 for (const [name, definition] of Object.entries(expected)) {
   const entry = config.content.find(item => item.name === name);
   assert(entry, `Coleção ausente no CMS: ${name}`);
@@ -32,7 +34,7 @@ for (const [name, definition] of Object.entries(expected)) {
   const data = JSON.parse(readFileSync(fileUrl, 'utf8'));
   assert.equal(Array.isArray(data), definition.list, `Formato incompatível com o CMS: ${entry.path}`);
   const records = definition.list ? data : [data];
-  const dataKeys = new Set(records.flatMap(record => Object.keys(record)));
+  const dataKeys = new Set(records.flatMap(record => Object.keys(record)).filter(key => !editorMetadataKeys.has(key)));
   const fieldKeys = new Set(entry.fields.map(field => field.name));
   assert.deepEqual([...fieldKeys].sort(), [...dataKeys].sort(), `O CMS não cobre todos os campos de ${entry.path}`);
 
