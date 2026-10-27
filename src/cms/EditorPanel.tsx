@@ -183,7 +183,7 @@ function EditorForm({ target }: { target: EditorTarget }) {
       <StringListField label="Biografia" values={artist.paragraphs} onChange={value => setDraft({ ...artist, paragraphs: value })} itemLabel="Parágrafo" {...format('paragraphs')}/>
       <SelectField label="Estado editorial" value={artist.editorialStatus} options={[{ value: 'inicial', label: 'Inicial' }, { value: 'pesquisado', label: 'Pesquisado' }, { value: 'revisado', label: 'Revisado' }]} onChange={value => setDraft({ ...artist, editorialStatus: value as Artist['editorialStatus'] })}/>
       <ToggleField label="Destacar em Mulheres no Funk" checked={artist.womenHighlight} onChange={value => setDraft({ ...artist, womenHighlight: value })}/>
-      <CheckboxGroup label="Obras relacionadas" values={content.works.map(work => ({ value: work.id, label: work.title }))} selected={artist.workIds} onChange={value => setDraft({ ...artist, workIds: value })}/>
+      <SelectField label="Música do perfil" value={artist.workIds[0] || ''} options={content.works.map(work => ({ value: work.id, label: work.title }))} onChange={value => setDraft({ ...artist, workIds: [value] })}/>
       <CheckboxGroup label="Fontes" values={content.sources.map(source => ({ value: source.id, label: source.title }))} selected={artist.sourceIds} onChange={value => setDraft({ ...artist, sourceIds: value })}/>
       <TextField label="Instagram" type="url" value={artist.instagramUrl || ''} onChange={value => setDraft({ ...artist, instagramUrl: value || null })}/>
       <TextField label="YouTube" type="url" value={artist.youtubeUrl || ''} onChange={value => setDraft({ ...artist, youtubeUrl: value || null })}/>
@@ -191,19 +191,17 @@ function EditorForm({ target }: { target: EditorTarget }) {
     </>;
   } else if (target.collection === 'works') {
     const work = draft as Work;
-    const mediaType = work.spotify ? 'spotify' : 'youtube';
     fields = <>
       <TextField label="ID" value={work.id} readOnly onChange={() => undefined}/>
       <TextField label="Título" value={work.title} onChange={value => setDraft({ ...work, title: value })} {...format('title')}/>
       <SelectField label="Década" value={work.decade} options={decadeOptions} onChange={value => setDraft({ ...work, decade: value as Work['decade'] })}/>
       <TextField label="Tipo" value={work.type} onChange={value => setDraft({ ...work, type: value })}/>
       <TextArea label="Contexto" value={work.context} onChange={value => setDraft({ ...work, context: value })} {...format('context')}/>
-      <CheckboxGroup label="Artistas" values={content.artists.map(artist => ({ value: artist.id, label: artist.name }))} selected={work.artistIds} onChange={value => setDraft({ ...work, artistIds: value })}/>
+      <SelectField label="Perfil relacionado" value={work.artistIds[0] || ''} options={content.artists.map(artist => ({ value: artist.id, label: artist.name }))} onChange={value => setDraft({ ...work, artistIds: [value] })}/>
       <CheckboxGroup label="Fontes" values={content.sources.map(source => ({ value: source.id, label: source.title }))} selected={work.sourceIds} onChange={value => setDraft({ ...work, sourceIds: value })}/>
       <ToggleField label="Conteúdo explícito" checked={work.explicit} onChange={value => setDraft({ ...work, explicit: value })}/>
-      <SelectField label="Player" value={mediaType} options={[{ value: 'spotify', label: 'Spotify' }, { value: 'youtube', label: 'YouTube' }]} onChange={value => setDraft(value === 'spotify' ? { ...work, spotify: work.spotify || { type: 'track', id: '', label: work.title }, youtube: null } : { ...work, youtube: work.youtube || { id: '', label: work.title }, spotify: null })}/>
-      {work.spotify && <><SelectField label="Tipo no Spotify" value={work.spotify.type} options={[{ value: 'track', label: 'Faixa' }, { value: 'album', label: 'Álbum' }, { value: 'playlist', label: 'Playlist' }]} onChange={value => setDraft({ ...work, spotify: { ...work.spotify!, type: value as 'track' | 'album' | 'playlist' } })}/><TextField label="ID do Spotify" value={work.spotify.id} onChange={value => setDraft({ ...work, spotify: { ...work.spotify!, id: value } })}/><TextField label="Rótulo do player" value={work.spotify.label} onChange={value => setDraft({ ...work, spotify: { ...work.spotify!, label: value } })}/></>}
-      {work.youtube && <><TextField label="ID do YouTube" value={work.youtube.id} onChange={value => setDraft({ ...work, youtube: { ...work.youtube!, id: value } })}/><TextField label="Rótulo do vídeo" value={work.youtube.label} onChange={value => setDraft({ ...work, youtube: { ...work.youtube!, label: value } })}/></>}
+      <TextField label="ID do vídeo no YouTube" value={work.youtube.id} onChange={value => setDraft({ ...work, youtube: { ...work.youtube, id: value } })} help="Use os 11 caracteres que aparecem depois de v= na URL do vídeo."/>
+      <TextField label="Rótulo do vídeo" value={work.youtube.label} onChange={value => setDraft({ ...work, youtube: { ...work.youtube, label: value } })}/>
     </>;
   } else if (target.collection === 'decades') {
     const decade = draft as Decade;

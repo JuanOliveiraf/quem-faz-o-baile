@@ -258,10 +258,10 @@
     "url": "https://commons.wikimedia.org/wiki/File:Dj_marlboro_bsb_(cropped).jpg"
   },
   {
-    "id": "media-conquista-spotify",
-    "title": "Claudinho & Buchecha — álbum com Conquista",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/album/3cVROV59MytmrSVmx5Hl1l"
+    "id": "media-conquista-youtube",
+    "title": "Claudinho & Buchecha — Conquista (clipe oficial)",
+    "credit": "Canal oficial de Buchecha no YouTube.",
+    "url": "https://www.youtube.com/watch?v=okPjGrMLmRE"
   },
   {
     "id": "media-rap-felicidade-youtube",
@@ -276,22 +276,22 @@
     "url": "https://www.youtube.com/watch?v=m_Uo24O-BbE"
   },
   {
-    "id": "media-tremendo-vacilao-spotify",
+    "id": "media-tremendo-vacilao-youtube",
     "title": "Perlla — Tremendo Vacilão",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/track/3u9Jvy8kUXW5Ms9FzjPC6d"
+    "credit": "Canal da gravadora Deck no YouTube.",
+    "url": "https://www.youtube.com/watch?v=9bNybjOT7-s"
   },
   {
-    "id": "media-fica-olhando-youtube",
-    "title": "Anitta — Fica só olhando",
-    "credit": "Anitta - Topic no YouTube.",
-    "url": "https://www.youtube.com/watch?v=zRgN7AO0snQ"
+    "id": "media-show-poderosas-youtube",
+    "title": "Anitta — Show das Poderosas (clipe oficial)",
+    "credit": "Warner Music Brasil no YouTube.",
+    "url": "https://www.youtube.com/watch?v=FGViL3CYRwg"
   },
   {
-    "id": "media-nosso-amor-spotify",
-    "title": "MC Pedrinho — Nosso Amor",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/album/0lgefaaaDLVoBfmSKFWojS"
+    "id": "media-dom-dom-dom-youtube",
+    "title": "MC Pedrinho — Dom Dom Dom",
+    "credit": "Canal DJ Batata no YouTube.",
+    "url": "https://www.youtube.com/watch?v=UWwE_6fP550"
   },
   {
     "id": "media-rabetao-youtube",
@@ -300,40 +300,52 @@
     "url": "https://www.youtube.com/watch?v=RymhzC238YI"
   },
   {
-    "id": "media-sinergia-spotify",
-    "title": "Bia Soull — PORNOGRAFIA AUDITIVA, álbum com Sinergia",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/album/0nRwEFPONzItt3VjqLzq2Q"
+    "id": "media-sinergia-youtube",
+    "title": "Bia Soull — Sinergia",
+    "credit": "Bia Soull - Topic no YouTube.",
+    "url": "https://www.youtube.com/watch?v=1IFrpttMg3k"
   },
   {
-    "id": "media-novinho-chora-spotify",
+    "id": "media-novinho-chora-youtube",
     "title": "NandaTsunami e iamlope$$ — Novinho Chora",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/album/2j4DZP2MoqtY3pscIEnYxS"
+    "credit": "Canal oficial de NandaTsunami no YouTube.",
+    "url": "https://www.youtube.com/watch?v=D1l2cDI6J-g"
   },
   {
-    "id": "media-mini-set-spotify",
-    "title": "Katy da Voz e as Abusadas — A VISITA",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/album/6DMo9730gJb8lCFiMT91Wp"
+    "id": "media-mini-set-youtube",
+    "title": "Katy da Voz e as Abusadas — mini set DAS VISITANTES",
+    "credit": "Katy da Voz e as Abusadas - Topic no YouTube.",
+    "url": "https://www.youtube.com/watch?v=Qox0HXY4_RA"
   },
   {
-    "id": "media-glamourosa-spotify",
-    "title": "MC Marcinho e DJ Marlboro — Glamourosa (Rap Glamurosa)",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/track/50ySvgpqmS9W810GuKhrvD"
+    "id": "media-glamourosa-youtube",
+    "title": "MC Marcinho — Glamurosa",
+    "credit": "Canal de MC Marcinho no YouTube.",
+    "url": "https://www.youtube.com/watch?v=am3U2a_wpV4"
   },
   {
-    "id": "media-boladona-spotify",
-    "title": "Tati Quebra Barraco e DJ Marlboro — Boladona",
-    "credit": "Spotify.",
-    "url": "https://open.spotify.com/track/19ETbp46uzm9GEoyE12toT"
+    "id": "media-boladona-youtube",
+    "title": "Tati Quebra Barraco — Boladona",
+    "credit": "Vídeo publicado no YouTube.",
+    "url": "https://www.youtube.com/watch?v=USO_Dfu-6Yg"
   },
   {
-    "id": "media-adulterio-spotify",
+    "id": "media-adulterio-youtube",
     "title": "Mr. Catra — Adultério (ao vivo)",
-    "credit": "Spotify, Mr. Catra no Estúdio Showlivre, 2017.",
-    "url": "https://open.spotify.com/track/14nUBavT6yI0ddM3EbJ7Vi"
+    "credit": "Estúdio Showlivre no YouTube, 2017.",
+    "url": "https://www.youtube.com/watch?v=QKh_B53_cfw"
+  },
+  {
+    "id": "media-ela-so-pensa-em-beijar-youtube",
+    "title": "MC Leozinho e DJ Marlboro — Ela Só Pensa em Beijar",
+    "credit": "Canal oficial de DJ Marlboro no YouTube.",
+    "url": "https://www.youtube.com/watch?v=ekg_x8EwCnc"
+  },
+  {
+    "id": "media-beijinho-ombro-youtube",
+    "title": "Valesca Popozuda — Beijinho no Ombro (clipe oficial)",
+    "credit": "Canal oficial de Valesca Popozuda no YouTube.",
+    "url": "https://www.youtube.com/watch?v=73sbW7gjBeo"
   },
   {
     "id": "media-travequeiro-youtube",

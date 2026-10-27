@@ -1,6 +1,6 @@
 # Quem Faz o Baile: arquitetura e regras
 
-Documento técnico do museu digital. Atualizado em 11/10/2026.
+Documento técnico do museu digital. Atualizado em 27/10/2026.
 
 ## 1. Escopo
 
@@ -33,7 +33,7 @@ A sala é um recorte curatorial, não o início ou o fim da carreira. A ordem do
 
 ### Perfis
 
-Cada entrada possui URL própria, biografia pesquisada, imagem com crédito, fontes e ao menos uma obra com player. Obras compartilhadas podem aparecer em mais de um perfil.
+Cada entrada possui URL própria, biografia pesquisada, imagem com crédito, fontes e uma obra representativa com player do YouTube.
 
 ### Mulheres no funk
 
@@ -47,9 +47,9 @@ Quatro núcleos: comunidade e pertencimento; política e espaço público; gêne
 
 ### Catálogo e música
 
-O catálogo reúne as 16 entradas, com busca por nome e filtro por década. O acervo musical contém 14 obras únicas, compartilhadas quando necessário entre perfis: nove usam Spotify e cinco usam vídeos incorporados do YouTube.
+O catálogo reúne as 16 entradas, com busca por nome e filtro por década. O acervo musical contém 16 obras, uma para cada perfil, todas com vídeo incorporado do YouTube.
 
-Os players só são carregados após ação do visitante. Cada obra usa exatamente uma plataforma e mantém link para a fonte externa.
+Os players só são carregados após ação do visitante. Cada obra mantém o ID validado do vídeo e um link direto para a publicação no YouTube.
 
 ## 3. Regras de negócio
 
@@ -63,7 +63,7 @@ Os players só são carregados após ação do visitante. Cada obra usa exatamen
 | RN06 | Catálogo, cronologia e exposição reutilizam o mesmo cadastro. |
 | RN07 | Relações entre obra e artista precisam existir nos dois sentidos. |
 | RN08 | Todo artista possui imagem, crédito, fonte e obra. |
-| RN09 | Toda obra possui fontes e exatamente um player validado. |
+| RN09 | Toda obra possui fontes e exatamente um vídeo validado do YouTube. |
 | RN10 | Conteúdo pesquisado ou revisado declara as fontes usadas. |
 | RN11 | Imagem exige caminho local, texto alternativo e crédito. |
 | RN12 | Links cadastrados usam HTTPS. |
@@ -131,7 +131,7 @@ O projeto funciona sem serviço pago:
 - Pages CMS gratuito;
 - conteúdo no GitHub;
 - site estático na Vercel Hobby para uso acadêmico e não comercial;
-- Spotify e YouTube por incorporação;
+- YouTube por incorporação e playlist transmídia externa opcional;
 - domínio próprio opcional.
 
 Se o Pages CMS deixar de ser usado, os JSON continuam editáveis no VS Code. Não existe migração de banco para recuperar o conteúdo.
@@ -151,5 +151,4 @@ Se o Pages CMS deixar de ser usado, os JSON continuam editáveis no VS Code. Nã
 - Pages CMS: https://pagescms.org/
 - Configuração do CMS: https://pagescms.org/docs/configuration/content/
 - Vite na Vercel: https://vercel.com/docs/frameworks/frontend/vite
-- Spotify Embeds: https://developer.spotify.com/documentation/embeds
 - YouTube Embedded Players: https://developers.google.com/youtube/player_parameters

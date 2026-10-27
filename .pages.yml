@@ -270,6 +270,7 @@ content:
         required: true
         list:
           min: 1
+          max: 1
         pattern: "^[a-z0-9-]+$"
         description: Cada ID precisa existir no cadastro de Obras.
       - name: sourceIds
@@ -324,11 +325,12 @@ content:
       - name: decade
         component: decade
       - name: artistIds
-        label: IDs dos artistas relacionados
+        label: ID do perfil relacionado
         type: string
         required: true
         list:
           min: 1
+          max: 1
         pattern: "^[a-z0-9-]+$"
         description: Cada ID precisa existir em Artistas e grupos.
       - name: type
@@ -341,39 +343,10 @@ content:
         required: true
       - name: sourceIds
         component: source_ids
-      - name: spotify
-        label: Player do Spotify
-        type: object
-        required: false
-        description: Preencha Spotify ou YouTube. Não cole código HTML.
-        fields:
-          - name: type
-            label: Tipo do recurso
-            type: select
-            required: true
-            options:
-              values:
-                - name: track
-                  label: Faixa
-                - name: album
-                  label: Álbum ou single
-                - name: playlist
-                  label: Playlist
-          - name: id
-            label: ID do Spotify
-            type: string
-            required: true
-            pattern:
-              regex: "^[A-Za-z0-9]{22}$"
-              message: O ID do Spotify deve ter 22 caracteres.
-          - name: label
-            label: Rótulo acessível
-            type: string
-            required: true
       - name: youtube
         label: Vídeo do YouTube
         type: object
-        required: false
+        required: true
         description: Use o ID de 11 caracteres da URL do vídeo.
         fields:
           - name: id

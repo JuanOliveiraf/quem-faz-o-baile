@@ -1,10 +1,9 @@
 export type DecadeId = '1990' | '2000' | '2010' | '2020';
 export type TextAlignment = 'left' | 'center' | 'right' | 'justify';
 export interface TextFormatting { textAlignments?: Record<string, TextAlignment> }
-export interface SpotifyMedia { type: 'track' | 'album' | 'playlist'; id: string; label: string }
 export interface YouTubeMedia { id: string; label: string }
 export interface Artist extends TextFormatting { id: string; slug: string; name: string; decade: DecadeId; kind: string; summary: string; paragraphs: string[]; editorialStatus: 'inicial' | 'pesquisado' | 'revisado'; womenHighlight: boolean; workIds: string[]; sourceIds: string[]; instagramUrl: string | null; youtubeUrl: string | null; image: { url: string; alt: string; credit: string } | null }
-export interface Work extends TextFormatting { id: string; title: string; decade: DecadeId; artistIds: string[]; type: string; context: string; sourceIds: string[]; spotify: SpotifyMedia | null; youtube: YouTubeMedia | null; explicit: boolean }
+export interface Work extends TextFormatting { id: string; title: string; decade: DecadeId; artistIds: string[]; type: string; context: string; sourceIds: string[]; youtube: YouTubeMedia; explicit: boolean }
 export interface Decade extends TextFormatting { id: DecadeId; label: string; title: string; description: string; artistIds: string[] }
 export interface Topic extends TextFormatting { id: string; title: string; subtitle: string; text: string[]; questions: string[]; sourceIds: string[] }
 export interface Source extends TextFormatting { id: string; title: string; credit: string; url: string | null }

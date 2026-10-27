@@ -10,14 +10,12 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-conquista-spotify"
+      "media-conquista-youtube"
     ],
-    "spotify": {
-      "type": "album",
-      "id": "3cVROV59MytmrSVmx5Hl1l",
-      "label": "Álbum Claudinho & Buchecha — inclui Conquista"
+    "youtube": {
+      "id": "okPjGrMLmRE",
+      "label": "Claudinho & Buchecha — Conquista (clipe oficial)"
     },
-    "youtube": null,
     "explicit": false
   },
   {
@@ -25,8 +23,7 @@
     "title": "Rap da Felicidade",
     "decade": "1990",
     "artistIds": [
-      "cidinho-doca",
-      "dj-marlboro"
+      "cidinho-doca"
     ],
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
@@ -34,7 +31,6 @@
       "projeto",
       "media-rap-felicidade-youtube"
     ],
-    "spotify": null,
     "youtube": {
       "id": "7pD8k2zaLqk",
       "label": "Cidinho & Doca — Rap da Felicidade (vídeo oficial)"
@@ -46,8 +42,7 @@
     "title": "Agora Tô Solteira",
     "decade": "2000",
     "artistIds": [
-      "furacao-2000",
-      "valesca-popozuda"
+      "furacao-2000"
     ],
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
@@ -55,10 +50,45 @@
       "projeto",
       "media-agora-solteira-youtube"
     ],
-    "spotify": null,
     "youtube": {
       "id": "m_Uo24O-BbE",
       "label": "Furacão 2000 — Agora Tô Solteira"
+    },
+    "explicit": false
+  },
+  {
+    "id": "ela-so-pensa-em-beijar",
+    "title": "Ela Só Pensa em Beijar (Se Ela Dança, Eu Danço)",
+    "decade": "2000",
+    "artistIds": [
+      "dj-marlboro"
+    ],
+    "type": "faixa produzida",
+    "context": "Sucesso de MC Leozinho produzido por DJ Marlboro, publicado no canal oficial do DJ no YouTube.",
+    "sourceIds": [
+      "media-ela-so-pensa-em-beijar-youtube"
+    ],
+    "youtube": {
+      "id": "ekg_x8EwCnc",
+      "label": "MC Leozinho e DJ Marlboro — Ela Só Pensa em Beijar"
+    },
+    "explicit": false
+  },
+  {
+    "id": "beijinho-no-ombro",
+    "title": "Beijinho no Ombro",
+    "decade": "2010",
+    "artistIds": [
+      "valesca-popozuda"
+    ],
+    "type": "faixa",
+    "context": "Primeiro single da carreira solo de Valesca Popozuda e seu videoclipe oficial mais visto no YouTube.",
+    "sourceIds": [
+      "media-beijinho-ombro-youtube"
+    ],
+    "youtube": {
+      "id": "73sbW7gjBeo",
+      "label": "Valesca Popozuda — Beijinho no Ombro (clipe oficial)"
     },
     "explicit": false
   },
@@ -73,19 +103,17 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-tremendo-vacilao-spotify"
+      "media-tremendo-vacilao-youtube"
     ],
-    "spotify": {
-      "type": "track",
-      "id": "3u9Jvy8kUXW5Ms9FzjPC6d",
-      "label": "Tremendo Vacilão"
+    "youtube": {
+      "id": "9bNybjOT7-s",
+      "label": "Perlla — Tremendo Vacilão"
     },
-    "youtube": null,
     "explicit": false
   },
   {
-    "id": "fica-so-olhando",
-    "title": "Fica só Olhando",
+    "id": "show-das-poderosas",
+    "title": "Show das Poderosas",
     "decade": "2010",
     "artistIds": [
       "anitta"
@@ -94,18 +122,17 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-fica-olhando-youtube"
+      "media-show-poderosas-youtube"
     ],
-    "spotify": null,
     "youtube": {
-      "id": "zRgN7AO0snQ",
-      "label": "Anitta — Fica só olhando"
+      "id": "FGViL3CYRwg",
+      "label": "Anitta — Show das Poderosas (clipe oficial)"
     },
     "explicit": false
   },
   {
-    "id": "nosso-amor",
-    "title": "Nosso Amor",
+    "id": "dom-dom-dom",
+    "title": "Dom Dom Dom",
     "decade": "2010",
     "artistIds": [
       "mc-pedrinho"
@@ -114,15 +141,13 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-nosso-amor-spotify"
+      "media-dom-dom-dom-youtube"
     ],
-    "spotify": {
-      "type": "album",
-      "id": "0lgefaaaDLVoBfmSKFWojS",
-      "label": "Single Nosso Amor"
+    "youtube": {
+      "id": "UWwE_6fP550",
+      "label": "MC Pedrinho — Dom Dom Dom"
     },
-    "youtube": null,
-    "explicit": false
+    "explicit": true
   },
   {
     "id": "rabetao",
@@ -137,7 +162,6 @@
       "projeto",
       "media-rabetao-youtube"
     ],
-    "spotify": null,
     "youtube": {
       "id": "RymhzC238YI",
       "label": "MC Lan — Rabetão (KondZilla)"
@@ -155,14 +179,12 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-sinergia-spotify"
+      "media-sinergia-youtube"
     ],
-    "spotify": {
-      "type": "album",
-      "id": "0nRwEFPONzItt3VjqLzq2Q",
-      "label": "Álbum PORNOGRAFIA AUDITIVA — inclui Sinergia"
+    "youtube": {
+      "id": "1IFrpttMg3k",
+      "label": "Bia Soull — Sinergia"
     },
-    "youtube": null,
     "explicit": true
   },
   {
@@ -176,14 +198,12 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-novinho-chora-spotify"
+      "media-novinho-chora-youtube"
     ],
-    "spotify": {
-      "type": "album",
-      "id": "2j4DZP2MoqtY3pscIEnYxS",
-      "label": "Single Novinho Chora"
+    "youtube": {
+      "id": "D1l2cDI6J-g",
+      "label": "NandaTsunami — Novinho Chora"
     },
-    "youtube": null,
     "explicit": true
   },
   {
@@ -197,14 +217,12 @@
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
       "projeto",
-      "media-mini-set-spotify"
+      "media-mini-set-youtube"
     ],
-    "spotify": {
-      "type": "album",
-      "id": "6DMo9730gJb8lCFiMT91Wp",
-      "label": "Álbum A VISITA — inclui mini set DAS VISITANTES"
+    "youtube": {
+      "id": "Qox0HXY4_RA",
+      "label": "Katy da Voz e as Abusadas — mini set DAS VISITANTES"
     },
-    "youtube": null,
     "explicit": true
   },
   {
@@ -215,16 +233,14 @@
       "mc-marcinho"
     ],
     "type": "faixa",
-    "context": "Registro disponível no Spotify creditado a MC Marcinho e DJ Marlboro.",
+    "context": "Um dos maiores sucessos de MC Marcinho, em registro publicado no canal do artista no YouTube.",
     "sourceIds": [
-      "media-glamourosa-spotify"
+      "media-glamourosa-youtube"
     ],
-    "spotify": {
-      "type": "track",
-      "id": "50ySvgpqmS9W810GuKhrvD",
-      "label": "Glamourosa (Rap Glamurosa)"
+    "youtube": {
+      "id": "am3U2a_wpV4",
+      "label": "MC Marcinho — Glamurosa"
     },
-    "youtube": null,
     "explicit": false
   },
   {
@@ -235,16 +251,14 @@
       "tati-quebra-barraco"
     ],
     "type": "faixa",
-    "context": "Registro disponível no Spotify creditado a Tati Quebra Barraco e DJ Marlboro.",
+    "context": "Faixa de destaque da trajetória de Tati Quebra Barraco, publicada em vídeo no YouTube.",
     "sourceIds": [
-      "media-boladona-spotify"
+      "media-boladona-youtube"
     ],
-    "spotify": {
-      "type": "track",
-      "id": "19ETbp46uzm9GEoyE12toT",
-      "label": "Boladona"
+    "youtube": {
+      "id": "USO_Dfu-6Yg",
+      "label": "Tati Quebra Barraco — Boladona"
     },
-    "youtube": null,
     "explicit": true
   },
   {
@@ -255,16 +269,14 @@
       "mc-catra"
     ],
     "type": "registro ao vivo",
-    "context": "Registro de Mr. Catra no Estúdio Showlivre, publicado no Spotify em 2017.",
+    "context": "Registro de Mr. Catra no Estúdio Showlivre, publicado no YouTube em 2017.",
     "sourceIds": [
-      "media-adulterio-spotify"
+      "media-adulterio-youtube"
     ],
-    "spotify": {
-      "type": "track",
-      "id": "14nUBavT6yI0ddM3EbJ7Vi",
-      "label": "Adultério — ao vivo"
+    "youtube": {
+      "id": "QKh_B53_cfw",
+      "label": "Mr. Catra — Adultério (ao vivo no Estúdio Showlivre)"
     },
-    "youtube": null,
     "explicit": true
   },
   {
@@ -279,7 +291,6 @@
     "sourceIds": [
       "media-travequeiro-youtube"
     ],
-    "spotify": null,
     "youtube": {
       "id": "LDZi4627zqg",
       "label": "Irmãs de Pau — Travequeiro"

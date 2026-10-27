@@ -1,7 +1,6 @@
 import type { ContentBundle } from '../types/content.js';
 
 const idPattern = /^[a-z0-9-]+$/;
-const spotifyPattern = /^[a-zA-Z0-9]{22}$/;
 const youtubePattern = /^[a-zA-Z0-9_-]{11}$/;
 
 function required(value: unknown, label: string, errors: string[]) {
@@ -53,6 +52,8 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   const decadeIds = new Set(decades.map(row => row.id));
   const roomArtists: string[] = [];
 
+  if (works.length !== artists.length) errors.push('Cada artista precisa ter uma obra exclusiva.');
+
   if (decades.length !== 4) errors.push('A cronologia precisa manter quatro décadas.');
   decades.forEach(decade => {
     validTextAlignments(decade.textAlignments, decade.id, errors);
@@ -78,7 +79,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
     if (!artist.paragraphs.length) errors.push(`A biografia de ${artist.id} está vazia.`);
     artist.paragraphs.forEach((text, index) => required(text, `Parágrafo ${index + 1} de ${artist.id}`, errors));
     if (!['inicial', 'pesquisado', 'revisado'].includes(artist.editorialStatus)) errors.push(`Estado editorial inválido em ${artist.id}.`);
-    if (!artist.workIds.length) errors.push(`${artist.name} precisa ter pelo menos uma obra.`);
+    if (artist.workIds.length !== 1) errors.push(`${artist.name} precisa ter exatamente uma obra.`);
     artist.workIds.forEach(id => {
       if (!workIds.has(id)) errors.push(`Obra ${id} não existe.`);
       if (!works.find(work => work.id === id)?.artistIds.includes(artist.id)) errors.push(`A relação entre ${artist.id} e ${id} está incompleta.`);
@@ -99,15 +100,14 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
     required(work.title, `Título da obra ${work.id}`, errors);
     required(work.type, `Tipo da obra ${work.id}`, errors);
     required(work.context, `Contexto da obra ${work.id}`, errors);
-    if (!work.artistIds.length) errors.push(`${work.title} precisa ter um artista.`);
+    if (work.artistIds.length !== 1) errors.push(`${work.title} precisa estar ligada a exatamente um perfil.`);
     work.artistIds.forEach(id => {
       if (!artistIds.has(id)) errors.push(`Artista ${id} não existe.`);
       if (!artists.find(artist => artist.id === id)?.workIds.includes(work.id)) errors.push(`A relação entre ${work.id} e ${id} está incompleta.`);
     });
     work.sourceIds.forEach(id => { if (!sourceIds.has(id)) errors.push(`Fonte ${id} não existe.`); });
-    if (Boolean(work.spotify) === Boolean(work.youtube)) errors.push(`${work.title} precisa usar Spotify ou YouTube, nunca os dois.`);
-    if (work.spotify && (!['track', 'album', 'playlist'].includes(work.spotify.type) || !spotifyPattern.test(work.spotify.id))) errors.push(`Player do Spotify inválido em ${work.title}.`);
-    if (work.youtube && !youtubePattern.test(work.youtube.id)) errors.push(`Player do YouTube inválido em ${work.title}.`);
+    if (!work.youtube || !youtubePattern.test(work.youtube.id)) errors.push(`Player do YouTube inválido em ${work.title}.`);
+    if (work.youtube) required(work.youtube.label, `Rótulo do vídeo de ${work.title}`, errors);
   });
 
   topics.forEach(topic => {

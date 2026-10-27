@@ -1,6 +1,6 @@
 # CMS visual do Quem Faz o Baile
 
-Guia de configuração e operação do editor administrativo integrado ao museu digital. Atualizado em 19/10/2026.
+Guia de configuração e operação do editor administrativo integrado ao museu digital. Atualizado em 27/10/2026.
 
 **Estado:** configurado e publicado em produção pela Vercel.
 
@@ -26,7 +26,7 @@ O Pages CMS continua configurado em `.pages.yml` apenas como painel alternativo 
 - nome, resumo, biografia, foto, crédito, fontes e links de cada artista;
 - destaque de artistas na exposição Mulheres no Funk;
 - título, introdução, nota editorial, cabeçalho da lista e legendas das estatísticas de Mulheres no Funk;
-- título, contexto, relações e player Spotify ou YouTube das obras;
+- título, contexto, relações e vídeo do YouTube de cada obra;
 - pesquisas, perguntas e fontes da área Olhares;
 - ordem dos quatro artistas dentro de cada década;
 - canais e links do projeto.
@@ -106,8 +106,8 @@ Para trocar a senha, execute novamente `npm run cms:credentials -- email@do-admi
 - uma obra e uma imagem para cada perfil;
 - texto alternativo e crédito de imagem;
 - URLs HTTPS;
-- exatamente um player Spotify ou YouTube por obra;
-- IDs de mídia no formato esperado;
+- exatamente um vídeo do YouTube por obra;
+- IDs de vídeo do YouTube com 11 caracteres;
 - alinhamentos de texto limitados às quatro opções oferecidas pelo editor;
 - três estatísticas automáticas e ordenadas na página Mulheres;
 - cobertura dos arquivos pelo CMS alternativo.

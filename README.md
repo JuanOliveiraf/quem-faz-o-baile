@@ -42,7 +42,7 @@ Para configurar a conta administrativa e a integração com o GitHub, siga [Quem
 | Área | Arquivo |
 |---|---|
 | Artistas, biografias, imagens e links | `src/data/artists.json` |
-| Obras, Spotify e YouTube | `src/data/works.json` |
+| Obras e vídeos do YouTube | `src/data/works.json` |
 | Décadas e ordem dos cards | `src/data/decades.json` |
 | Pesquisas e perguntas | `src/data/topics.json` |
 | Fontes bibliográficas | `src/data/sources.json` |
