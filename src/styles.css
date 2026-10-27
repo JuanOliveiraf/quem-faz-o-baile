@@ -10,7 +10,8 @@
 @media(max-width:430px){.detail-summary{font-size:18px}}
 
 /* Exposição Mulheres no Funk: direção sóbria e editorial. */
-.women-feature{background:#ece8e4;color:var(--ink);border-block:1px solid #c8c1bc}
+:root{--women-background:#ece8e4}
+.women-feature{background:var(--women-background);color:var(--ink);border-block:1px solid #c8c1bc}
 .women-feature .eyebrow{color:#8e304d}
 .women-hero .eyebrow{color:#8e304d}
 .women-feature-head{display:grid;grid-template-columns:1fr 1fr;gap:84px;align-items:end}
@@ -32,7 +33,7 @@
 .woman-navigation-icon{flex:none;color:#8e304d;transition:transform .2s}
 .woman-name:hover .woman-navigation-icon,.woman-row:hover .woman-navigation-icon{transform:translateX(3px)}
 .woman-name:hover{padding-left:10px;color:#8e304d}
-.women-hero{display:grid;grid-template-columns:1.25fr .75fr;min-height:470px;padding-top:70px;padding-bottom:70px;background:#ded6d8;color:var(--ink);border-bottom:1px solid #b8adaf}
+.women-hero{display:grid;grid-template-columns:1.25fr .75fr;min-height:470px;padding-top:70px;padding-bottom:70px;background:var(--women-background);color:var(--ink);border-bottom:1px solid #b8adaf}
 .women-hero-copy{display:flex;flex-direction:column;justify-content:center;padding-right:8%}
 .women-hero h1{max-width:760px;margin-bottom:28px;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:72px;font-weight:900;line-height:1;letter-spacing:0}
 .women-hero .lead{max-width:680px;font-size:23px}
