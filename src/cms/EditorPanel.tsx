@@ -61,7 +61,6 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
     <StringListField label="Linhas do título" values={draft.womenSection.titleLines} onChange={value => update('womenSection', { ...draft.womenSection, titleLines: value })} itemLabel="Linha" {...format('women.title')}/>
     <TextField label="Chamada" value={draft.womenSection.lead} onChange={value => update('womenSection', { ...draft.womenSection, lead: value })} {...format('women.lead')}/>
     <TextArea label="Introdução" value={draft.womenIntro} onChange={value => update('womenIntro', value)} {...format('women.intro')}/>
-    <TextField label="Texto do botão" value={draft.womenSection.ctaLabel} onChange={value => update('womenSection', { ...draft.womenSection, ctaLabel: value })}/>
     <StringListField label="Legenda da estatística na página inicial" values={draft.womenSection.statLabelLines} onChange={value => update('womenSection', { ...draft.womenSection, statLabelLines: value })} itemLabel="Linha"/>
     <TextField label="Título da página" value={draft.womenTitle} onChange={value => update('womenTitle', value)} {...format('women.pageTitle')}/>
     <TextArea label="Nota editorial" value={draft.womenEditorialNote} onChange={value => update('womenEditorialNote', value)} {...format('women.editorialNote')}/>

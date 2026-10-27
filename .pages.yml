@@ -136,7 +136,6 @@ content:
           - { name: eyebrow, label: Identificação, type: string, required: true }
           - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
           - { name: lead, label: Chamada, type: string, required: true }
-          - { name: ctaLabel, label: Texto do botão, type: string, required: true }
           - { name: statLabelLines, label: Linhas da legenda numérica, type: string, required: true, list: true }
       - name: womenPage
         label: Página Mulheres no Funk

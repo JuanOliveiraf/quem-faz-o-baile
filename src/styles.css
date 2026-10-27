@@ -10,7 +10,7 @@
 @media(max-width:430px){.detail-summary{font-size:18px}}
 
 /* Exposição Mulheres no Funk: direção sóbria e editorial. */
-:root{--women-background:#ece8e4}
+:root{--women-background:var(--paper)}
 .women-feature{background:var(--women-background);color:var(--ink);border-block:1px solid #c8c1bc}
 .women-feature .eyebrow{color:#8e304d}
 .women-hero .eyebrow{color:#8e304d}
@@ -22,7 +22,6 @@
 .women-stat{display:flex;align-items:center;gap:13px;margin:28px 0}
 .women-stat strong{font-size:46px;line-height:1;font-weight:900;color:#8e304d}
 .women-stat span{font-size:11px;font-weight:800;line-height:1.3;text-transform:uppercase}
-.women-button{background:#8e304d;border-color:#8e304d;color:white}
 .women-by-decade{margin-top:58px;border-top:1px solid #aaa19b}
 .women-decade{display:grid;grid-template-columns:150px minmax(0,1fr);gap:34px;padding:24px 4px;border-bottom:1px solid #c3bbb6}
 .women-decade-year{margin:0;padding-top:16px;font-size:14px;font-weight:900;text-transform:uppercase}
