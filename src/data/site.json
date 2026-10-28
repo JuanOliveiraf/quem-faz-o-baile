@@ -73,11 +73,10 @@
   "topicsSection": {
     "eyebrow": "03 / ACERVO DE PESQUISAS",
     "titleLines": [
-      "Olhares do funk."
+      "O Funk em discussão "
     ],
     "descriptionLines": [
-      "Comunidade, política, corpo e cultura.",
-      "Explore as perguntas de cada pesquisa."
+      "Conheça quatro temas relacionados à história e à cultura do funk brasileiro. Nesta seção, apresentamos pesquisas sobre questões sociais, preconceito, liberdade de expressão e transformações do gênero, com acontecimentos históricos e diferentes perspectivas para reflexão."
     ]
   },
   "catalogSection": {
@@ -130,6 +129,7 @@
   },
   "textAlignments": {
     "hero.intro": "justify",
-    "women.intro": "justify"
+    "women.intro": "justify",
+    "topics.description": "justify"
   }
 }
