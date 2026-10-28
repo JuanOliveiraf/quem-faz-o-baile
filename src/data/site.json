@@ -130,6 +130,7 @@
   "textAlignments": {
     "hero.intro": "justify",
     "women.intro": "justify",
-    "topics.description": "justify"
+    "topics.description": "justify",
+    "topics.title": "justify"
   }
 }
