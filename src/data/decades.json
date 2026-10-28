@@ -32,14 +32,17 @@
   {
     "id": "2010",
     "label": "2010s",
-    "title": "Identidade, visibilidade e circulação.",
-    "description": "Trajetórias selecionadas para pensar as transformações na produção e no consumo musical.",
+    "title": "A expansão do funk na era digital",
+    "description": "Nos anos 2010, o funk ampliou seu alcance por meio da internet, dos videoclipes e das plataformas digitais. A década foi marcada pelo funk ostentação, que abordava luxo, consumo e ascensão social, e pela aproximação com o pop. Temas como relacionamentos, sensualidade e sexualidade continuaram presentes, enquanto novas batidas e estilos conquistavam públicos de diferentes regiões do Brasil.\n\nPara representar essa década, foram selecionados Anitta, que aproximou o funk do pop; Valesca Popozuda, destaque do protagonismo feminino; MC Pedrinho, associado ao funk ousadia, marcado por letras de conotação sexual; e MC Lan, conhecido pelo humor, pelas provocações e pelas batidas dançantes. ",
     "artistIds": [
       "anitta",
       "valesca-popozuda",
       "mc-pedrinho",
       "mc-lan"
-    ]
+    ],
+    "textAlignments": {
+      "description": "justify"
+    }
   },
   {
     "id": "2020",
