@@ -18,7 +18,7 @@
   {
     "id": "politica",
     "title": "Sexualidade e liberdade de expressão",
-    "subtitle": "Sexualidade e liberdade de expressão\n",
+    "subtitle": "Por que as letras de funk geram tantas discussões?",
     "text": [
       "A proposta do grupo aborda as disputas em torno dos bailes, do preconceito e do reconhecimento cultural. O acervo desta sala será dedicado aos diferentes olhares sobre a presença do funk no espaço público.",
       "As leituras devem contextualizar os acontecimentos e distinguir a análise do grupo das informações documentadas."
@@ -29,7 +29,10 @@
     ],
     "sourceIds": [
       "projeto"
-    ]
+    ],
+    "textAlignments": {
+      "subtitle": "justify"
+    }
   },
   {
     "id": "genero",
