@@ -1,7 +1,7 @@
 import { Plus, Save, Trash2, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import type { Artist, Channel, ContentBundle, Decade, SiteContent, Source, TextAlignment, Topic, Work } from '../types/content';
-import { getTextAlignment, withTextAlignment } from '../services/textFormatting';
+import { getTextAlignment, getTextColor, withTextAlignment, withTextColor } from '../services/textFormatting';
 import { useCms, type EditorTarget, type MediaDraft } from './CmsContext';
 import { CheckboxGroup, ImageUpload, ReorderField, SelectField, StringListField, TextArea, TextField, ToggleField, imageFileToDraft } from './FormFields';
 
@@ -35,7 +35,7 @@ function updateExperienceCount(eyebrow: string, count: number): string {
 
 function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreviewUrl }: { draft: SiteContent; setDraft: (value: SiteContent) => void; section?: string; setMedia: (media: MediaDraft | undefined) => void; previewUrl?: string; setPreviewUrl: (url: string) => void }) {
   const update = <K extends keyof SiteContent>(key: K, value: SiteContent[K]) => setDraft({ ...draft, [key]: value });
-  const format = (key: string) => ({ alignment: getTextAlignment(draft, key), onAlignmentChange: (alignment: TextAlignment) => setDraft(withTextAlignment(draft, key, alignment)) });
+  const format = (key: string) => ({ alignment: getTextAlignment(draft, key), onAlignmentChange: (alignment: TextAlignment) => setDraft(withTextAlignment(draft, key, alignment)), color: getTextColor(draft, key), onColorChange: (color?: string) => setDraft(withTextColor(draft, key, color)) });
   const current = section || 'general';
   if (current === 'navigation') return <>
     <p className="cms-form-note">Edite os nomes exibidos no cabeçalho. O destino de cada link permanece protegido.</p>
@@ -68,7 +68,7 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
     <StringListField label="Linhas do título" values={draft.womenSection.titleLines} onChange={value => update('womenSection', { ...draft.womenSection, titleLines: value })} itemLabel="Linha" {...format('women.title')}/>
     <TextField label="Chamada" value={draft.womenSection.lead} onChange={value => update('womenSection', { ...draft.womenSection, lead: value })} {...format('women.lead')}/>
     <TextArea label="Introdução" value={draft.womenIntro} onChange={value => update('womenIntro', value)} {...format('women.intro')}/>
-    <StringListField label="Legenda da estatística na página inicial" values={draft.womenSection.statLabelLines} onChange={value => update('womenSection', { ...draft.womenSection, statLabelLines: value })} itemLabel="Linha"/>
+    <StringListField label="Legenda da estatística na página inicial" values={draft.womenSection.statLabelLines} onChange={value => update('womenSection', { ...draft.womenSection, statLabelLines: value })} itemLabel="Linha" {...format('women.stat')}/>
   </>;
   if (current === 'topics') return <>
     <TextField label="Identificação" value={draft.topicsSection.eyebrow} onChange={value => update('topicsSection', { ...draft.topicsSection, eyebrow: value })}/>
@@ -104,7 +104,7 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
       <TextField label="Identificação" value={draft.aboutSection.eyebrow} onChange={value => update('aboutSection', { ...draft.aboutSection, eyebrow: value })}/>
       <StringListField label="Linhas do título" values={draft.aboutSection.titleLines} onChange={value => update('aboutSection', { ...draft.aboutSection, titleLines: value })} itemLabel="Linha" {...format('about.title')}/>
       {draft.aboutSection.channels.length > 1 && <ReorderField label="Ordem das experiências" ids={draft.aboutSection.channels.map(channel => channel.id)} labels={labels} onChange={ids => setChannels(ids.map(id => draft.aboutSection.channels.find(channel => channel.id === id)!))}/>}
-      {draft.aboutSection.channels.map((channel, index) => { const channelFormat = (key: string) => ({ alignment: getTextAlignment(channel, key), onAlignmentChange: (alignment: TextAlignment) => updateChannel(index, withTextAlignment(channel, key, alignment)) }); return <fieldset className="cms-fieldset cms-subgroup" key={channel.id}><legend>Experiência {index + 1}</legend><div className="cms-subgroup-heading"><strong>{channel.title || 'Sem título'}</strong><button type="button" className="cms-delete-button" onClick={() => removeChannel(index)}><Trash2 size={16}/> Excluir experiência</button></div><TextField label="Identificação" value={channel.label} onChange={value => updateChannel(index, { ...channel, label: value })}/><TextField label="Título" value={channel.title} onChange={value => updateChannel(index, { ...channel, title: value })} {...channelFormat('title')}/><TextArea label="Texto" value={channel.text} onChange={value => updateChannel(index, { ...channel, text: value })} {...channelFormat('text')}/><TextField label="Texto do link" value={channel.linkLabel || ''} onChange={value => updateChannel(index, { ...channel, linkLabel: value || null })}/><TextField label="URL do link" type="url" value={channel.linkUrl || ''} onChange={value => updateChannel(index, { ...channel, linkUrl: value || null })}/></fieldset>; })}
+      {draft.aboutSection.channels.map((channel, index) => { const channelFormat = (key: string) => ({ alignment: getTextAlignment(channel, key), onAlignmentChange: (alignment: TextAlignment) => updateChannel(index, withTextAlignment(channel, key, alignment)), color: getTextColor(channel, key), onColorChange: (color?: string) => updateChannel(index, withTextColor(channel, key, color)) }); return <fieldset className="cms-fieldset cms-subgroup" key={channel.id}><legend>Experiência {index + 1}</legend><div className="cms-subgroup-heading"><strong>{channel.title || 'Sem título'}</strong><button type="button" className="cms-delete-button" onClick={() => removeChannel(index)}><Trash2 size={16}/> Excluir experiência</button></div><TextField label="Identificação" value={channel.label} onChange={value => updateChannel(index, { ...channel, label: value })}/><TextField label="Título" value={channel.title} onChange={value => updateChannel(index, { ...channel, title: value })} {...channelFormat('title')}/><TextArea label="Texto" value={channel.text} onChange={value => updateChannel(index, { ...channel, text: value })} {...channelFormat('text')}/><TextField label="Texto do link" value={channel.linkLabel || ''} onChange={value => updateChannel(index, { ...channel, linkLabel: value || null })}/><TextField label="URL do link" type="url" value={channel.linkUrl || ''} onChange={value => updateChannel(index, { ...channel, linkUrl: value || null })}/></fieldset>; })}
       <button type="button" className="cms-secondary-button" onClick={addChannel}><Plus size={16}/> Adicionar experiência</button>
     </>;
   }
@@ -131,7 +131,7 @@ function EditorForm({ target }: { target: EditorTarget }) {
 
   useEffect(() => () => { if (previewUrl) URL.revokeObjectURL(previewUrl); }, [previewUrl]);
   if (!draft) return null;
-  const format = (key: string) => ({ alignment: getTextAlignment(draft, key), onAlignmentChange: (alignment: TextAlignment) => setDraft(withTextAlignment(draft, key, alignment)) });
+  const format = (key: string) => ({ alignment: getTextAlignment(draft, key), onAlignmentChange: (alignment: TextAlignment) => setDraft(withTextAlignment(draft, key, alignment)), color: getTextColor(draft, key), onColorChange: (color?: string) => setDraft(withTextColor(draft, key, color)) });
 
   const save = async () => {
     setError('');

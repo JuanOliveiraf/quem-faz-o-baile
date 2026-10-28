@@ -33,6 +33,17 @@ function validTextAlignments(value: unknown, label: string, errors: string[]) {
   });
 }
 
+function validTextColors(value: unknown, label: string, errors: string[]) {
+  if (value === undefined) return;
+  if (!value || typeof value !== 'object' || Array.isArray(value)) {
+    errors.push(`As cores de ${label} são inválidas.`);
+    return;
+  }
+  Object.values(value).forEach(color => {
+    if (!/^#[0-9a-f]{6}$/i.test(String(color))) errors.push(`Cor de texto inválida em ${label}.`);
+  });
+}
+
 export function validateContentBundle(bundle: ContentBundle): string[] {
   const errors: string[] = [];
   const { artists, works, decades, topics, sources, site } = bundle;
@@ -57,6 +68,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   if (decades.length !== 4) errors.push('A cronologia precisa manter quatro décadas.');
   decades.forEach(decade => {
     validTextAlignments(decade.textAlignments, decade.id, errors);
+    validTextColors(decade.textColors, decade.id, errors);
     required(decade.label, `Rótulo da década ${decade.id}`, errors);
     required(decade.title, `Título da década ${decade.id}`, errors);
     required(decade.description, `Descrição da década ${decade.id}`, errors);
@@ -71,6 +83,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
 
   artists.forEach(artist => {
     validTextAlignments(artist.textAlignments, artist.id, errors);
+    validTextColors(artist.textColors, artist.id, errors);
     required(artist.name, `Nome de ${artist.id}`, errors);
     required(artist.kind, `Tipo de ${artist.id}`, errors);
     required(artist.summary, `Resumo de ${artist.id}`, errors);
@@ -97,6 +110,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
 
   works.forEach(work => {
     validTextAlignments(work.textAlignments, work.id, errors);
+    validTextColors(work.textColors, work.id, errors);
     required(work.title, `Título da obra ${work.id}`, errors);
     required(work.type, `Tipo da obra ${work.id}`, errors);
     required(work.context, `Contexto da obra ${work.id}`, errors);
@@ -112,6 +126,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
 
   topics.forEach(topic => {
     validTextAlignments(topic.textAlignments, topic.id, errors);
+    validTextColors(topic.textColors, topic.id, errors);
     required(topic.title, `Título da pesquisa ${topic.id}`, errors);
     required(topic.subtitle, `Abertura da pesquisa ${topic.id}`, errors);
     if (!topic.text.length || !topic.questions.length) errors.push(`A pesquisa ${topic.id} está incompleta.`);
@@ -119,6 +134,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   });
   sources.forEach(source => {
     validTextAlignments(source.textAlignments, source.id, errors);
+    validTextColors(source.textColors, source.id, errors);
     required(source.title, `Título da fonte ${source.id}`, errors);
     required(source.credit, `Crédito da fonte ${source.id}`, errors);
     secureUrl(source.url, `URL da fonte ${source.id}`, errors);
@@ -126,6 +142,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
 
   required(site.title, 'Título do site', errors);
   validTextAlignments(site.textAlignments, 'site', errors);
+  validTextColors(site.textColors, 'site', errors);
   required(site.navigation?.timeline, 'Nome Cronologia no cabeçalho', errors);
   required(site.navigation?.women, 'Nome Mulheres no cabeçalho', errors);
   required(site.navigation?.topics, 'Nome Olhares no cabeçalho', errors);
@@ -141,6 +158,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
     uniqueIds(site.aboutSection.channels, 'experiências do projeto', errors);
     site.aboutSection.channels.forEach((channel, index) => {
       validTextAlignments(channel.textAlignments, `experiência ${index + 1}`, errors);
+      validTextColors(channel.textColors, `experiência ${index + 1}`, errors);
       secureUrl(channel.linkUrl, `URL da experiência ${index + 1}`, errors);
     });
   }

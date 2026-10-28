@@ -1,6 +1,6 @@
 export type DecadeId = '1990' | '2000' | '2010' | '2020';
 export type TextAlignment = 'left' | 'center' | 'right' | 'justify';
-export interface TextFormatting { textAlignments?: Record<string, TextAlignment> }
+export interface TextFormatting { textAlignments?: Record<string, TextAlignment>; textColors?: Record<string, string> }
 export interface YouTubeMedia { id: string; label: string }
 export interface Artist extends TextFormatting { id: string; slug: string; name: string; decade: DecadeId; kind: string; summary: string; paragraphs: string[]; editorialStatus: 'inicial' | 'pesquisado' | 'revisado'; womenHighlight: boolean; workIds: string[]; sourceIds: string[]; instagramUrl: string | null; youtubeUrl: string | null; image: { url: string; alt: string; credit: string } | null }
 export interface Work extends TextFormatting { id: string; title: string; decade: DecadeId; artistIds: string[]; type: string; context: string; sourceIds: string[]; youtube: YouTubeMedia; explicit: boolean }

@@ -19,7 +19,7 @@ const expected = {
   sources: { path: 'src/data/sources.json', list: true }
 };
 
-const editorMetadataKeys = new Set(['textAlignments']);
+const editorMetadataKeys = new Set(['textAlignments', 'textColors']);
 
 for (const [name, definition] of Object.entries(expected)) {
   const entry = config.content.find(item => item.name === name);
