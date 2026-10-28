@@ -458,10 +458,15 @@
     "name": "Katy da Voz e as Abusadas",
     "decade": "2020",
     "kind": "grupo",
-    "summary": "Trio do Grajaú que mistura funk, música eletrônica, punk, humor e performance.",
+    "summary": "Grupo musical paulistano que mistura funk,\nmúsica eletrônica e referências punk e teatrais,\nutilizando provocação, humor e estética de\nhorror para desafiar convenções sociais.",
     "paragraphs": [
-      "Katy da Voz e as Abusadas é um trio formado em 2019 no Grajaú, na Zona Sul de São Paulo, por Katy da Voz, Palladino Proibida e Degoncé Rabetão. O grupo articula funk, música eletrônica, punk, humor e performance a partir de uma identidade ligada ao território periférico.",
-      "A produção do trio inclui singles, remixes, apresentações e colaborações com artistas da cena independente. Em 2024, o grupo integrou a programação do Festival Grito Periférico, realizado pela Secretaria Municipal de Cultura de São Paulo. “mini set DAS VISITANTES” é a obra escolhida pelo grupo Omnia para este acervo."
+      "Katy da Voz e as Abusadas é um grupo musical\nformado por Katy da Voz, Palladino Proibida e\nDegoncé Rabetão, associado à cena\n-underground de São Paulo. Com raízes no\nGrajaú, na zona sul da cidade, o trio desenvolveu\numa identidade artística marcada por letras\nprovocativas, performances teatrais e pela\nmistura de funk com música eletrônica e\nreferências punk.",
+      "A partir de apresentações na cena alternativa\npaulistana, o grupo ampliou sua presença com\nmúsicas e projetos que combinam\nexperimentação sonora, humor e crítica social.\nEm 2025, lançou o álbum A Visita, que incorpora\nelementos do horror à identidade visual e\nmusical do trio. A proposta artística questiona\nos preconceitos direcionados às pessoas\ntravestis e transforma o palco em um espaço de\nliberdade, confronto e expressão cultural.",
+      "Katy da Voz e as Abusadas é um grupo musical\nligado à cena underground paulistana, formado\npor Katy da Voz, Palladino Proibida e Degoncé\nRabetão. O trio construiu sua identidade a partir\nda combinação entre funk, música eletrônica,\nperformances teatrais e referências visuais que\ndialogam com a cultura pop, o punkeohorror.",
+      "Katy da Voz cresceu na zona sul de São Paulo,\nespecialmente no Grajaú, em contato com a\ncultura dos bailes funk. Ao mesmo tempo,\ndesenvolveu interesse por artistas pop como\nBeyoncé, Lady Gaga e Katy Perry. Essa\ncombinação de referências ajuda a\ncompreender a identidade do grupo, que\naproxima a energia do funk de uma\napresentação cênica mais teatral e provocativa.\nEm entrevista à Vetor Magazine, Katy relatou\nque seu nome artístico surgiu de uma\nbrincadeira relacionada à cultura pop e que seus\nprimeiros passos na noite paulistana\ncontribuíram para sua trajetória musical.",
+      "O grupo começou a chamar atenção na cena\nalternativa de São Paulo por volta de 201 9, e sua\ntrajetória se desenvolveu ao longo dos anos\nseguintes. As músicas e apresentações utilizam\nletras explícitas, humor, figurinos marcantes e\numa estética que procura desafiar expectativas\nsobre gênero, sexualidade e comportamento.\nNesse contexto, a provocação não funciona\napenas como recurso de entretenimento: ela\ntambém questiona os limites impostos à\nexpressão artística de pessoas travestis e\nperiféricas.",
+      "Em 2025, o trio lançou A Visita, álbum que\naproxima o funk de referências do horror e da\nmúsica eletrônica. A estética sombria e teatral\ndo projeto amplia a identidade do grupo,\ntransformando elementos tradicionalmente\nassociados ao medo e ao desconforto em\nrecursos de expressão artística. Essa\nabordagem permite refletir sobre como os\npreconceitos sociais frequentemente\ntransformam corpos marginalizados em objetos\nde estranhamento e como a arte pode\nressignificar esse olhar.",
+      "A importância de Katy da Voz e as Abusadas\npara o museu digital está na relação entre\nmúsica, performance, identidade e resistência\ncultural. O grupo demonstra que o funk\ncontemporâneo pode dialogar com outras\nlinguagens artísticas, como o teatro, o punk e o\nhorror, criando experiências que ultrapassam a\nmúsica gravada. Sua trajetória também\nevidencia a presença de artistas travestis na\nconstrução de novas estéticas e narrativas\ndentro da cultura urbana brasileira."
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
@@ -477,9 +482,12 @@
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
-      "url": "/artists/katy-abusadas.jpg",
-      "alt": "Integrantes de Katy da Voz e as Abusadas na capa de Sacolão das Faveladas.",
-      "credit": "Capa de Sacolão das Faveladas, 2022 / Apple Music."
+      "url": "/artists/katy-voz-abusadas.jpg",
+      "alt": "Integrantes de Katy da Voz e as Abusadas ",
+      "credit": "Instagram oficial Katy da Voz e as Abusadas (@katydavozeasabusadas)."
+    },
+    "textAlignments": {
+      "paragraphs": "justify"
     }
   }
 ]
