@@ -384,10 +384,14 @@
     "name": "Irmãs de Pau",
     "decade": "2020",
     "kind": "dupla",
-    "summary": "Dupla formada por Vita Pereira e Isma Almeida, com música ligada a vivências negras, travestis e periféricas.",
+    "summary": "Dupla musical formada por Vita Pereira e Isma\nAlmeida que mistura funk, música eletrônica e\noutras sonoridades, articulando vivências\ntravestis, cultura periférica e liberdade artística.",
     "paragraphs": [
-      "Irmãs de Pau é a dupla formada pelas multiartistas paulistanas Vita Pereira e Isma Almeida. Elas se aproximaram durante as ocupações de escolas públicas de São Paulo, em 2015, e começaram a desenvolver juntas um projeto musical durante a pandemia.",
-      "A estreia veio em 2021 com o single “Travequeiro” e o álbum “Dotadas”. O trabalho combina funk com referências de dancehall, vogue, trap e performance para abordar afeto, raça, território, sexualidade e experiências de travestis negras e periféricas."
+      "Irmãs de Pau e uma upla musical formada\npelas multiartistas travestis Vita Pereira e Isma\nAlmeida, que construíram sua trajetória na cena\ncultural periférica de São Paulo. A parceria\nnasceu de uma amizade desenvolvida em\nespaços de mobilização estudantil e se\ntransformou em um projeto artístico que\ncombina funk, experimentação sonora e\nperformance.",
+      "A dupla estreou com o álbum Dotadas, em 2021,\ne ampliou sua presença na música brasileira\ncom trabalhos como Gambiarra Chic. Suas\nproduções abordam sexualidade, gênero, afeto e\ncotidiano, trazendo para o centro da música\nexperiências de pessoas travestis e periféricas.\nAo combinar diferentes referências musicais e\nvisuais, Irmãs de Pau transforma a própria\nexistência e expressão artística em uma forma\nde ocupar espaços historicamente restritos a\ndeterminados grupos.",
+      "Irmãs de Pau é um projeto musical formado por\nVita Pereira e Isma Almeida, duas multiartistas\ntravestis cuja trajetória está ligada à cultura\nperiférica paulista e à construção de espaços de\nexpressão para pessoas LGBTQIA+. As duas se\nem 201 5, durante uma ocupação\nestudantil, em um contexto de mobilização e\ndebate sobre educação e vivências LGBTQIA+\nnas periferias. A amizade e as experiências\ncompartilhadas contribuíram para o\ndesenvolvimento de uma parceria que\nposteriormente se consolidou na música.",
+      "A dupla começou a desenvolver suas\ncomposições autorais durante a pandemia e\nlançou o álbum de estreia Dotadas, em 2021\nDesde então, construiu uma identidade artística\nbaseada na mistura de funk com outras\nlinguagens musicais, como música eletrônica,\ndrill, vogue e dancehall. Essa combinação\nacompanha uma proposta visual e performática\nprópria, na qual figurinos, coreografias, humor e\npresença de palco integram a construção da\nobra.",
+      "Em trabalhos como Gambiarra Chic, a dupla\ninvestiga as estéticas da sexualidade na cultura\nbrasileira, articulando temas como desejo,\nmasculinidade, afeto, gênero e poder\neconômico. Suas letras não se limitam à\nprovocação: também apresentam experiências\ncotidianas e questionam as formas pelas quais\ncorpos travestis são representados ou excluídos\ndos espaços culturais. A própria ideia de\n\"gambiarra\" pode ser relacionada à\ninventividade e à criação de soluções e\nlinguagens a partir de condições concretas,\nembora seu significado específico deva ser\ncompreendido a partir das propostas de cada\ntrabalho.",
+      "A relevância de Irmãs de Pau para o museu\ndigital está na relação entre música, Identidade\ne ocupação cultural. A dupla contribui para\nampliar a representação de artistas travestis na\ncena musical e demonstra como o funk pode\nser utilizado para criar narrativas próprias,\ncontestar padrões sociais e construir novas\npossibilidades estéticas. Sua trajetória também\nevidencia a importância das cenas\nindependentes e periféricas na renovação da\nmusica brasileira."
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
@@ -405,6 +409,10 @@
       "url": "/artists/irmas-de-pau.jpg",
       "alt": "Vita Pereira e Isma Almeida, da dupla Irmãs de Pau.",
       "credit": "Lucas Silvestre / Divulgação, via Agência Mural."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
