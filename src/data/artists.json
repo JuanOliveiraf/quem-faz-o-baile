@@ -12,8 +12,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["conquista"],
-    "sourceIds": ["claudinho-folha", "claudinho-globo", "claudinho-gshow-photo"],
+    "workIds": [
+      "conquista"
+    ],
+    "sourceIds": [
+      "claudinho-folha",
+      "claudinho-globo",
+      "claudinho-gshow-photo"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -35,8 +41,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["rap-da-felicidade"],
-    "sourceIds": ["cidinho-folha", "cidinho-gshow", "cidinho-extra-photo"],
+    "workIds": [
+      "rap-da-felicidade"
+    ],
+    "sourceIds": [
+      "cidinho-folha",
+      "cidinho-gshow",
+      "cidinho-extra-photo"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -58,8 +70,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["glamourosa"],
-    "sourceIds": ["marcinho-uol", "marcinho-oglobo"],
+    "workIds": [
+      "glamourosa"
+    ],
+    "sourceIds": [
+      "marcinho-uol",
+      "marcinho-oglobo"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -81,8 +98,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["ela-so-pensa-em-beijar"],
-    "sourceIds": ["marlboro-alataj", "marlboro-band", "marlboro-commons"],
+    "workIds": [
+      "ela-so-pensa-em-beijar"
+    ],
+    "sourceIds": [
+      "marlboro-alataj",
+      "marlboro-band",
+      "marlboro-commons"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -104,8 +127,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["agora-to-solteira"],
-    "sourceIds": ["projeto", "furacao-site", "furacao-uff"],
+    "workIds": [
+      "agora-to-solteira"
+    ],
+    "sourceIds": [
+      "projeto",
+      "furacao-site",
+      "furacao-uff"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -127,8 +156,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["boladona"],
-    "sourceIds": ["tati-gshow", "tati-elle", "tati-commons"],
+    "workIds": [
+      "boladona"
+    ],
+    "sourceIds": [
+      "tati-gshow",
+      "tati-elle",
+      "tati-commons"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -150,8 +185,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["tremendo-vacilao"],
-    "sourceIds": ["perlla-folha", "perlla-gshow", "perlla-commons"],
+    "workIds": [
+      "tremendo-vacilao"
+    ],
+    "sourceIds": [
+      "perlla-folha",
+      "perlla-gshow",
+      "perlla-commons"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -173,8 +214,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["adulterio-ao-vivo"],
-    "sourceIds": ["catra-tvbrasil", "catra-uol"],
+    "workIds": [
+      "adulterio-ao-vivo"
+    ],
+    "sourceIds": [
+      "catra-tvbrasil",
+      "catra-uol"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -196,8 +242,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["show-das-poderosas"],
-    "sourceIds": ["anitta-folha", "anitta-uol"],
+    "workIds": [
+      "show-das-poderosas"
+    ],
+    "sourceIds": [
+      "anitta-folha",
+      "anitta-uol"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -219,8 +270,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["beijinho-no-ombro"],
-    "sourceIds": ["valesca-universa", "valesca-tangerina"],
+    "workIds": [
+      "beijinho-no-ombro"
+    ],
+    "sourceIds": [
+      "valesca-universa",
+      "valesca-tangerina"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -242,8 +298,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["dom-dom-dom"],
-    "sourceIds": ["pedrinho-ego", "pedrinho-billboard"],
+    "workIds": [
+      "dom-dom-dom"
+    ],
+    "sourceIds": [
+      "pedrinho-ego",
+      "pedrinho-billboard"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -265,8 +326,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
-    "workIds": ["rabetao"],
-    "sourceIds": ["lan-uol", "lan-kondzilla"],
+    "workIds": [
+      "rabetao"
+    ],
+    "sourceIds": [
+      "lan-uol",
+      "lan-kondzilla"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -281,21 +347,30 @@
     "name": "Bia Soull",
     "decade": "2020",
     "kind": "artista",
-    "summary": "Cantora e compositora paranaense que articula funk, rap, R&B e música eletrônica.",
+    "summary": "Cantora e compositora paranaense que combina\nfunk, rap, R&B e música eletrônica para explorar\no desejo feminino, a sexualidade e a liberdade\nde expressão.",
     "paragraphs": [
       "Bia Soull é uma cantora e compositora paranaense radicada em São Paulo. Seu trabalho combina referências de funk, rap, R&B e música eletrônica, com letras que tratam o desejo feminino e a sexualidade de forma explícita e autoral.",
       "Em 2026, lançou o álbum de estreia “Pornografia Auditiva”. “Sinergia”, parceria com DJ RD da DZ7, integra o disco e concentra uma das propostas que a artista apresenta em entrevistas: colocar o prazer narrado por uma mulher no centro da canção."
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["sinergia"],
-    "sourceIds": ["bia-bravo", "bia-folha", "bia-tmdqa"],
+    "workIds": [
+      "sinergia"
+    ],
+    "sourceIds": [
+      "bia-bravo",
+      "bia-folha",
+      "bia-tmdqa"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
       "url": "/artists/bia-soull.png",
       "alt": "Retrato artístico de Bia Soull.",
       "credit": "Imagem de divulgação publicada pela Bravo!."
+    },
+    "textAlignments": {
+      "summary": "justify"
     }
   },
   {
@@ -311,8 +386,14 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["travequeiro"],
-    "sourceIds": ["irmas-mural", "irmas-abramus", "irmas-ig"],
+    "workIds": [
+      "travequeiro"
+    ],
+    "sourceIds": [
+      "irmas-mural",
+      "irmas-abramus",
+      "irmas-ig"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -334,8 +415,13 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["novinho-chora"],
-    "sourceIds": ["nanda-elle", "nanda-terra"],
+    "workIds": [
+      "novinho-chora"
+    ],
+    "sourceIds": [
+      "nanda-elle",
+      "nanda-terra"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
@@ -357,8 +443,15 @@
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
-    "workIds": ["mini-set-das-visitantes"],
-    "sourceIds": ["projeto", "katy-falo", "katy-prefeitura", "katy-apple"],
+    "workIds": [
+      "mini-set-das-visitantes"
+    ],
+    "sourceIds": [
+      "projeto",
+      "katy-falo",
+      "katy-prefeitura",
+      "katy-apple"
+    ],
     "instagramUrl": null,
     "youtubeUrl": null,
     "image": {
