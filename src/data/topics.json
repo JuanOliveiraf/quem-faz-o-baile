@@ -13,7 +13,10 @@
     ],
     "sourceIds": [
       "projeto"
-    ]
+    ],
+    "textColors": {
+      "title": "#f50505"
+    }
   },
   {
     "id": "politica",
