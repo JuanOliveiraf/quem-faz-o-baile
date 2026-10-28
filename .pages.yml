@@ -125,16 +125,8 @@ content:
           - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
           - { name: descriptionLines, label: Linhas da descrição, type: string, required: true, list: true }
           - { name: note, label: Nota curatorial, type: text, required: true }
-      - name: womenTitle
-        label: Título da exposição de mulheres
-        type: string
-        required: true
       - name: womenIntro
         label: Introdução da exposição
-        type: text
-        required: true
-      - name: womenEditorialNote
-        label: Nota editorial da exposição
         type: text
         required: true
       - name: womenSection
@@ -146,23 +138,6 @@ content:
           - { name: titleLines, label: Linhas do título, type: string, required: true, list: true }
           - { name: lead, label: Chamada, type: string, required: true }
           - { name: statLabelLines, label: Linhas da legenda numérica, type: string, required: true, list: true }
-      - name: womenPage
-        label: Página Mulheres no Funk
-        type: object
-        required: true
-        fields:
-          - { name: eyebrow, label: Identificação da página, type: string, required: true }
-          - { name: directoryEyebrow, label: Identificação da lista, type: string, required: true }
-          - { name: directoryTitle, label: Título da lista, type: string, required: true }
-          - name: stats
-            label: Legendas das estatísticas
-            type: object
-            required: true
-            list: true
-            fields:
-              - { name: id, label: ID, type: string, required: true }
-              - { name: label, label: Rótulo, type: string, required: true }
-              - { name: detail, label: Complemento, type: string, required: true }
       - name: topicsSection
         label: Chamada Olhares do Funk
         type: object

@@ -39,9 +39,7 @@
     ],
     "note": ""
   },
-  "womenTitle": "Mulheres no funk.",
   "womenIntro": "Ao longo das décadas, as mulheres conquistaram espaço no funk brasileiro, transformando a maneira como suas experiências, desejos e identidades são representados nas músicas. Em um cenário historicamente dominado por homens, artistas de diferentes gerações contribuíram para ampliar o protagonismo feminino e fortalecer novas formas de expressão.\n\nNesta seção, reunimos as mulheres já apresentadas na cronologia do museu, oferecendo um espaço dedicado às suas trajetórias, contribuições e à importância de suas vozes na construção da história do funk.",
-  "womenEditorialNote": "Este recorte reúne perfis pesquisados e fontes consultadas, sem pretender esgotar a presença das mulheres na história do funk.",
   "womenSection": {
     "eyebrow": "02 / MULHERES",
     "titleLines": [
@@ -52,28 +50,6 @@
     "statLabelLines": [
       "Artistas e grupos ",
       "em destaque "
-    ]
-  },
-  "womenPage": {
-    "eyebrow": "EXPOSIÇÃO / MULHERES NO FUNK",
-    "directoryEyebrow": "AS ARTISTAS / O ACERVO",
-    "directoryTitle": "Conheça cada trajetória.",
-    "stats": [
-      {
-        "id": "artists",
-        "label": "trajetórias pesquisadas",
-        "detail": "artistas e grupos"
-      },
-      {
-        "id": "decades",
-        "label": "décadas representadas",
-        "detail": "2000, 2010 e 2020"
-      },
-      {
-        "id": "works",
-        "label": "obras no acervo",
-        "detail": "com player disponível"
-      }
     ]
   },
   "topicsSection": {

@@ -19,11 +19,8 @@ export interface SiteContent extends TextFormatting {
  hero: HeroContent;
  ribbonText: string;
  timelineSection: SectionIntro & { note: string };
- womenTitle: string;
  womenIntro: string;
- womenEditorialNote: string;
  womenSection: { eyebrow: string; titleLines: string[]; lead: string; statLabelLines: string[] };
- womenPage: { eyebrow: string; directoryEyebrow: string; directoryTitle: string; stats: Array<{ id: string; label: string; detail: string }> };
  topicsSection: SectionIntro;
  catalogSection: { eyebrow: string; titleLines: string[]; description: string; ctaLabel: string };
  aboutSection: { eyebrow: string; titleLines: string[]; channels: Channel[] };

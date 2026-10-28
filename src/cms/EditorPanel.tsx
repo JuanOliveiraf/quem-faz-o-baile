@@ -69,13 +69,6 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
     <TextField label="Chamada" value={draft.womenSection.lead} onChange={value => update('womenSection', { ...draft.womenSection, lead: value })} {...format('women.lead')}/>
     <TextArea label="Introdução" value={draft.womenIntro} onChange={value => update('womenIntro', value)} {...format('women.intro')}/>
     <StringListField label="Legenda da estatística na página inicial" values={draft.womenSection.statLabelLines} onChange={value => update('womenSection', { ...draft.womenSection, statLabelLines: value })} itemLabel="Linha"/>
-    <TextField label="Título da página" value={draft.womenTitle} onChange={value => update('womenTitle', value)} {...format('women.pageTitle')}/>
-    <TextArea label="Nota editorial" value={draft.womenEditorialNote} onChange={value => update('womenEditorialNote', value)} {...format('women.editorialNote')}/>
-    <TextField label="Identificação da página" value={draft.womenPage.eyebrow} onChange={value => update('womenPage', { ...draft.womenPage, eyebrow: value })}/>
-    <TextField label="Identificação da lista" value={draft.womenPage.directoryEyebrow} onChange={value => update('womenPage', { ...draft.womenPage, directoryEyebrow: value })}/>
-    <TextField label="Título da lista" value={draft.womenPage.directoryTitle} onChange={value => update('womenPage', { ...draft.womenPage, directoryTitle: value })} {...format('women.directoryTitle')}/>
-    <p className="cms-form-note">Os valores das estatísticas são calculados pelo acervo. Aqui você edita somente os rótulos e complementos.</p>
-    {draft.womenPage.stats.map((stat, index) => <fieldset className="cms-fieldset cms-subgroup" key={stat.id}><legend>Estatística {index + 1}</legend><TextField label="Rótulo" value={stat.label} onChange={value => update('womenPage', { ...draft.womenPage, stats: draft.womenPage.stats.map((item, current) => current === index ? { ...item, label: value } : item) })}/><TextField label="Complemento" value={stat.detail} onChange={value => update('womenPage', { ...draft.womenPage, stats: draft.womenPage.stats.map((item, current) => current === index ? { ...item, detail: value } : item) })}/></fieldset>)}
   </>;
   if (current === 'topics') return <>
     <TextField label="Identificação" value={draft.topicsSection.eyebrow} onChange={value => update('topicsSection', { ...draft.topicsSection, eyebrow: value })}/>

@@ -134,22 +134,7 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   required(site.hero?.imageUrl, 'Imagem de abertura', errors);
   if (site.hero?.imageUrl && !site.hero.imageUrl.startsWith('/')) errors.push('A imagem de abertura precisa usar um caminho público do site.');
   required(site.ribbonText, 'Texto da faixa', errors);
-  required(site.womenTitle, 'Título Mulheres no Funk', errors);
   required(site.womenIntro, 'Introdução Mulheres no Funk', errors);
-  required(site.womenEditorialNote, 'Nota editorial Mulheres no Funk', errors);
-  required(site.womenPage?.eyebrow, 'Identificação da página Mulheres no Funk', errors);
-  required(site.womenPage?.directoryEyebrow, 'Identificação da lista Mulheres no Funk', errors);
-  required(site.womenPage?.directoryTitle, 'Título da lista Mulheres no Funk', errors);
-  if (!Array.isArray(site.womenPage?.stats) || site.womenPage.stats.length !== 3) {
-    errors.push('A página Mulheres no Funk precisa manter três estatísticas.');
-  } else {
-    const expectedStats = ['artists', 'decades', 'works'];
-    site.womenPage.stats.forEach((stat, index) => {
-      if (stat.id !== expectedStats[index]) errors.push('A ordem das estatísticas de Mulheres no Funk é protegida.');
-      required(stat.label, `Rótulo da estatística ${index + 1}`, errors);
-      required(stat.detail, `Complemento da estatística ${index + 1}`, errors);
-    });
-  }
   if (!Array.isArray(site.aboutSection?.channels)) {
     errors.push('As experiências do projeto precisam estar em uma lista.');
   } else {
