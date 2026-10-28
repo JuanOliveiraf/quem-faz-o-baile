@@ -11,7 +11,7 @@
 
 /* Exposição Mulheres no Funk: direção sóbria e editorial. */
 :root{--women-background:var(--paper)}
-.women-feature{background:var(--women-background);color:var(--ink);border-block:1px solid #c8c1bc}
+.women-feature{background:var(--women-background);color:var(--ink)}
 .women-feature .eyebrow{color:var(--ink)}
 .women-hero .eyebrow{color:#8e304d}
 .women-feature-head{display:grid;grid-template-columns:minmax(300px,.85fr) minmax(0,1.15fr);gap:clamp(48px,7vw,110px);align-items:start}
@@ -22,16 +22,16 @@
 .women-stat{display:flex;align-items:center;gap:13px;margin:28px 0}
 .women-stat strong{font-size:46px;line-height:1;font-weight:900;color:#8e304d}
 .women-stat span{font-size:11px;font-weight:800;line-height:1.3;text-transform:uppercase}
-.women-by-decade{margin-top:58px;border-top:1px solid #aaa19b}
-.women-decade{display:grid;grid-template-columns:150px minmax(0,1fr);gap:34px;padding:24px 4px;border-bottom:1px solid #c3bbb6}
-.women-decade-year{margin:0;padding-top:16px;font-size:14px;font-weight:900;text-transform:uppercase}
-.women-decade-artists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:42px}
-.woman-name{display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:14px;min-height:72px;padding:8px 4px;border-bottom:1px solid #d1cbc7;transition:color .2s,padding .2s}
-.woman-face{width:56px;height:56px;object-fit:cover;border:1px solid #817a76}
+.women-by-decade{display:grid;gap:34px;margin-top:64px}
+.women-decade{display:grid;grid-template-columns:130px minmax(0,1fr);gap:34px;padding:0}
+.women-decade-year{align-self:start;margin:0;padding:8px 0 8px 12px;border-left:4px solid var(--red);font-size:16px;font-weight:900;text-transform:uppercase}
+.women-decade-artists{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 16px}
+.woman-name{display:grid;grid-template-columns:56px minmax(0,1fr) auto;align-items:center;gap:14px;min-height:76px;padding:10px 14px;background:#e9e7e1;border-radius:2px;transition:background .2s,transform .2s,color .2s}
+.woman-face{width:56px;height:56px;object-fit:cover}
 .woman-name span{font-size:21px;font-weight:800;line-height:1.2;overflow-wrap:anywhere}
 .woman-navigation-icon{flex:none;color:#8e304d;transition:transform .2s}
 .woman-name:hover .woman-navigation-icon,.woman-row:hover .woman-navigation-icon{transform:translateX(3px)}
-.woman-name:hover{padding-left:10px;color:#8e304d}
+.woman-name:hover{background:#dedbd4;color:#8e304d;transform:translateY(-2px)}
 .women-hero{display:grid;grid-template-columns:1.25fr .75fr;min-height:470px;padding-top:70px;padding-bottom:70px;background:var(--women-background);color:var(--ink);border-bottom:1px solid #b8adaf}
 .women-hero-copy{display:flex;flex-direction:column;justify-content:center;padding-right:8%}
 .women-hero h1{max-width:760px;margin-bottom:28px;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:72px;font-weight:900;line-height:1;letter-spacing:0}
@@ -76,6 +76,7 @@
 .cms-header-edit-button{position:static;flex:none}
 .cms-edit-button:hover{background:var(--red)}
 .cms-inline-host>.cms-edit-button,.cms-list-host>.cms-edit-button,.cms-source-host>.cms-edit-button{top:50%;right:8px;translate:0 -50%}
+.women-decade .cms-inline-host>.cms-edit-button{width:32px;height:32px;border-color:#c7c3bd;background:#fff;color:var(--ink);box-shadow:none}
 .cms-inline-host .woman-name{padding-right:52px}
 .cms-card-host>.cms-edit-button{top:9px;right:9px}
 .cms-reorder{position:absolute;z-index:8;top:54px;right:9px;display:flex;border:1px solid var(--ink);background:#fff}
