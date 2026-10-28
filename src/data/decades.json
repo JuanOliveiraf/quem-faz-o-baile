@@ -2,14 +2,17 @@
   {
     "id": "1990",
     "label": "1990s",
-    "title": "Encontros que guardam memória.",
-    "description": "Um percurso pelas referências selecionadas pelo grupo para aproximar música, baile e pertencimento.",
+    "title": " A consolidação do funk brasileiro",
+    "description": "### 1990 — A consolidação do funk brasileiro\n\nDurante os anos 1990, o funk brasileiro fortaleceu sua identidade musical e cultural, especialmente nas periferias do Rio de Janeiro. As produções da época abordavam diferentes aspectos da vida cotidiana, desde o amor e os relacionamentos até a desigualdade social, a violência e as experiências das comunidades. Nesse cenário, ganharam destaque diferentes vertentes do gênero, como o funk melody, caracterizado por melodias e letras românticas, e o funk consciente, marcado por letras que abordavam questões sociais e a realidade das periferias. Os bailes também se consolidaram como importantes espaços de encontro e expressão cultural, enquanto o gênero conquistava maior visibilidade nacional, apesar do preconceito enfrentado.\n\nPara representar essa década, o museu selecionou Claudinho & Buchecha e MC Marcinho, associados ao romantismo do funk melody; Cidinho & Doca, conhecidos por suas letras de crítica social; e DJ Marlboro, cuja atuação como DJ e produtor contribuiu significativamente para a consolidação e popularização do funk brasileiro.",
     "artistIds": [
       "claudinho-buchecha",
       "dj-marlboro",
       "cidinho-doca",
       "mc-marcinho"
-    ]
+    ],
+    "textAlignments": {
+      "description": "justify"
+    }
   },
   {
     "id": "2000",
