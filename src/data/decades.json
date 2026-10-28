@@ -47,13 +47,16 @@
   {
     "id": "2020",
     "label": "2020s",
-    "title": "Outros encontros, novas perspectivas.",
-    "description": "Um recorte contemporâneo que abre espaço para novas vozes e formas de expressão.",
+    "title": "Novos ritmos e representatividade no funk",
+    "description": "Nos anos 2020, o funk brasileiro ampliou sua diversidade musical e cultural, impulsionado pelas redes sociais e plataformas de streaming. A década é marcada por experimentações sonoras, misturas com outros gêneros e novas formas de expressão. Mulheres e artistas LGBTQIA+ conquistam maior visibilidade, abordando temas como sexualidade, identidade, liberdade e experiências pessoais, enquanto o funk alcança públicos cada vez mais diversos.\n\nPara representar essa década, foram selecionadas Bia Soull, que explora desejo e liberdade sexual; Vita e Isma, com produções que dialogam com novas sonoridades; NandaTsunami, que combina diferentes influências musicais; e Katy da Voz e as Abusadas, que trazem novas perspectivas de expressão e representatividade.",
     "artistIds": [
       "bia-soull",
       "vita-isma",
       "nanda-tsunami",
       "katy-voz-abusadas"
-    ]
+    ],
+    "textAlignments": {
+      "description": "justify"
+    }
   }
 ]
