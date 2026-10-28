@@ -131,6 +131,6 @@
     "hero.intro": "justify",
     "women.intro": "justify",
     "topics.description": "justify",
-    "topics.title": "justify"
+    "topics.title": "center"
   }
 }
