@@ -73,7 +73,8 @@
   "topicsSection": {
     "eyebrow": "03 / TEMAS PARA REFLEXÃO ",
     "titleLines": [
-      "O Funk em discussão "
+      "O Funk",
+      " em discussão "
     ],
     "descriptionLines": [
       "Conheça quatro temas relacionados à história e à cultura do funk brasileiro. Nesta seção, apresentamos pesquisas sobre questões sociais, preconceito, liberdade de expressão e transformações do gênero, com acontecimentos históricos e diferentes perspectivas para reflexão."
@@ -130,6 +131,7 @@
   "textAlignments": {
     "hero.intro": "justify",
     "women.intro": "justify",
-    "topics.title": "center"
+    "topics.title": "justify",
+    "topics.description": "justify"
   }
 }
