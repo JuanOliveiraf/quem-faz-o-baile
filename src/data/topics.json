@@ -36,8 +36,8 @@
   },
   {
     "id": "genero",
-    "title": "Gênero, corpo e autonomia",
-    "subtitle": "Quem narra o próprio desejo?",
+    "title": "O funk além da música ",
+    "subtitle": "Como o funk influencia a cultura brasileira?",
     "text": [
       "O prazer e a liberdade feminina são parte central do recorte apresentado pelo grupo. A pesquisa também propõe explorar representatividade feminina e LGBTQIA+ e tensões entre autonomia, visibilidade e mercado.",
       "A seção especial de mulheres complementa esta sala ao conectar perguntas de pesquisa a trajetórias selecionadas."
@@ -50,7 +50,10 @@
       "projeto",
       "azmina",
       "empoderamento"
-    ]
+    ],
+    "textAlignments": {
+      "subtitle": "justify"
+    }
   },
   {
     "id": "estetica",
