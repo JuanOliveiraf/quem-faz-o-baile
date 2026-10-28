@@ -117,6 +117,7 @@
     "topics.description": "justify"
   },
   "textColors": {
-    "women.title": "#fa1100"
+    "women.title": "#fa1100",
+    "topics.title": "#fa0000"
   }
 }
