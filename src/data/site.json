@@ -71,7 +71,7 @@
     ]
   },
   "topicsSection": {
-    "eyebrow": "03 / ACERVO DE PESQUISAS",
+    "eyebrow": "03 / TEMAS PARA REFLEXÃO ",
     "titleLines": [
       "O Funk em discussão "
     ],
@@ -130,7 +130,6 @@
   "textAlignments": {
     "hero.intro": "justify",
     "women.intro": "justify",
-    "topics.description": "justify",
     "topics.title": "center"
   }
 }
