@@ -115,5 +115,8 @@
     "women.intro": "justify",
     "topics.title": "justify",
     "topics.description": "justify"
+  },
+  "textColors": {
+    "women.title": "#fa1100"
   }
 }
