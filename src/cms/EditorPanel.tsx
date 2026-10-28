@@ -37,6 +37,13 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
   const update = <K extends keyof SiteContent>(key: K, value: SiteContent[K]) => setDraft({ ...draft, [key]: value });
   const format = (key: string) => ({ alignment: getTextAlignment(draft, key), onAlignmentChange: (alignment: TextAlignment) => setDraft(withTextAlignment(draft, key, alignment)) });
   const current = section || 'general';
+  if (current === 'navigation') return <>
+    <p className="cms-form-note">Edite os nomes exibidos no cabeçalho. O destino de cada link permanece protegido.</p>
+    <TextField label="Cronologia" value={draft.navigation.timeline} onChange={value => update('navigation', { ...draft.navigation, timeline: value })}/>
+    <TextField label="Mulheres" value={draft.navigation.women} onChange={value => update('navigation', { ...draft.navigation, women: value })}/>
+    <TextField label="Olhares" value={draft.navigation.topics} onChange={value => update('navigation', { ...draft.navigation, topics: value })}/>
+    <TextField label="Catálogo" value={draft.navigation.catalog} onChange={value => update('navigation', { ...draft.navigation, catalog: value })}/>
+  </>;
   if (current === 'hero') return <>
     <TextField label="Identificação" value={draft.hero.eyebrow} onChange={value => update('hero', { ...draft.hero, eyebrow: value })}/>
     <StringListField label="Linhas do título" values={draft.hero.titleLines} onChange={value => update('hero', { ...draft.hero, titleLines: value })} itemLabel="Linha" {...format('hero.title')}/>

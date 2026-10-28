@@ -15,6 +15,7 @@ export interface SiteContent extends TextFormatting {
  instagramUrl: string;
  playlistUrl: string | null;
  playlistTitle: string;
+ navigation: { timeline: string; women: string; topics: string; catalog: string };
  hero: HeroContent;
  ribbonText: string;
  timelineSection: SectionIntro & { note: string };

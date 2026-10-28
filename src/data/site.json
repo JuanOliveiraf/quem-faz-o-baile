@@ -3,6 +3,12 @@
   "instagramUrl": "https://www.instagram.com/quemfaz0baile/",
   "playlistUrl": null,
   "playlistTitle": "Quem Faz o Baile: Beat a Beat",
+  "navigation": {
+    "timeline": "Cronologia",
+    "women": "Mulheres",
+    "topics": "Olhares",
+    "catalog": "Catálogo"
+  },
   "hero": {
     "eyebrow": "CONHEÇA O GRAVE / MUSEU DIGITAL DO FUNK",
     "titleLines": [

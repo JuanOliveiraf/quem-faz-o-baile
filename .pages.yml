@@ -83,6 +83,15 @@ content:
         label: Nome da playlist
         type: string
         required: true
+      - name: navigation
+        label: Navegação principal
+        type: object
+        required: true
+        fields:
+          - { name: timeline, label: Cronologia, type: string, required: true }
+          - { name: women, label: Mulheres, type: string, required: true }
+          - { name: topics, label: Olhares, type: string, required: true }
+          - { name: catalog, label: Catálogo, type: string, required: true }
       - name: hero
         label: Abertura do site
         type: object

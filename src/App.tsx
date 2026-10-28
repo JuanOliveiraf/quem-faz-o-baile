@@ -34,7 +34,7 @@ export default function App() {
     <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <header>
       <Link className="brand" to="/">QUEM FAZ<br/><span>O BAILE</span><i>CONHEÇA O GRAVE</i></Link>
-      <nav aria-label="Navegação principal"><Link to="/#cronologia">Cronologia</Link><Link to="/mulheres">Mulheres</Link><Link to="/#olhares">Olhares</Link><Link to="/catalogo">Catálogo</Link></nav>
+      <div className="header-navigation cms-edit-host"><nav aria-label="Navegação principal"><Link to="/#cronologia">{site.navigation.timeline}</Link><Link to="/mulheres">{site.navigation.women}</Link><Link to="/#olhares">{site.navigation.topics}</Link><Link to="/catalogo">{site.navigation.catalog}</Link></nav><EditButton className="cms-header-edit-button" target={{ collection: 'site', section: 'navigation', label: 'nomes do cabeçalho' }}/></div>
       <CmsAccountButton/>
     </header>
     <main id="conteudo"><Routes><Route path="/" element={<Home/>}/><Route path="/catalogo" element={<Catalog/>}/><Route path="/artistas/:slug" element={<ArtistDetail/>}/><Route path="/mulheres" element={<Women/>}/><Route path="/olhares/:id" element={<TopicDetail/>}/><Route path="/admin" element={<Admin/>}/><Route path="*" element={<NotFound/>}/></Routes></main>

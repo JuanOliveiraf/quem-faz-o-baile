@@ -72,6 +72,8 @@
 .cms-list-host .woman-row{width:100%}
 .cms-source-host{padding-right:48px}
 .cms-edit-button{position:absolute;z-index:8;top:10px;right:10px;display:grid;place-items:center;width:36px;height:36px;padding:0;border:1px solid #fff;background:var(--ink);color:#fff;box-shadow:0 2px 8px #0004}
+.header-navigation{display:flex;align-items:center;gap:14px}
+.cms-header-edit-button{position:static;flex:none}
 .cms-edit-button:hover{background:var(--red)}
 .cms-inline-host>.cms-edit-button,.cms-list-host>.cms-edit-button,.cms-source-host>.cms-edit-button{top:50%;right:8px;translate:0 -50%}
 .cms-inline-host .woman-name{padding-right:52px}

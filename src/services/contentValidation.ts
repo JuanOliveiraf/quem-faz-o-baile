@@ -126,6 +126,10 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
 
   required(site.title, 'Título do site', errors);
   validTextAlignments(site.textAlignments, 'site', errors);
+  required(site.navigation?.timeline, 'Nome Cronologia no cabeçalho', errors);
+  required(site.navigation?.women, 'Nome Mulheres no cabeçalho', errors);
+  required(site.navigation?.topics, 'Nome Olhares no cabeçalho', errors);
+  required(site.navigation?.catalog, 'Nome Catálogo no cabeçalho', errors);
   required(site.hero?.intro, 'Texto de abertura', errors);
   required(site.hero?.imageUrl, 'Imagem de abertura', errors);
   if (site.hero?.imageUrl && !site.hero.imageUrl.startsWith('/')) errors.push('A imagem de abertura precisa usar um caminho público do site.');
