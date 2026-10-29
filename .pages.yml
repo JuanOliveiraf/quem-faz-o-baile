@@ -47,9 +47,8 @@ components:
   source_ids:
     type: string
     label: IDs das fontes
-    required: true
-    list:
-      min: 1
+    required: false
+    list: true
     pattern:
       regex: "^[a-z0-9-]+$"
       message: Informe um ID existente em Fontes.
@@ -226,20 +225,17 @@ content:
       - name: kind
         label: Tipo de entrada
         type: string
-        required: true
+        required: false
         description: "Exemplo: artista, dupla, grupo, DJ ou coletivo/produtora."
       - name: summary
         label: Resumo do perfil
         type: text
-        required: true
-        options:
-          minlength: 20
+        required: false
       - name: paragraphs
         label: Parágrafos da biografia
         type: text
-        required: true
-        list:
-          min: 1
+        required: false
+        list: true
       - name: editorialStatus
         label: Estado editorial
         type: select
@@ -404,19 +400,17 @@ content:
       - name: subtitle
         label: Pergunta de abertura
         type: string
-        required: true
+        required: false
       - name: text
         label: Parágrafos
         type: text
-        required: true
-        list:
-          min: 1
+        required: false
+        list: true
       - name: questions
         label: Perguntas de pesquisa
         type: text
-        required: true
-        list:
-          min: 1
+        required: false
+        list: true
       - name: sourceIds
         component: source_ids
 
