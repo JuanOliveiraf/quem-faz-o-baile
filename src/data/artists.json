@@ -152,10 +152,12 @@
     "name": "Tati Quebra Barraco",
     "decade": "2000",
     "kind": "artista",
-    "summary": "Cantora da Cidade de Deus que abriu espaço para a voz feminina no funk carioca.",
+    "summary": "Pioneira do funk carioca que revolucionou a presença feminina no gênero ao pautar a autonomia sexual, a independência financeira e a autoafirmação.",
     "paragraphs": [
-      "......",
-      "......."
+      "Tatiana dos Santos Lourenço (conhecida como Tati Quebra Barraco), é uma das figuras mais emblemáticas e importantes na história do funk brasileiro. Nascida e criada na Cidade de Deus, no Rio de Janeiro, a cantora e compositora emergiu nos bailes cariocas no final dos anos 1990 e atingiu projeção nacional e internacional nos anos 2000 com sucessos estrondosos como \"Boladona\" e \"Dako é Bom\".",
+      "Sua produção artística provocou um deslocamento fundamental na lírica do funk: ao invés de ocupar o lugar de objeto do desejo masculino, Tati assumiu a voz de mulher desejante, autônoma e dona do próprio corpo. Suas composições abordam a liberdade sexual feminina, a independência financeira e a rejeição aos padrões morais tradicionais, utilizando uma linguagem direta, sem rodeios e profundamente conectada com o cotidiano e a vivência das mulheres periféricas.",
+      "Ao longo dos anos 2000, Tati rompeu barreiras de classe e gênero ao se apresentar em grandes festivais mundiais, programas de TV de horário nobre e circuitos acadêmicos e artísticos internacionais, tornando-se objeto de estudos sobre feminismo periférico e empoderamento. Sua identidade visual marcante e sua postura firme diante das críticas e do preconceito consolidaram sua figura como um símbolo de resistência cultural e autenticidade.",
+      "Sua relevância se deu pelo seu pioneirismo político e estético. Sua trajetória é essencial para analisar como o funk se tornou uma ferramenta de emancipação e protagonismo para mulheres pretas e periféricas, pavimentando o caminho para todas as gerações de artistas femininas que vieram a seguir no rap, no próprio funk e na música urbana contemporânea."
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
@@ -173,6 +175,10 @@
       "url": "/artists/tati-quebra-barraco.jpg",
       "alt": "Retrato de Tati Quebra Barraco.",
       "credit": "Imagem publicada por MidiaNews."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
