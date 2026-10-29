@@ -222,10 +222,12 @@
     "name": "Mr. Catra",
     "decade": "2000",
     "kind": "artista",
-    "summary": "Cantor e compositor que transitou entre funk, rock, rap e samba.",
+    "summary": "Uma das vozes mais icônicas e irreverentes do funk carioca, fundamental para a consolidação do tamborzão e para a expansão do gênero entre diferentes classes sociais.",
     "paragraphs": [
-      ".....",
-      "......."
+      "MC Catra, nome artístico de Wagner Domingues Costa (1968–2018), foi uma das personalidades mais carismáticas, complexas e influentes da história da música urbana brasileira. Criado na comunidade do Rodo, na Zona Sul do Rio de Janeiro, Catra possuía uma formação ampla que transitava entre o rock, o samba e o funk. Sua voz grave inconfundível, risada marcante e estilo performático tornaram-no uma figura cultuada em todas as camadas da sociedade brasileira nos anos 2000.",
+      "O artista desempenhou um papel central na transição e popularização das batidas de funk ao longo da década, destacando-se tanto na vertente do \"funk consciente\" quanto no \"funk proibidão\" e nas canções festivas que tomavam conta das pistas. Músicas como \"Adultério\", \"Vem Todo Mundo\" e \"Uh Papai Chegou\" transformaram-se em hinos geracionais, misturando irreverência, crônica social, boemia e celebração da cultura de rua.",
+      "Além de sua produção musical, Catra atuou como um embaixador informal da cultura da favela. Com sua capacidade de articular diálogos entre a elite cultural e a periferia, o MC transitou com naturalidade entre os bailes das comunidades cariocas, grandes festivais de música alternativa, programas de TV e eventos corporativos de grande porte, desafiando a segregação espacial e cultural da cidade.",
+      "Sua obra traduz a riqueza narrativa, a liberdade expressiva e as contradições da cultura de rua carioca. A trajetória de MC Catra ajuda a entender como o funk dos anos 2000 construiu uma linguagem própria de celebração, sobrevivência e pertencimento, marcada pelo carisma imensurável de um dos maiores comunicadores da música popular brasileira."
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
@@ -242,6 +244,10 @@
       "url": "/artists/mc-catra.jpg",
       "alt": "Retrato de Mr. Catra.",
       "credit": "Imagem publicada por O Globo"
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
