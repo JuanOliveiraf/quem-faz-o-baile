@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import type { Artist, Channel, ContentBundle, Decade, SiteContent, Source, TextAlignment, Topic, Work } from '../types/content';
 import { getTextAlignment, getTextColor, withTextAlignment, withTextColor } from '../services/textFormatting';
 import { useCms, type EditorTarget, type MediaDraft } from './CmsContext';
-import { CheckboxGroup, ImageUpload, ReorderField, SelectField, StringListField, TextArea, TextField, ToggleField, imageFileToDraft } from './FormFields';
+import { AddFieldButton, CheckboxGroup, ImageUpload, ReorderField, SelectField, StringListField, TextArea, TextField, ToggleField, imageFileToDraft } from './FormFields';
 
 type EditableValue = Artist | Work | Decade | Topic | Source | SiteContent;
 
@@ -135,9 +135,13 @@ function EditorForm({ target }: { target: EditorTarget }) {
   const [media, setMedia] = useState<MediaDraft>();
   const [previewUrl, setPreviewUrl] = useState<string>();
   const [error, setError] = useState('');
+  const [opened, setOpened] = useState<string[]>([]);
 
   useEffect(() => () => { if (previewUrl) URL.revokeObjectURL(previewUrl); }, [previewUrl]);
   if (!draft) return null;
+  const isOpen = (key: string, value: string) => value.trim() !== '' || opened.includes(key);
+  const openField = (key: string) => setOpened([...opened, key]);
+  const closeField = (key: string) => setOpened(opened.filter(item => item !== key));
   const format = (key: string) => ({ alignment: getTextAlignment(draft, key), onAlignmentChange: (alignment: TextAlignment) => setDraft(withTextAlignment(draft, key, alignment)), color: getTextColor(draft, key), onColorChange: (color?: string) => setDraft(withTextColor(draft, key, color)) });
 
   const save = async () => {
@@ -148,7 +152,7 @@ function EditorForm({ target }: { target: EditorTarget }) {
         return;
       }
       if (target.collection === 'artists') {
-        const artist = draft as Artist;
+        const artist = { ...(draft as Artist), paragraphs: (draft as Artist).paragraphs.filter(text => text.trim()) };
         const artists = content.artists.map(item => item.id === artist.id ? artist : item);
         const works = content.works.map(work => {
           const selected = artist.workIds.includes(work.id);
@@ -168,7 +172,8 @@ function EditorForm({ target }: { target: EditorTarget }) {
         return;
       }
       const rows = content[target.collection] as Array<{ id: string }>;
-      const next = rows.map(row => row.id === target.id ? draft : row);
+      const saved = target.collection === 'topics' ? { ...(draft as Topic), text: (draft as Topic).text.filter(text => text.trim()), questions: (draft as Topic).questions.filter(text => text.trim()) } : draft;
+      const next = rows.map(row => row.id === target.id ? saved : row);
       await saveChanges({ [target.collection]: next } as Partial<ContentBundle>);
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : 'Não foi possível salvar.');
@@ -184,9 +189,13 @@ function EditorForm({ target }: { target: EditorTarget }) {
       <TextField label="ID" value={artist.id} readOnly onChange={() => undefined} help="O ID conecta este perfil ao restante do acervo."/>
       <TextField label="Nome" value={artist.name} onChange={value => setDraft({ ...artist, name: value })} {...format('name')}/>
       <SelectField label="Década" value={artist.decade} options={decadeOptions} onChange={() => undefined} disabled help="A década é protegida porque também define a sala cronológica deste perfil."/>
-      <TextField label="Tipo" value={artist.kind} onChange={value => setDraft({ ...artist, kind: value })}/>
-      <TextArea label="Resumo" value={artist.summary} onChange={value => setDraft({ ...artist, summary: value })} {...format('summary')}/>
-      <StringListField label="Biografia" values={artist.paragraphs} onChange={value => setDraft({ ...artist, paragraphs: value })} itemLabel="Parágrafo" {...format('paragraphs')}/>
+      {isOpen('kind', artist.kind)
+        ? <TextField label="Tipo" value={artist.kind} onChange={value => setDraft({ ...artist, kind: value })} onRemove={() => { closeField('kind'); setDraft({ ...artist, kind: '' }); }}/>
+        : <AddFieldButton label="Tipo" onAdd={() => openField('kind')}/>}
+      {isOpen('summary', artist.summary)
+        ? <TextArea label="Resumo" value={artist.summary} onChange={value => setDraft({ ...artist, summary: value })} onRemove={() => { closeField('summary'); setDraft({ ...artist, summary: '' }); }} {...format('summary')}/>
+        : <AddFieldButton label="Resumo" onAdd={() => openField('summary')}/>}
+      <StringListField label="Biografia" values={artist.paragraphs} onChange={value => setDraft({ ...artist, paragraphs: value })} itemLabel="Parágrafo" allowEmpty {...format('paragraphs')}/>
       <SelectField label="Estado editorial" value={artist.editorialStatus} options={[{ value: 'inicial', label: 'Inicial' }, { value: 'pesquisado', label: 'Pesquisado' }, { value: 'revisado', label: 'Revisado' }]} onChange={value => setDraft({ ...artist, editorialStatus: value as Artist['editorialStatus'] })}/>
       <ToggleField label="Destacar em Mulheres no Funk" checked={artist.womenHighlight} onChange={value => setDraft({ ...artist, womenHighlight: value })}/>
       <SelectField label="Música do perfil" value={artist.workIds[0] || ''} options={content.works.map(work => ({ value: work.id, label: work.title }))} onChange={value => setDraft({ ...artist, workIds: [value] })}/>
@@ -214,7 +223,7 @@ function EditorForm({ target }: { target: EditorTarget }) {
     fields = <><TextField label="Década" value={decade.id} readOnly onChange={() => undefined}/><TextField label="Rótulo" value={decade.label} onChange={value => setDraft({ ...decade, label: value })}/><TextField label="Título" value={decade.title} onChange={value => setDraft({ ...decade, title: value })} {...format('title')}/><TextArea label="Descrição" value={decade.description} onChange={value => setDraft({ ...decade, description: value })} {...format('description')}/><ReorderField label="Ordem dos quatro artistas" ids={decade.artistIds} labels={Object.fromEntries(content.artists.map(artist => [artist.id, artist.name]))} onChange={value => setDraft({ ...decade, artistIds: value })}/></>;
   } else if (target.collection === 'topics') {
     const topic = draft as Topic;
-    fields = <><TextField label="ID" value={topic.id} readOnly onChange={() => undefined}/><TextField label="Título" value={topic.title} onChange={value => setDraft({ ...topic, title: value })} {...format('title')}/><TextArea label="Pergunta de abertura" value={topic.subtitle} onChange={value => setDraft({ ...topic, subtitle: value })} {...format('subtitle')}/><StringListField label="Texto" values={topic.text} onChange={value => setDraft({ ...topic, text: value })} itemLabel="Parágrafo" {...format('text')}/><StringListField label="Perguntas" values={topic.questions} onChange={value => setDraft({ ...topic, questions: value })} itemLabel="Pergunta" {...format('questions')}/><CheckboxGroup label="Fontes" values={content.sources.map(source => ({ value: source.id, label: source.title }))} selected={topic.sourceIds} onChange={value => setDraft({ ...topic, sourceIds: value })}/></>;
+    fields = <><TextField label="ID" value={topic.id} readOnly onChange={() => undefined}/><TextField label="Título" value={topic.title} onChange={value => setDraft({ ...topic, title: value })} {...format('title')}/>{isOpen('subtitle', topic.subtitle) ? <TextArea label="Pergunta de abertura" value={topic.subtitle} onChange={value => setDraft({ ...topic, subtitle: value })} onRemove={() => { closeField('subtitle'); setDraft({ ...topic, subtitle: '' }); }} {...format('subtitle')}/> : <AddFieldButton label="Pergunta de abertura" onAdd={() => openField('subtitle')}/>}<StringListField label="Texto" values={topic.text} onChange={value => setDraft({ ...topic, text: value })} itemLabel="Parágrafo" allowEmpty {...format('text')}/><StringListField label="Perguntas" values={topic.questions} onChange={value => setDraft({ ...topic, questions: value })} itemLabel="Pergunta" allowEmpty {...format('questions')}/><CheckboxGroup label="Fontes" values={content.sources.map(source => ({ value: source.id, label: source.title }))} selected={topic.sourceIds} onChange={value => setDraft({ ...topic, sourceIds: value })}/></>;
   } else {
     const source = draft as Source;
     fields = <><TextField label="ID" value={source.id} readOnly onChange={() => undefined}/><TextField label="Título" value={source.title} onChange={value => setDraft({ ...source, title: value })} {...format('title')}/><TextArea label="Crédito bibliográfico" value={source.credit} onChange={value => setDraft({ ...source, credit: value })} {...format('credit')}/><TextField label="URL" type="url" value={source.url || ''} onChange={value => setDraft({ ...source, url: value || null })}/></>;

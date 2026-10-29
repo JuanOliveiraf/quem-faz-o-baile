@@ -29,14 +29,19 @@ function FormattingToolbar({ alignment, onAlignmentChange, color, onColorChange 
   return <div className="cms-formatting-toolbar"><AlignmentToolbar value={alignment} onChange={onAlignmentChange}/><ColorControl value={color} onChange={onColorChange}/></div>;
 }
 
-export function TextField({ label, value, onChange, type = 'text', readOnly = false, help, alignment, onAlignmentChange, color, onColorChange }: { label: string; value: string; onChange: (value: string) => void; type?: 'text' | 'url'; readOnly?: boolean; help?: string } & FormattingProps) {
-  const id = useId();
-  return <div className="cms-field"><label htmlFor={id}>{label}</label><FormattingToolbar alignment={alignment} onAlignmentChange={onAlignmentChange} color={color} onColorChange={onColorChange}/><input id={id} type={type} value={value} readOnly={readOnly} style={onAlignmentChange || onColorChange ? { textAlign: alignment, color } : undefined} onChange={event => onChange(event.target.value)}/>{help && <small>{help}</small>}</div>;
+function RemoveFieldButton({ label, onRemove }: { label: string; onRemove?: () => void }) {
+  if (!onRemove) return null;
+  return <button type="button" className="cms-delete-button" onClick={onRemove} title={`Excluir ${label.toLowerCase()}`} aria-label={`Excluir ${label.toLowerCase()}`}><Trash2 size={16}/> Excluir</button>;
 }
 
-export function TextArea({ label, value, onChange, rows = 4, alignment, onAlignmentChange, color, onColorChange }: { label: string; value: string; onChange: (value: string) => void; rows?: number } & FormattingProps) {
+export function TextField({ label, value, onChange, type = 'text', readOnly = false, help, onRemove, alignment, onAlignmentChange, color, onColorChange }: { label: string; value: string; onChange: (value: string) => void; type?: 'text' | 'url'; readOnly?: boolean; help?: string; onRemove?: () => void } & FormattingProps) {
   const id = useId();
-  return <div className="cms-field"><label htmlFor={id}>{label}</label><FormattingToolbar alignment={alignment} onAlignmentChange={onAlignmentChange} color={color} onColorChange={onColorChange}/><textarea id={id} value={value} rows={rows} style={{ textAlign: alignment, color }} onChange={event => onChange(event.target.value)}/></div>;
+  return <div className="cms-field"><div className="cms-field-heading"><label htmlFor={id}>{label}</label><RemoveFieldButton label={label} onRemove={onRemove}/></div><FormattingToolbar alignment={alignment} onAlignmentChange={onAlignmentChange} color={color} onColorChange={onColorChange}/><input id={id} type={type} value={value} readOnly={readOnly} style={onAlignmentChange || onColorChange ? { textAlign: alignment, color } : undefined} onChange={event => onChange(event.target.value)}/>{help && <small>{help}</small>}</div>;
+}
+
+export function TextArea({ label, value, onChange, rows = 4, onRemove, alignment, onAlignmentChange, color, onColorChange }: { label: string; value: string; onChange: (value: string) => void; rows?: number; onRemove?: () => void } & FormattingProps) {
+  const id = useId();
+  return <div className="cms-field"><div className="cms-field-heading"><label htmlFor={id}>{label}</label><RemoveFieldButton label={label} onRemove={onRemove}/></div><FormattingToolbar alignment={alignment} onAlignmentChange={onAlignmentChange} color={color} onColorChange={onColorChange}/><textarea id={id} value={value} rows={rows} style={{ textAlign: alignment, color }} onChange={event => onChange(event.target.value)}/></div>;
 }
 
 export function SelectField({ label, value, options, onChange, disabled = false, help }: { label: string; value: string; options: Option[]; onChange: (value: string) => void; disabled?: boolean; help?: string }) {
@@ -47,9 +52,13 @@ export function ToggleField({ label, checked, onChange }: { label: string; check
   return <label className="cms-toggle"><input type="checkbox" checked={checked} onChange={event => onChange(event.target.checked)}/><span>{label}</span></label>;
 }
 
-export function StringListField({ label, values, onChange, itemLabel = 'Item', alignment, onAlignmentChange, color, onColorChange }: { label: string; values: string[]; onChange: (values: string[]) => void; itemLabel?: string } & FormattingProps) {
+export function AddFieldButton({ label, onAdd }: { label: string; onAdd: () => void }) {
+  return <button type="button" className="cms-secondary-button" onClick={onAdd}><Plus size={16}/> Adicionar {label.toLowerCase()}</button>;
+}
+
+export function StringListField({ label, values, onChange, itemLabel = 'Item', allowEmpty = false, alignment, onAlignmentChange, color, onColorChange }: { label: string; values: string[]; onChange: (values: string[]) => void; itemLabel?: string; allowEmpty?: boolean } & FormattingProps) {
   const update = (index: number, value: string) => onChange(values.map((item, current) => current === index ? value : item));
-  return <fieldset className="cms-fieldset"><legend>{label}</legend><FormattingToolbar alignment={alignment} onAlignmentChange={onAlignmentChange} color={color} onColorChange={onColorChange}/>{values.map((value, index) => <div className="cms-list-row" key={index}><textarea aria-label={`${itemLabel} ${index + 1}`} value={value} rows={3} style={{ textAlign: alignment, color }} onChange={event => update(index, event.target.value)}/><button type="button" className="cms-icon-button" onClick={() => onChange(values.filter((_, current) => current !== index))} disabled={values.length === 1} title="Remover" aria-label={`Remover ${itemLabel.toLowerCase()}`}><Trash2 size={16}/></button></div>)}<button type="button" className="cms-secondary-button" onClick={() => onChange([...values, ''])}><Plus size={16}/> Adicionar {itemLabel.toLowerCase()}</button></fieldset>;
+  return <fieldset className="cms-fieldset"><legend>{label}</legend><FormattingToolbar alignment={alignment} onAlignmentChange={onAlignmentChange} color={color} onColorChange={onColorChange}/>{values.map((value, index) => <div className="cms-list-row" key={index}><textarea aria-label={`${itemLabel} ${index + 1}`} value={value} rows={3} style={{ textAlign: alignment, color }} onChange={event => update(index, event.target.value)}/><button type="button" className="cms-icon-button" onClick={() => onChange(values.filter((_, current) => current !== index))} disabled={!allowEmpty && values.length === 1} title="Remover" aria-label={`Remover ${itemLabel.toLowerCase()}`}><Trash2 size={16}/></button></div>)}<button type="button" className="cms-secondary-button" onClick={() => onChange([...values, ''])}><Plus size={16}/> Adicionar {itemLabel.toLowerCase()}</button></fieldset>;
 }
 
 export function CheckboxGroup({ label, values, selected, onChange }: { label: string; values: Option[]; selected: string[]; onChange: (selected: string[]) => void }) {

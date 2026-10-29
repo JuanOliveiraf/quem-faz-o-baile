@@ -85,11 +85,8 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
     validTextAlignments(artist.textAlignments, artist.id, errors);
     validTextColors(artist.textColors, artist.id, errors);
     required(artist.name, `Nome de ${artist.id}`, errors);
-    required(artist.kind, `Tipo de ${artist.id}`, errors);
-    required(artist.summary, `Resumo de ${artist.id}`, errors);
     if (artist.slug !== artist.id) errors.push(`O slug de ${artist.id} precisa ser igual ao ID.`);
     if (!decadeIds.has(artist.decade)) errors.push(`Década inválida em ${artist.id}.`);
-    if (!artist.paragraphs.length) errors.push(`A biografia de ${artist.id} está vazia.`);
     artist.paragraphs.forEach((text, index) => required(text, `Parágrafo ${index + 1} de ${artist.id}`, errors));
     if (!['inicial', 'pesquisado', 'revisado'].includes(artist.editorialStatus)) errors.push(`Estado editorial inválido em ${artist.id}.`);
     if (artist.workIds.length !== 1) errors.push(`${artist.name} precisa ter exatamente uma obra.`);
@@ -128,8 +125,6 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
     validTextAlignments(topic.textAlignments, topic.id, errors);
     validTextColors(topic.textColors, topic.id, errors);
     required(topic.title, `Título da pesquisa ${topic.id}`, errors);
-    required(topic.subtitle, `Abertura da pesquisa ${topic.id}`, errors);
-    if (!topic.text.length || !topic.questions.length) errors.push(`A pesquisa ${topic.id} está incompleta.`);
     topic.sourceIds.forEach(id => { if (!sourceIds.has(id)) errors.push(`Fonte ${id} não existe.`); });
   });
   sources.forEach(source => {
