@@ -307,10 +307,14 @@
     "name": "MC Pedrinho",
     "decade": "2010",
     "kind": "artista",
-    "summary": "Cantor paulista que começou ainda criança e ganhou audiência pela circulação digital do funk.",
+    "summary": "Cantor de Cabreúva (SP) que, ainda criança, se tornou um dos nomes do funk ousadia, cuja ascensão em 2014 abriu um debate sobre sexualidade nas letras e proteção da infância. ",
     "paragraphs": [
-      "......",
-      "......"
+      "MC Pedrinho é um dos rostos mais conhecidos do funk paulista da década de 2010 e também um dos casos que mais levantaram discussões sobre infância, sexualidade e indústria musical no funk. Seu perfil precisa ser apresentado com contexto, sem exaltar nem reduzir a trajetória a uma polêmica. ",
+      "Natural de Cabreúva (SP), Pedro Maia Tempester começou a cantar muito cedo. Segundo a Billboard Brasil, circulava por quermesses pedindo oportunidades para cantar, até ser descoberto por um dos fundadores da GR6. Em reportagem do G1 de 2014, aos 12 anos, ele contou que o sucesso no funk melhorou a vida da família, ideia que retoma em entrevista recente ao SAPO 24, quando diz que a música e o público mudaram a trajetória dos seus. ",
+      "O funk ousadia surgiu em São Paulo no início de 2014, a partir de MCs jovens que cantavam letras de forte conteúdo sexual, em geral com humor, e conquistaram o público adolescente enquanto enfrentavam a rejeição de setores conservadores. Um artigo publicado na revista Estudos e Pesquisas em Psicologia, da UERJ (leitura lacaniana do fenômeno), registra que Pedrinho, aos 12 anos, já cobrava mais de dez mil reais por apresentação. “Dom Dom Dom” é descrita como a música que o projetou nacionalmente, com letra sexualmente explícita associada à voz de criança. ",
+      "O impacto jurídico veio rápido. Em janeiro de 2015, o Ministério Público do Ceará obteve uma liminar que proibiu um show de Pedrinho em Fortaleza, e houve notícia de pedido para proibir suas músicas em todo o território nacional. Ainda em 2015, ele firmou um acordo com o Ministério Público para adequar suas músicas ao público mais jovem, com previsão de multa superior a cinquenta mil reais em caso de descumprimento. Hoje, Pedrinho descreve esse período como um momento duro, em que precisou participar de audiências ainda criança. ",
+      "Depois do acordo, passou a gravar músicas mais românticas e manteve a carreira ativa, com uma discografia que, segundo o DN Brasil, soma dez álbuns de estúdio. Parcerias como “Dançarina” (2022, com Pedro Sampaio) ampliaram seu alcance, inclusive em Portugal, onde já se apresentou várias vezes. Em 2024 deixou a GR6, onde estava desde criança, para atuar de forma independente. ",
+      "A importância de MC Pedrinho para o museu digital está em mostrar um dos lados mais controversos do funk dos anos 2010: a transição do funk ostentação para o funk ousadia, a circulação pela internet, o papel das produtoras e o debate sobre os limites entre liberdade de expressão e proteção de crianças e adolescentes. É um perfil que permite discutir o funk como fenômeno cultural, econômico e jurídico. "
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
@@ -327,6 +331,10 @@
       "url": "/artists/mc-pedrinho.webp",
       "alt": "Retrato de MC Pedrinho segurando uma coroa.",
       "credit": "Imagem publicada por Billboard Brasil."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
