@@ -99,7 +99,8 @@
   "catalogPage": {
     "eyebrow": "CATÁLOGO / TODO O ACERVO",
     "title": "Artistas, vozes e encontros.",
-    "description": "Encontre um perfil para conhecer o recorte do projeto e acessar as músicas e links disponíveis."
+    "description": "Encontre um perfil para conhecer o recorte do projeto e acessar as músicas e links disponíveis.",
+    "references": []
   },
   "footer": {
     "project": "Projeto Omnia · FAPCOM · 2026",

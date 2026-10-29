@@ -75,14 +75,21 @@ function SiteFields({ draft, setDraft, section, setMedia, previewUrl, setPreview
     <StringListField label="Linhas do título" values={draft.topicsSection.titleLines} onChange={value => update('topicsSection', { ...draft.topicsSection, titleLines: value })} itemLabel="Linha" {...format('topics.title')}/>
     <StringListField label="Linhas da descrição" values={draft.topicsSection.descriptionLines} onChange={value => update('topicsSection', { ...draft.topicsSection, descriptionLines: value })} itemLabel="Linha" {...format('topics.description')}/>
   </>;
-  if (current === 'catalog') return <>
-    <TextField label="Identificação" value={draft.catalogSection.eyebrow} onChange={value => update('catalogSection', { ...draft.catalogSection, eyebrow: value })}/>
-    <StringListField label="Linhas do título" values={draft.catalogSection.titleLines} onChange={value => update('catalogSection', { ...draft.catalogSection, titleLines: value })} itemLabel="Linha" {...format('catalog.title')}/>
-    <TextArea label="Descrição" value={draft.catalogSection.description} onChange={value => update('catalogSection', { ...draft.catalogSection, description: value })} {...format('catalog.description')}/>
-    <TextField label="Texto do botão" value={draft.catalogSection.ctaLabel} onChange={value => update('catalogSection', { ...draft.catalogSection, ctaLabel: value })}/>
-    <TextField label="Título da página do catálogo" value={draft.catalogPage.title} onChange={value => update('catalogPage', { ...draft.catalogPage, title: value })} {...format('catalog.pageTitle')}/>
-    <TextArea label="Descrição da página do catálogo" value={draft.catalogPage.description} onChange={value => update('catalogPage', { ...draft.catalogPage, description: value })} {...format('catalog.pageDescription')}/>
-  </>;
+  if (current === 'catalog') {
+    const updateReference = (index: number, reference: SiteContent['catalogPage']['references'][number]) => update('catalogPage', { ...draft.catalogPage, references: draft.catalogPage.references.map((item, currentIndex) => currentIndex === index ? reference : item) });
+    const removeReference = (index: number) => update('catalogPage', { ...draft.catalogPage, references: draft.catalogPage.references.filter((_, currentIndex) => currentIndex !== index) });
+    const addReference = () => update('catalogPage', { ...draft.catalogPage, references: [...draft.catalogPage.references, { id: `catalogo-${Date.now().toString(36)}`, label: 'Nova referência', url: null }] });
+    return <>
+      <TextField label="Identificação" value={draft.catalogSection.eyebrow} onChange={value => update('catalogSection', { ...draft.catalogSection, eyebrow: value })}/>
+      <StringListField label="Linhas do título" values={draft.catalogSection.titleLines} onChange={value => update('catalogSection', { ...draft.catalogSection, titleLines: value })} itemLabel="Linha" {...format('catalog.title')}/>
+      <TextArea label="Descrição" value={draft.catalogSection.description} onChange={value => update('catalogSection', { ...draft.catalogSection, description: value })} {...format('catalog.description')}/>
+      <TextField label="Texto do botão" value={draft.catalogSection.ctaLabel} onChange={value => update('catalogSection', { ...draft.catalogSection, ctaLabel: value })}/>
+      <TextField label="Título da página do catálogo" value={draft.catalogPage.title} onChange={value => update('catalogPage', { ...draft.catalogPage, title: value })} {...format('catalog.pageTitle')}/>
+      <TextArea label="Descrição da página do catálogo" value={draft.catalogPage.description} onChange={value => update('catalogPage', { ...draft.catalogPage, description: value })} {...format('catalog.pageDescription')}/>
+      {draft.catalogPage.references.map((reference, index) => <fieldset className="cms-fieldset cms-subgroup" key={reference.id}><legend>Referência {index + 1}</legend><div className="cms-subgroup-heading"><strong>{reference.label || 'Sem identificação'}</strong><button type="button" className="cms-delete-button" onClick={() => removeReference(index)}><Trash2 size={16}/> Excluir referência</button></div><TextArea label="Referência" value={reference.label} onChange={value => updateReference(index, { ...reference, label: value })}/><TextField label="URL (opcional)" type="url" value={reference.url || ''} onChange={value => updateReference(index, { ...reference, url: value || null })}/></fieldset>)}
+      <button type="button" className="cms-secondary-button" onClick={addReference}><Plus size={16}/> Adicionar referência</button>
+    </>;
+  }
   if (current === 'about') {
     const updateChannel = (index: number, channel: Channel) => update('aboutSection', { ...draft.aboutSection, channels: draft.aboutSection.channels.map((item, currentIndex) => currentIndex === index ? channel : item) });
     const setChannels = (channels: Channel[]) => update('aboutSection', {

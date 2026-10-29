@@ -10,6 +10,7 @@ export interface Source extends TextFormatting { id: string; title: string; cred
 export interface HeroContent { eyebrow: string; titleLines: string[]; accent: string; intro: string; ctaLabel: string; meta: string; imageUrl: string; imageAlt: string; imageCredit: string; stickerLines: string[] }
 export interface SectionIntro { eyebrow: string; titleLines: string[]; descriptionLines: string[] }
 export interface Channel extends TextFormatting { id: string; label: string; title: string; text: string; linkLabel: string | null; linkUrl: string | null }
+export interface CatalogReference { id: string; label: string; url: string | null }
 export interface SiteContent extends TextFormatting {
  title: string;
  instagramUrl: string;
@@ -24,7 +25,7 @@ export interface SiteContent extends TextFormatting {
  topicsSection: SectionIntro;
  catalogSection: { eyebrow: string; titleLines: string[]; description: string; ctaLabel: string };
  aboutSection: { eyebrow: string; titleLines: string[]; channels: Channel[] };
- catalogPage: { eyebrow: string; title: string; description: string };
+ catalogPage: { eyebrow: string; title: string; description: string; references: CatalogReference[] };
  footer: { project: string; tagline: string; notes: string[] };
 }
 export interface ContentBundle { artists: Artist[]; works: Work[]; decades: Decade[]; topics: Topic[]; sources: Source[]; site: SiteContent }

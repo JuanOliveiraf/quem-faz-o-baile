@@ -152,6 +152,15 @@ export function validateContentBundle(bundle: ContentBundle): string[] {
   if (site.hero?.imageUrl && !site.hero.imageUrl.startsWith('/')) errors.push('A imagem de abertura precisa usar um caminho público do site.');
   required(site.ribbonText, 'Texto da faixa', errors);
   required(site.womenIntro, 'Introdução Mulheres no Funk', errors);
+  if (!Array.isArray(site.catalogPage?.references)) {
+    errors.push('As referências do catálogo precisam estar em uma lista.');
+  } else {
+    uniqueIds(site.catalogPage.references, 'referências do catálogo', errors);
+    site.catalogPage.references.forEach((reference, index) => {
+      required(reference.label, `Referência ${index + 1} do catálogo`, errors);
+      secureUrl(reference.url, `URL da referência ${index + 1} do catálogo`, errors);
+    });
+  }
   if (!Array.isArray(site.aboutSection?.channels)) {
     errors.push('As experiências do projeto precisam estar em uma lista.');
   } else {
