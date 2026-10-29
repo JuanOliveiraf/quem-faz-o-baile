@@ -115,7 +115,8 @@
     "hero.intro": "justify",
     "women.intro": "justify",
     "topics.title": "justify",
-    "topics.description": "justify"
+    "topics.description": "justify",
+    "about.title": "center"
   },
   "textColors": {
     "women.title": "#fa1100",
