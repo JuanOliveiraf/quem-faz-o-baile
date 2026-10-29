@@ -12,7 +12,7 @@ export default function ArtistDetail() {
  {artist.editorialStatus === 'inicial' && <p className="editorial-note"><strong>Conteúdo ainda não pesquisado.</strong> Este texto registra apenas a seleção do projeto e não deve ser tratado como biografia.</p>}
  {artist.editorialStatus === 'pesquisado' && <p className="editorial-note"><strong>Perfil pesquisado.</strong> O texto foi elaborado a partir das <a href="#fontes">fontes listadas ao final da página</a> e ainda aguarda a revisão editorial do grupo.</p>}
  {artist.paragraphs.length > 0 && <><h2 className="subheading">Trajetória pesquisada</h2><div className="reading" style={textAlignmentStyle(artist, 'paragraphs')}>{artist.paragraphs.map((text,i) => <p key={i}>{text}</p>)}</div></>}
- <div className="external-links">{artist.instagramUrl && <a className="button" href={artist.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram do artista</a>}{artist.youtubeUrl && <a className="button" href={artist.youtubeUrl} target="_blank" rel="noopener noreferrer">Canal no YouTube</a>}{!artist.youtubeUrl && <a className="text-link" href={`https://www.youtube.com/results?search_query=${encodeURIComponent(artist.name)}`} target="_blank" rel="noopener noreferrer">Buscar {artist.name} no YouTube</a>}</div>
+ <div className="external-links">{artist.instagramUrl && <a className="button" href={artist.instagramUrl} target="_blank" rel="noopener noreferrer">Instagram do artista</a>}<Link className="button" to={`/acervo/${artist.slug}`}>Conhecer catálogo do artista</Link></div>
  <SourceList ids={artist.sourceIds}/>
  </section>;
 }

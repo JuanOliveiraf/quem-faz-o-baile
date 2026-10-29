@@ -12,7 +12,7 @@
       "......."
     ],
     "sourceIds": [
-      "projeto"
+      "projeto-populacao"
     ],
     "textColors": {
       "title": "#050505"
@@ -31,7 +31,7 @@
       "........"
     ],
     "sourceIds": [
-      "projeto"
+      "projeto-politica"
     ],
     "textAlignments": {
       "subtitle": "justify"
@@ -50,7 +50,7 @@
       "......"
     ],
     "sourceIds": [
-      "projeto",
+      "projeto-genero",
       "azmina",
       "empoderamento"
     ],
@@ -71,7 +71,7 @@
       "......."
     ],
     "sourceIds": [
-      "projeto"
+      "projeto-estetica"
     ]
   }
 ]

@@ -9,7 +9,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-conquista",
       "media-conquista-youtube"
     ],
     "youtube": {
@@ -28,7 +28,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-rap-da-felicidade",
       "media-rap-felicidade-youtube"
     ],
     "youtube": {
@@ -47,7 +47,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-agora-to-solteira",
       "media-agora-solteira-youtube"
     ],
     "youtube": {
@@ -102,7 +102,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-tremendo-vacilao",
       "media-tremendo-vacilao-youtube"
     ],
     "youtube": {
@@ -121,7 +121,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-show-das-poderosas",
       "media-show-poderosas-youtube"
     ],
     "youtube": {
@@ -140,7 +140,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-dom-dom-dom",
       "media-dom-dom-dom-youtube"
     ],
     "youtube": {
@@ -159,7 +159,7 @@
     "type": "faixa",
     "context": "Obra selecionada pelo grupo na proposta da playlist Beat a Beat. A análise desta obra será aprofundada na curadoria.",
     "sourceIds": [
-      "projeto",
+      "projeto-rabetao",
       "media-rabetao-youtube"
     ],
     "youtube": {
@@ -178,7 +178,7 @@
     "type": "faixa",
     "context": "\"Além de fazer música, sexo é político. Quando falamos sobre prazer feminino, isso leva a outras escalas e movimentos que vão contra essa liberdade. Então, é importante questionar esses assuntos e como essas relações são encaradas”, reflete Bia Soull.",
     "sourceIds": [
-      "projeto",
+      "projeto-sinergia",
       "media-sinergia-youtube"
     ],
     "youtube": {
@@ -197,7 +197,7 @@
     "type": "faixa",
     "context": "“A gente fala muito de amor, mas de um jeito distorcido, quase sempre vindo de um lugar de carência. Eu quis mostrar o amor como essa força que transforma” - NandaTsunami\n\n",
     "sourceIds": [
-      "projeto",
+      "projeto-novinho-chora",
       "media-novinho-chora-youtube"
     ],
     "youtube": {
@@ -216,7 +216,7 @@
     "type": "set",
     "context": "\"Somos mulheres cantando sobre sexo. A verdade é que a mulher não pode fazer nada, somos travestis cantando funk sobre sexo - o homem cis sempre vai destruir a imagem feminina, sendo ela uma diva pop ou uma travesti. Então esse é o nosso público-alvo, é por isso que a gente incomoda\" - Katy da Voz e as Abusadas ",
     "sourceIds": [
-      "projeto",
+      "projeto-mini-set-das-visitantes",
       "media-mini-set-youtube"
     ],
     "youtube": {
