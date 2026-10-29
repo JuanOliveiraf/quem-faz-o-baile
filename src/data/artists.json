@@ -71,10 +71,15 @@
     "name": "MC Marcinho",
     "decade": "1990",
     "kind": "artista",
-    "summary": "Cantor e compositor associado ao funk melody e a sucessos românticos do gênero.",
+    "summary": "Cantor e compositor carioca conhecido como “Príncipe do Funk”, que se tornou uma das principais referências do funk melody com músicas românticas que marcaram os anos 1990 e 2000. ",
     "paragraphs": [
-      ".....",
-      "......"
+      "MC Marcinho, nome artístico de Márcio André Nepomuceno Garcia, foi um cantor e compositor fundamental para a popularização do funk melody no Brasil. Nascido em 1977, no estado do Rio de Janeiro, e criado em Bangu, na Zona Oeste da capital, o artista construiu uma carreira marcada por músicas que exploravam o amor, a paixão, a solidão e os relacionamentos afetivos. Sua produção ajudou a consolidar uma vertente do funk carioca que combinava batidas dançantes com letras românticas e melodias marcantes. ",
+      "A trajetória musical de MC Marcinho ganhou destaque em meados dos anos 1990, quando compôs “Rap do Solitário”. A música, inspirada em uma experiência amorosa, chamou a atenção do público e passou a tocar nas rádios cariocas, abrindo caminho para sua carreira profissional. Em 1995, participou de uma coletânea de funk e, nos anos seguintes, consolidou seu nome com canções que ampliaram a presença do funk melody no mercado fonográfico brasileiro. ",
+      "Entre seus principais sucessos estão “Princesa”, “Glamurosa”, “Garota Nota 100” e “Rap do Silva”. Essas músicas demonstram diferentes aspectos de sua produção: enquanto algumas exploram o romantismo e a idealização amorosa, outras valorizam a dança, a autoestima e a atmosfera festiva dos bailes. Em “Glamurosa”, por exemplo, a celebração da mulher aparece associada a uma estética de brilho, estilo e presença, elementos que dialogam com a cultura visual e performática do funk. ",
+      "A importância de MC Marcinho está relacionada à maneira como ajudou a consolidar o funk melody como uma vertente reconhecida da música brasileira. Em um cenário no qual o gênero era frequentemente associado a preconceitos sociais e territoriais, suas canções românticas contribuíram para aproximar o funk de públicos variados, sem romper com sua origem nos bailes cariocas. Seu repertório também demonstrou que o gênero poderia abordar sentimentos e experiências afetivas de forma acessível, mantendo a energia rítmica característica das pistas de dança. ",
+      "Ao longo de sua carreira, o artista enfrentou dificuldades pessoais e profissionais. Em 2006, sofreu um grave acidente de carro, que provocou lesões e exigiu um longo processo de recuperação. Mesmo diante dessas dificuldades, continuou ligado à música e aos palcos. Sua trajetória foi interrompida em 26 de agosto de 2023, quando morreu aos 45 anos, deixando um repertório que permanece importante para a memória do funk brasileiro. ",
+      "O legado de MC Marcinho ultrapassa o sucesso comercial de suas canções. Sua obra ajudou a estabelecer uma identidade romântica para o funk carioca, influenciando artistas que exploraram posteriormente temas como amor, desejo e relacionamentos. Ao mesmo tempo, sua permanência na memória musical demonstra como músicas produzidas em uma época específica podem continuar sendo compartilhadas e reconhecidas por novas gerações. ",
+      "Para o museu digital, MC Marcinho representa a consolidação do funk melody e a importância das narrativas românticas na história do gênero. Sua trajetória permite explorar como o funk se diversificou durante os anos 1990 e 2000, conquistando novos públicos por meio de diferentes abordagens musicais e temáticas. Também possibilita comparar a produção romântica daquele período com as formas contemporâneas de representar o amor e os relacionamentos na música urbana. "
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
@@ -91,6 +96,10 @@
       "url": "/artists/mc-marcinho.jpg",
       "alt": "Retrato de MC Marcinho.",
       "credit": "Imagem publicada por O Globo."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
