@@ -117,10 +117,12 @@
     "name": "Furacão 2000",
     "decade": "2000",
     "kind": "produtora",
-    "summary": "Equipe de som, produtora e gravadora central para a circulação do funk carioca.",
+    "summary": "Equipe de som e gravadora responsável por profissionalizar, massificar e projetar o funk carioca em escala nacional no início dos anos 2000.",
     "paragraphs": [
-      ".....",
-      "......"
+      "A Furacão 2000 é um dos coletivos e empresas de entretenimento mais influentes da história da música periférica brasileira. Sob o comando de Rômulo Costa e Marlboro (em momentos chave de sua história), a equipe de som transformou-se em uma verdadeira fábrica de hits e vitrine cultural a partir do final dos anos 1990 e, especialmente, ao longo dos anos 2000. Através de programas de televisão, DVDs dos bailes ao vivo e coletâneas fonográficas massivamente distribuídas, a Furacão 2000 foi a principal responsável por mediar e fazer a ponte entre o funk das favelas cariocas e rádios, festivais e lares de todo o país.",
+      "A importância da equipe de som reside na capacidade de mapear, produzir e lançar novos talentos que definiram a estética e a linguagem do funk na década de 2000. Foi graças ao apoio e visibilidade dado pela Furacão que despontaram grupos e artistas cruciais para a consolidação do ritmo, como o Bonde do Tigrão, que popularizou o tamborzão e as danças coreografadas em hits como \"Cerol na Mão\"; Os Havaianos, que revolucionaram a moda e os passos de dança nos bailes; e o MC Bola de Fogo, figura icônica dos bordões que conquistaram as pistas de todo o Brasil.",
+      "A produtora funcionou não apenas como selo, mas como uma plataforma de sociabilidade e difusão de linguagem. Os lançamentos da Furacão 2000 articulavam som, imagem, moda de rua e comportamento jovem, estabelecendo um padrão visual e estético que dominou a cultura de massa brasileira na virada do milênio.",
+      "A relevância da Furacão 2000 para o museu digital está em sua centralidade na história do funk como fenômeno da indústria cultural. Sua trajetória permite compreender como uma infraestrutura comunitária de bailes de favela se transformou em uma potência midiática, capaz de romper bloqueios socioculturais e ditar os rumos da música popular brasileira nos anos 2000."
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
@@ -138,6 +140,10 @@
       "url": "/artists/furacao-2000.jpg",
       "alt": "Marca oficial da Furacão 2000.",
       "credit": "Imagem publicada por Folha Vitória."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
