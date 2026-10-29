@@ -271,10 +271,14 @@
     "name": "Valesca Popozuda",
     "decade": "2010",
     "kind": "artista",
-    "summary": "Cantora que se projetou à frente da Gaiola das Popozudas antes de seguir carreira solo.",
+    "summary": "Cantora e dançarina carioca, ex-vocalista da Gaiola das Popozudas, que se consolidou como uma das principais vozes femininas do funk com “Beijinho no Ombro\".",
     "paragraphs": [
-      ".....",
-      "....."
+      "Valesca Popozuda é uma das artistas que ajudam a explicar a presença feminina no funk carioca antes e durante a era digital. Sua carreira atravessa duas fases: a do grupo Gaiola das Popozudas, nos anos 2000, e a da cantora solo que se firmou nos anos 2010. ",
+      "Nascida no Rio de Janeiro em 1978 (as fontes divergem entre 6 e 7 de outubro), ela começou como dançarina e só depois passou a cantar. Em entrevista à Billboard Brasil, contou que o nome “Popozuda” veio do Carnaval: nos ensaios das escolas de samba, o público a identificava pelo samba no pé, e o apelido pegou. Essa origem mostra uma ligação entre funk, samba e cultura popular carioca. ",
+      "Como vocalista da Gaiola das Popozudas, permaneceu cerca de doze anos no grupo. O público nacional a conheceu com “Agora Eu Sou Solteira” e “Late Que Eu Tô Passando”, esta última presente na trilha sonora da novela Beleza Pura, da TV Globo. Em entrevistas, ela lembra que começou em um cenário predominantemente masculino e que, em 2006, foi convidada a cantar no Carnaval, no circuito Campo Grande. Ao lado de Tati Quebra Barraco, é lembrada como uma das precursoras do funk carioca feito por mulheres. ",
+      "O início da carreira solo aparece com datas diferentes: 2010 na Billboard Brasil, 2012 na Super Rádio Tupi e 2013 nos estudos acadêmicos, que registram o anúncio da saída da Gaiola em março daquele ano (ponto a conferir). Em 2013, “Beijinho no Ombro” foi um divisor de águas, nas palavras da própria artista, ampliando seu público para além dos fãs da Gaiola. A música passou de cem milhões de visualizações no YouTube, segundo reportagem da Tupi, e se tornou um dos grandes marcos do funk na era dos vídeos online. ",
+      "O tema do protagonismo feminino é central. Trabalhos acadêmicos, como o artigo “Uma Nova Valesca: da gaiola ao feminismo” (Intercom, 2015) e a monografia “A ressignificação da mulher no funk carioca: de ‘Vai Danada’ a ‘Beijinho no Ombro’” (FACHA, 2014), analisam como suas letras e sua imagem passam do humor sexual da Gaiola para um discurso mais voltado a autoestima e empoderamento. Em entrevista ao Bahia Notícias, Valesca relacionou o fato de nascer mulher a assumir posicionamentos feministas e comentou uma nova versão de “Beijinho no Ombro” que valoriza as mulheres. Na mesma ocasião, estava em Salvador para participar da Parada LGBT. ",
+      "A importância de Valesca para o museu digital está em mostrar como uma mulher que veio dos bailes e do Carnaval construiu autonomia, assumiu a própria narrativa e abriu portas para outras artistas. Seu perfil permite discutir sexualidade e humor no funk, autoestima, machismo na indústria musical e o alcance do funk nas plataformas digitais. "
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": true,
@@ -291,6 +295,10 @@
       "url": "/artists/valesca-popozuda.png",
       "alt": "Retrato de Valesca Popozuda.",
       "credit": "Imagem publicada por Gshow - Globo"
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
