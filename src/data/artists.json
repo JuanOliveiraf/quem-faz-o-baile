@@ -42,10 +42,15 @@
     "name": "Cidinho & Doca",
     "decade": "1990",
     "kind": "dupla",
-    "summary": "Dupla da Cidade de Deus conhecida por transformar o cotidiano da favela em crônica musical.",
+    "summary": "Dupla de MCs cariocas que marcou o funk dos anos 1990 com músicas que retratam a vida nas favelas, reivindicam direitos e expressam o desejo de liberdade, segurança e dignidade. ",
     "paragraphs": [
-      "...",
-      "......"
+      "Cidinho & Doca é uma dupla formada pelos MCs Sidney da Silva, conhecido como Cidinho, e Marcos Paulo de Jesus Peixoto, o Doca. Originários da Cidade de Deus, na Zona Oeste do Rio de Janeiro, os artistas ganharam destaque nacional durante os anos 1990, período em que o funk carioca se consolidava como uma importante expressão cultural das periferias urbanas. Suas composições abordavam experiências cotidianas das comunidades, incluindo a violência, as desigualdades sociais e as dificuldades enfrentadas por seus moradores. ",
+      "Um dos principais marcos da trajetória da dupla foi “Rap da Felicidade”, lançado na década de 1990 e conhecido pelo refrão que expressa o desejo de viver com tranquilidade na comunidade de origem. A música se tornou um dos grandes clássicos do funk brasileiro por apresentar uma perspectiva dos moradores das favelas sobre questões frequentemente tratadas de maneira estigmatizada pela sociedade e pela mídia. ",
+      "Em entrevista publicada pela Folha de S.Paulo em 1995, Cidinho explicou que a música não se dirigia somente à polícia, mas também aos políticos, aos empresários e ao conjunto da sociedade. A letra reivindicava o direito à segurança, ao lazer e à dignidade, denunciando a realidade de pessoas que conviviam com a violência e com diferentes formas de injustiça. Dessa maneira, “Rap da Felicidade” ultrapassou o caráter de música dançante e se tornou uma expressão de reivindicação social. ",
+      "Outro grande sucesso da dupla foi “Rap das Armas”, cuja história envolve diferentes versões. A composição original foi criada pelos MCs Júnior e Leonardo e, posteriormente, ganhou uma releitura de Cidinho & Doca. A canção ficou conhecida nacionalmente por sua linguagem explícita e por referências ao armamento presente em contextos de violência urbana. Sua circulação também gerou controvérsias, evidenciando as tensões em torno da representação das favelas e da relação entre funk, criminalidade e liberdade de expressão. ",
+      "A trajetória de Cidinho & Doca ajuda a compreender como o funk carioca dos anos 1990 se tornou um espaço de expressão de diferentes experiências das periferias. Enquanto algumas produções se concentravam no romance, na festa e na dança, outras utilizavam o formato do rap para narrar conflitos sociais e reivindicar direitos. No caso da dupla, essa dimensão social é especialmente importante: suas músicas colocaram em circulação discursos sobre a vida nas comunidades que raramente encontravam espaço equivalente nos meios de comunicação tradicionais.",
+      "O legado da dupla também permanece na memória coletiva do funk. “Rap da Felicidade” continua presente em festas, eventos culturais, manifestações e conteúdos digitais, sendo reconhecido por diferentes gerações. Sua permanência demonstra como uma música originada em um contexto específico pode adquirir significados mais amplos e atravessar diferentes momentos da história brasileira. ",
+      "Para o museu digital, Cidinho & Doca representa a dimensão social e política do funk, permitindo discutir como o gênero se tornou uma forma de narrar a realidade das periferias, reivindicar cidadania e questionar estereótipos. Sua obra também abre espaço para refletir sobre os conflitos entre expressão artística, violência urbana e preconceito contra a cultura produzida nas favelas. "
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
@@ -63,6 +68,10 @@
       "url": "/artists/cidinho-doca.jpg",
       "alt": "Cidinho e Doca",
       "credit": "Imagem publicada por Jornal Meia Hora."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
