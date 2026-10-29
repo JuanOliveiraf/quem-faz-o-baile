@@ -5,8 +5,15 @@
     "name": "Claudinho & Buchecha",
     "decade": "1990",
     "kind": "dupla",
-    "summary": ".",
-    "paragraphs": [],
+    "summary": "Dupla brasileira que marcou a história do funk melody ao combinar batidas do funk carioca, influências da black music e melodias românticas, levando o gênero ao grande público nos anos 1990. ",
+    "paragraphs": [
+      "Claudinho & Buchecha foi uma das duplas mais populares da história do funk brasileiro. Formada por Cláudio Rodrigues de Mattos, o Claudinho, e Claucirlei Jovêncio de Sousa, o Buchecha, a dupla surgiu em São Gonçalo, no Rio de Janeiro, onde os dois cresceram e começaram a frequentar os bailes funk. A parceria se destacou por apresentar uma abordagem melódica e romântica do gênero, ajudando a ampliar seu alcance para além dos circuitos tradicionais dos bailes. ",
+      "A trajetória musical ganhou impulso nos primeiros anos da década de 1990, quando os artistas participaram de festivais de música em São Gonçalo. Em 1995, conquistaram reconhecimento com “Rap do Salgueiro”, que circulou pelos bailes e pelas rádios cariocas. No ano seguinte, lançaram seu primeiro álbum, Claudinho & Buchecha, que alcançou grande sucesso comercial, impulsionado pela música “Conquista”. A partir daí, a dupla passou a ocupar um espaço importante na música popular brasileira. ",
+      "Ao longo da carreira, lançaram sucessos como “Nosso Sonho”, “Quero Te Encontrar”, “Só Love”, “Xereta” e “Fico Assim Sem Você”. Essas músicas se destacavam pelas letras românticas, pelos refrões marcantes e pela combinação de ritmos dançantes com referências da música pop e da black music. Em vez de se restringir à estética dos raps de baile, a dupla desenvolveu uma sonoridade que aproximava o funk de formatos populares nas rádios, contribuindo para a consolidação do chamado funk melody. ",
+      "O sucesso de Claudinho & Buchecha também demonstra como o funk passou a ocupar novos espaços de circulação durante os anos 1990. A dupla conquistou públicos de diferentes idades e contextos sociais, ajudando a transformar artistas oriundos dos bailes periféricos em nomes de alcance nacional. Sua trajetória evidencia que a expansão do gênero não aconteceu apenas por meio de músicas voltadas à denúncia social ou à realidade das comunidades, mas também pela criação de canções românticas, dançantes e acessíveis a um público amplo. ",
+      "Em 2002, Claudinho morreu em um acidente de carro, encerrando a parceria. Buchecha seguiu em carreira solo, mantendo vivo o repertório da dupla e sua presença na memória musical brasileira. Mesmo após o fim da formação original, suas músicas continuaram circulando em rádios, festas, plataformas digitais e produções audiovisuais, sendo redescobertas por novas gerações. ",
+      "Para o museu digital, Claudinho & Buchecha representa um momento fundamental de transformação do funk carioca: a consolidação de uma vertente romântica que ampliou as possibilidades sonoras e temáticas do gênero. Sua trajetória permite discutir como o funk dialogou com a música pop, conquistou novos públicos e desenvolveu diferentes identidades musicais sem perder sua ligação com os bailes e com a cultura periférica. "
+    ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
     "workIds": [
@@ -23,6 +30,10 @@
       "url": "/artists/claudinho-buchecha.jpg",
       "alt": "Claudinho e Buchecha.",
       "credit": "Imagem publicada por O Globo."
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
