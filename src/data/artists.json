@@ -343,10 +343,15 @@
     "name": "MC Lan",
     "decade": "2010",
     "kind": "artista",
-    "summary": "Cantor e compositor ligado ao funk paulista que alcançou projeção com “Rabetão”.",
+    "summary": "Cantor paulista de funk ousadia que ficou conhecido a partir de 2016 pelo humor, pelas provocações e pelas batidas dançantes, com sucessos como “Rabetão” e “Open the Tcheka”. ",
     "paragraphs": [
-      "......",
-      "......"
+      "MC Lan representa uma face do funk dos anos 2010 baseada em humor, provocação e batidas feitas para dançar. Sua carreira mostra como, no funk paulista, a combinação entre YouTube, produtoras e criatividade com as batidas transformou jovens da periferia em nomes nacionais em poucos meses. ",
+      "Caio Alexandre Cruz nasceu em Diamantina, em Minas Gerais (as datas de nascimento variam entre as fontes, mas sempre em 1994), e mudou-se com a família para São Paulo na infância. Influenciado por rock, blues e rap, atuou como locutor de rádio na adolescência. Depois de um período afastado da música, em 2016 decidiu retomar a carreira: por meio de uma dona de lan house em São Bernardo do Campo, conseguiu gravar a primeira música e adotou o nome artístico Lan. ",
+      "Seu primeiro sucesso, “Cala Boca e Me Mama”, saiu em meados de 2016. Em dezembro do mesmo ano, lançou os primeiros videoclipes com KondZilla, com versões das músicas “Pararam Pam” e “Aprendestes”. Em seguida vieram “Xanaína”, “Open the Tcheka”, “Sua Amiga Eu Vou Pegar” e “Grave Faz Bum” (as duas últimas com MC WM) e, em 2017, “Rabetão”. O sucesso levou à Warner Music Brasil em junho de 2017 e, em maio de 2019, à KondZilla Records. ",
+      "Lan é apontado como um dos principais nomes do funk ousadia, vertente que faz referências humorísticas a termos de conotação sexual. O humor aparece também em batidas que brincam com personagens da cultura pop, como os títulos que remetem a Teletubbies, Rei Leão, Darth Vader e Robocop. Esse recurso ajuda a entender o funk como linguagem de brincadeira e de diálogo com o repertório da internet. ",
+      "O perfil também pede uma leitura crítica. Um projeto de pesquisa de graduação da UNILAB (2018), sobre funk ostentação, masculinidade hegemônica e hipersexualização, toma letras e clipes de MC Lan como objeto e propõe investigar como eles tratam a potência sexual masculina e o corpo feminino; trata-se de uma hipótese de trabalho, não de um resultado. Colocar essa leitura ao lado do perfil de Valesca Popozuda permite ao público comparar diferentes olhares sobre sexualidade e gênero no funk. ",
+      "Depois da década, o artista seguiu mudando de rumo. “Rave de Favela” (2020), com Major Lazer e Anitta, lhe deu projeção internacional e uma indicação ao Grammy Latino. Em 2025, em entrevista à Rolling Stone Brasil, apresentou V3NOM, álbum de rock dividido em três volumes, que ele descreve como um recomeço de carreira. ",
+      "A importância de MC Lan para o museu digital está em mostrar o funk como espaço de humor, provocação e experimentação sonora, ao mesmo tempo que abre discussões sobre representação de gênero e mercado. Sua trajetória também ilustra a mobilidade do artista entre funk, trap e rock. "
     ],
     "editorialStatus": "pesquisado",
     "womenHighlight": false,
@@ -363,6 +368,10 @@
       "url": "/artists/mc-lan.jpg",
       "alt": "Retrato de MC Lan.",
       "credit": "Imagem publicada por G1 - Globo"
+    },
+    "textAlignments": {
+      "summary": "justify",
+      "paragraphs": "justify"
     }
   },
   {
