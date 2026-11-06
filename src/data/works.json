@@ -254,9 +254,10 @@
       "tati-quebra-barraco"
     ],
     "type": "faixa",
-    "context": "Faixa de destaque da trajetória de Tati Quebra Barraco, publicada em vídeo no YouTube.",
+    "context": "\"Sou a primeira funkeira a cantar putaria\" - Tati Quebra Barraco ",
     "sourceIds": [
-      "media-boladona-youtube"
+      "media-boladona-youtube",
+      "boladona-ref-mw5bjqi4"
     ],
     "youtube": {
       "id": "USO_Dfu-6Yg",
