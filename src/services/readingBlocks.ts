@@ -17,5 +17,20 @@ export function toReadingBlocks(paragraphs: string[]): ReadingBlock[] {
       });
     });
   }
-  return blocks;
+  return mergeShortParagraphs(blocks);
+}
+
+const MAX_PARAGRAPH_LENGTH = 850;
+
+/** Une frases curtas consecutivas em parágrafos de tamanho natural; títulos sempre iniciam um novo parágrafo. */
+function mergeShortParagraphs(blocks: ReadingBlock[]): ReadingBlock[] {
+  const merged: ReadingBlock[] = [];
+  for (const block of blocks) {
+    const previous = merged[merged.length - 1];
+    const canMerge = block.kind === 'paragraph' && previous?.kind === 'paragraph'
+      && /[.!?…]$/.test(previous.text) && previous.text.length + block.text.length + 1 <= MAX_PARAGRAPH_LENGTH;
+    if (canMerge) previous.text = `${previous.text} ${block.text}`;
+    else merged.push({ ...block });
+  }
+  return merged;
 }

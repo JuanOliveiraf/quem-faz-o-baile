@@ -228,6 +228,6 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 .detail-page .reading,.detail-page .lead,.detail-page .detail-summary,.detail-page .editorial-note,.detail-page .research-questions,.detail-page .sources{max-width:none}
 
 /* Texto de leitura: parágrafos separados por linha em branco; "- Título" vira subtítulo */
-.reading p{margin:0 0 1.4em}
-.reading .reading-heading{margin:2.2em 0 .7em;font-size:26px;line-height:1.2}
+.reading p{margin:0 0 1em}
+.reading .reading-heading{margin:1.6em 0 .5em;font-size:24px;line-height:1.2}
 .reading .reading-heading:first-child{margin-top:0}
