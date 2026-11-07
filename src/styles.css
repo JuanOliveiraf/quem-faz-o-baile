@@ -220,3 +220,6 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 .hero-copy{padding-left:var(--edge)}
 .detail-page p{max-width:none}
 .detail-page .detail-title,.detail-page h2,.detail-page h3,.detail-page .detail-photo{max-width:none}
+
+/* Cronologia: texto da década vai até a margem direita, alinhado ao fim da barra de épocas */
+.decade-panel p:not(.eyebrow){max-width:none}
