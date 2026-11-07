@@ -213,3 +213,10 @@ header{padding-left:6%;padding-right:6%}
 .detail-page p{max-width:820px}
 .detail-page .detail-title,.detail-page h2,.detail-page h3{max-width:1100px}
 .detail-page .detail-photo{max-width:1100px}
+
+/* Margem lateral única (mesmo valor em cabeçalho, seções e rodapé) e texto ocupando a largura útil */
+:root{--edge:min(96px,6vw)}
+header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
+.hero-copy{padding-left:var(--edge)}
+.detail-page p{max-width:none}
+.detail-page .detail-title,.detail-page h2,.detail-page h3,.detail-page .detail-photo{max-width:none}
