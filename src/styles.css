@@ -233,5 +233,5 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 .reading .reading-heading:first-child{margin-top:0}
 .detail-page .text-link+h2,.detail-page .text-link+.detail-title{margin-top:40px}
 
-/* Cards de artistas: a foto aparece inteira (nenhum rosto cortado) */
-.artist .artist-photo{height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center;background:rgba(0,0,0,.14)}
+/* Página do acervo: foto inteira, sem cortar rostos */
+.detail-page .detail-photo{width:auto;max-width:100%;height:auto;max-height:560px;object-fit:contain;display:block}
