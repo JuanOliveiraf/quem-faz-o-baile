@@ -193,3 +193,13 @@
 /* Hero: o parágrafo tem a mesma largura do título (termina no ponto final de "HISTÓRIAS.") */
 .hero-copy{display:grid;grid-template-columns:fit-content(100%);justify-content:start;justify-items:start;align-content:start}
 .hero-copy .intro{width:0;min-width:100%;max-width:none}
+
+/* Logo oficial no cabeçalho */
+.brand{display:inline-flex;align-items:center;line-height:0}
+.brand img{display:block;width:64px;height:64px;object-fit:contain}
+@media(max-width:430px){.brand img{width:52px;height:52px}}
+
+/* Alinhamento: cabeçalho, abertura, seções e rodapé compartilham a mesma margem lateral (6%) */
+header{padding-left:6%;padding-right:6%}
+.hero-copy{padding-left:6%}
+@media(min-width:851px){.hero-copy{padding-right:5%}}

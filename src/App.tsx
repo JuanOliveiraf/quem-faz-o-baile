@@ -33,7 +33,7 @@ export default function App() {
     <RouteEffects/>
     <a className="skip-link" href="#conteudo">Pular para o conteúdo</a>
     <header>
-      <Link className="brand" to="/">QUEM FAZ<br/><span>O BAILE</span><i>CONHEÇA O GRAVE</i></Link>
+      <Link className="brand" to="/" aria-label="Quem Faz o Baile: Conheça o Grave — página inicial"><img src="/logo.png" alt="" width="64" height="64"/></Link>
       <div className="header-navigation cms-edit-host"><nav aria-label="Navegação principal"><Link to="/#cronologia">{site.navigation.timeline}</Link><Link to="/#mulheres">{site.navigation.women}</Link><Link to="/#olhares">{site.navigation.topics}</Link><Link to="/catalogo">{site.navigation.catalog}</Link></nav><EditButton className="cms-header-edit-button" target={{ collection: 'site', section: 'navigation', label: 'nomes do cabeçalho' }}/></div>
       <CmsAccountButton/>
     </header>
