@@ -235,3 +235,5 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 
 /* Página do acervo: foto inteira, sem cortar rostos */
 .detail-page .detail-photo{width:auto;max-width:100%;height:auto;max-height:560px;object-fit:contain;display:block}
+.detail-page figure{margin:28px 0;padding:0}
+.detail-page figcaption{margin-top:8px}
