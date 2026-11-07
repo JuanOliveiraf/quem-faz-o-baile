@@ -232,3 +232,6 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 .reading .reading-heading{margin:1.6em 0 .5em;font-size:24px;line-height:1.2}
 .reading .reading-heading:first-child{margin-top:0}
 .detail-page .text-link+h2,.detail-page .text-link+.detail-title{margin-top:40px}
+
+/* Cards de artistas: a foto aparece inteira (nenhum rosto cortado) */
+.artist .artist-photo{height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center;background:rgba(0,0,0,.14)}
