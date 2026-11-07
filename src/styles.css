@@ -203,3 +203,7 @@
 header{padding-left:6%;padding-right:6%}
 .hero-copy{padding-left:6%}
 @media(min-width:851px){.hero-copy{padding-right:5%}}
+.brand{gap:14px}
+.brand-text{display:block;line-height:.85}
+.brand-text i{line-height:1}
+@media(max-width:430px){.brand{gap:10px}.brand-text i{display:none}}
