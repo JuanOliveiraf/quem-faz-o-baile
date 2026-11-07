@@ -223,3 +223,6 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 
 /* Cronologia: texto da década vai até a margem direita, alinhado ao fim da barra de épocas */
 .decade-panel p:not(.eyebrow){max-width:none}
+
+/* Páginas de detalhe: nenhum bloco de texto fica preso a uma coluna estreita */
+.detail-page .reading,.detail-page .lead,.detail-page .detail-summary,.detail-page .editorial-note,.detail-page .research-questions,.detail-page .sources{max-width:none}
