@@ -174,3 +174,22 @@
 .cms-notice span{padding:13px 15px;font-size:13px;font-weight:700}
 @media(max-width:850px){.cms-login-trigger{margin-left:auto}.cms-account{margin-left:auto}.cms-checkbox-grid{grid-template-columns:1fr}.cms-panel{width:min(620px,100%)}.cms-list-host>.cms-edit-button{right:4px}.cms-list-host .woman-row{padding-right:52px}}
 @media(max-width:430px){.cms-login-trigger{padding:8px 12px}.cms-account>span{padding:8px;font-size:11px}.cms-login-modal{padding:28px 20px;box-shadow:5px 5px 0 var(--ink)}.cms-panel>header,.cms-panel-body,.cms-panel>form>footer{padding-left:16px;padding-right:16px}.cms-panel>header h2{font-size:20px}.cms-panel>form>footer{display:grid;grid-template-columns:1fr 1fr}.cms-edit-button{width:34px;height:34px}.cms-notice{right:12px;bottom:12px;max-width:calc(100vw - 24px)}}
+
+/* UX: alinhamento e margens de texto */
+.hero-copy,.section,.women-hero-copy{overflow-wrap:break-word}
+.hero-copy h1,.section h2{max-width:100%;overflow-wrap:normal}
+.hero-copy .intro{max-width:min(100%,520px)}
+.hero-copy .intro,.women-feature-copy p,.section-heading p,.catalog-intro p,.about p,.topic-card p{text-wrap:pretty}
+[style*="text-align: justify"]{hyphens:auto;-webkit-hyphens:auto;text-align-last:left;word-spacing:-.02em}
+@media(max-width:850px){
+  .hero-copy{padding:42px 6% 40px}
+  .hero-copy .intro{max-width:none}
+  .hero-copy h1{font-size:clamp(52px,14vw,100px)}
+}
+@media(max-width:430px){
+  [style*="text-align: justify"]{text-align:left!important;hyphens:manual}
+}
+
+/* Hero: o parágrafo tem a mesma largura do título (termina no ponto final de "HISTÓRIAS.") */
+.hero-copy{display:grid;grid-template-columns:fit-content(100%);justify-content:start;justify-items:start;align-content:start}
+.hero-copy .intro{width:0;min-width:100%;max-width:none}
