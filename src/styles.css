@@ -180,14 +180,14 @@
 .hero-copy h1,.section h2{max-width:100%;overflow-wrap:normal}
 .hero-copy .intro{max-width:min(100%,520px)}
 .hero-copy .intro,.women-feature-copy p,.section-heading p,.catalog-intro p,.about p,.topic-card p{text-wrap:pretty}
-[style*="text-align: justify"]{hyphens:auto;-webkit-hyphens:auto;text-align-last:left;word-spacing:-.02em}
+[style*="text-align: justify"]{hyphens:none;-webkit-hyphens:none;text-align-last:left;word-spacing:-.02em}
 @media(max-width:850px){
   .hero-copy{padding:42px 6% 40px}
   .hero-copy .intro{max-width:none}
   .hero-copy h1{font-size:clamp(52px,14vw,100px)}
 }
 @media(max-width:430px){
-  [style*="text-align: justify"]{text-align:left!important;hyphens:manual}
+  [style*="text-align: justify"]{text-align:left!important;hyphens:none}
 }
 
 /* Hero: o parágrafo tem a mesma largura do título (termina no ponto final de "HISTÓRIAS.") */
