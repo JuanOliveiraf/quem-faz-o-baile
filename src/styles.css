@@ -237,3 +237,4 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 .detail-page .detail-photo{width:auto;max-width:100%;height:auto;max-height:560px;object-fit:contain;display:block}
 .archive-detail figure{margin:28px 0;display:flex;flex-direction:column;align-items:center;text-align:center}
 .archive-detail .detail-photo{margin:0 auto}
+.archive-detail .detail-tag,.archive-detail .detail-title{text-align:center}
