@@ -238,3 +238,4 @@ header,footer,.section{padding-left:var(--edge);padding-right:var(--edge)}
 .archive-detail figure,.detail-page figure{margin:28px 0;display:flex;flex-direction:column;align-items:center;text-align:center}
 .archive-detail .detail-photo,.detail-page .detail-photo{margin:0 auto}
 .archive-detail .detail-tag,.archive-detail .detail-title{text-align:center}
+.women-decade-year{text-transform:none}
