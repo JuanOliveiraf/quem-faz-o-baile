@@ -118,7 +118,8 @@
     "women.intro": "justify",
     "topics.title": "justify",
     "topics.description": "justify",
-    "about.title": "center"
+    "about.title": "center",
+    "footer.notes": "justify"
   },
   "textColors": {
     "women.title": "#fa1100",
